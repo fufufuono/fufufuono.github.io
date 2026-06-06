@@ -13,15 +13,31 @@
 }
 
 .tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 0.9rem;
   margin: 1.5rem 0 3rem;
 }
 
 .tag-pill {
-  display: inline-block;
-  margin: 0 0.7rem 0.9rem 0;
-  padding: 0.25rem 0.65rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.28rem 0.75rem;
   border: 1px solid rgba(15, 160, 206, 0.4);
   border-radius: 4px;
+  text-decoration: none;
+}
+
+.tag-pill:hover {
+  background: rgba(15, 160, 206, 0.08);
+  border-color: rgba(15, 160, 206, 0.75);
+}
+
+.tag-link {
+  display: inline-block;
+  margin-left: 0.45rem;
 }
 
 .tag-pill span {
@@ -35,7 +51,7 @@
 .post-nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(128, 128, 128, 0.25);
@@ -43,6 +59,15 @@
 
 .post-nav-item {
   display: block;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(15, 160, 206, 0.28);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.post-nav-item:hover {
+  background: rgba(15, 160, 206, 0.08);
+  border-color: rgba(15, 160, 206, 0.65);
 }
 
 .post-nav-item span {
