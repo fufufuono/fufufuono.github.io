@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<h2>Tags</h2>
+
+{% assign tags = site.tags | sort %}
+{% if tags.size > 0 %}
+  <div class="tag-cloud">
+    {% for tag in tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tagged_posts = tag[1] %}
+      <a class="tag-pill" href="#{{ tag_name | escape }}">
+        {{ tag_name | escape }} <span>{{ tagged_posts | size }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  {% for tag in tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tagged_posts = tag[1] %}
+    <section class="tag-section" id="{{ tag_name | escape }}">
+      <h3>{{ tag_name | escape }}</h3>
+      {% for post in tagged_posts %}
+      <div class="row">
+        <div class="three columns left lit">
+          <p class="bottom">{{ post.date | date: "%b %-d, %Y" }}</p>
+        </div>
+        <div class="nine columns left mb-3">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+{% else %}
+  <p>No tags yet.</p>
+{% endif %}

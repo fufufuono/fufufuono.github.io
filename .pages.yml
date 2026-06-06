@@ -13,7 +13,7 @@ content:
     path: _posts
     filename: "{year}-{month}-{day}-{title}.md"
     view:
-      fields: [title, date]
+      fields: [title, date, tags]
       primary: title
       sort: [date, title]
     fields:
@@ -25,6 +25,11 @@ content:
         label: Date
         type: date
         required: true
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        description: Add tags such as 水软, 猴软, 科笛.
       - name: body
         label: Body
         type: rich-text

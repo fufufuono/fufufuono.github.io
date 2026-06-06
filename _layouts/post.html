@@ -7,8 +7,29 @@ layout: default
   <h2>{{ page.title | escape }}</h2>
   <p class="post-meta">
     {{ page.date | date: "%b %-d, %Y" }} · {{ plain_content | size }} 字
+    {% if page.tags and page.tags.size > 0 %}
+      ·
+      {% for tag in page.tags %}
+        <a class="tag-link" href="{{ '/tags/' | relative_url }}#{{ tag | escape }}">{{ tag | escape }}</a>
+      {% endfor %}
+    {% endif %}
   </p>
   <div class="post-content">
     {{ content }}
   </div>
+
+  <nav class="post-nav" aria-label="Post navigation">
+    {% if page.previous %}
+      <a class="post-nav-item" href="{{ page.previous.url | relative_url }}">
+        <span>上一篇</span>
+        {{ page.previous.title | escape }}
+      </a>
+    {% endif %}
+    {% if page.next %}
+      <a class="post-nav-item post-nav-next" href="{{ page.next.url | relative_url }}">
+        <span>下一篇</span>
+        {{ page.next.title | escape }}
+      </a>
+    {% endif %}
+  </nav>
 </article>

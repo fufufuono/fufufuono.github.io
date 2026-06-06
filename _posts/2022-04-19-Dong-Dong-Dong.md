@@ -2,6 +2,8 @@
 layout: post
 title: "【水软】Dong Dong Dong"
 date: "2022-04-19"
+tags:
+  - 水软
 permalink: "/2022/04/19/Dong-Dong-Dong/"
 ---
 

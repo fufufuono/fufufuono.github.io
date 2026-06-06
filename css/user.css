@@ -12,6 +12,60 @@
   margin-bottom: 2rem;
 }
 
+.tag-cloud {
+  margin: 1.5rem 0 3rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  margin: 0 0.7rem 0.9rem 0;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(15, 160, 206, 0.4);
+  border-radius: 4px;
+}
+
+.tag-pill span {
+  color: #777;
+}
+
+.tag-section {
+  margin-top: 3rem;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.post-nav-item {
+  display: block;
+}
+
+.post-nav-item span {
+  display: block;
+  color: #777;
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.post-nav-next {
+  text-align: right;
+}
+
+@media (max-width: 549px) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav-next {
+    text-align: left;
+  }
+}
+
 .message-form {
   margin-top: 1.8rem;
 }
