@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h2>{{ page.title | escape }}</h2>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
+</article>
