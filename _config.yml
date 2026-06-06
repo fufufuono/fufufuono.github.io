@@ -9,6 +9,7 @@ permalink: /:year/:month/:day/:title/
 
 cloudflare_analytics_token: "e04f882bc3e842f7b185bb2eb74e2bcf"
 google_analytics_id:
+formspree_endpoint: "https://formspree.io/f/xdavaqrl"
 
 defaults:
   - scope:

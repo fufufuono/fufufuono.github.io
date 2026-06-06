@@ -1,0 +1,27 @@
+---
+layout: default
+title: Message
+permalink: /message/
+---
+
+<h2>Message</h2>
+
+{% if site.formspree_endpoint %}
+<form class="message-form" action="{{ site.formspree_endpoint }}" method="POST" accept-charset="UTF-8">
+  <input type="hidden" name="_subject" value="New message from {{ site.title | escape }}">
+  <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+
+  <label for="message-name">Name</label>
+  <input id="message-name" type="text" name="name" autocomplete="name" placeholder="Your name">
+
+  <label for="message-email">Email</label>
+  <input id="message-email" type="email" name="email" autocomplete="email" placeholder="Optional, if you want a reply">
+
+  <label for="message-body">Message</label>
+  <textarea id="message-body" name="message" rows="8" required placeholder="Write your message here."></textarea>
+
+  <button class="button button-primary" type="submit">Send</button>
+</form>
+{% else %}
+<p>The message form is not configured yet.</p>
+{% endif %}

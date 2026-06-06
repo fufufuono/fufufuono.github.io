@@ -6,3 +6,23 @@
 .site-footer {
   color: #777;
 }
+
+.message-form {
+  margin-top: 1.8rem;
+}
+
+.message-form input[type="text"],
+.message-form input[type="email"],
+.message-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.message-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.form-honeypot {
+  display: none;
+}
