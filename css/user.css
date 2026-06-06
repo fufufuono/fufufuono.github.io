@@ -2,9 +2,14 @@
   margin-bottom: 1.35rem;
 }
 
-.post-date,
+.post-meta,
 .site-footer {
   color: #777;
+}
+
+.post-meta {
+  margin-top: -0.8rem;
+  margin-bottom: 2rem;
 }
 
 .message-form {

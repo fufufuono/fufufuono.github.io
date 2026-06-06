@@ -3,9 +3,12 @@ layout: default
 ---
 
 <article class="post">
+  {% assign plain_content = content | strip_html | strip_newlines | replace: " ", "" | replace: "&nbsp;", "" %}
   <h2>{{ page.title | escape }}</h2>
+  <p class="post-meta">
+    {{ page.date | date: "%b %-d, %Y" }} · {{ plain_content | size }} 字
+  </p>
   <div class="post-content">
     {{ content }}
   </div>
-  <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
 </article>
