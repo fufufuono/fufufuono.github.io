@@ -1,0 +1,24 @@
+title: "I'm Blue"
+author: "Fufufuono"
+description: ""
+url: "https://fufufuono.github.io"
+baseurl: ""
+timezone: "Europe/Berlin"
+
+permalink: /:year/:month/:day/:title/
+
+cloudflare_analytics_token:
+google_analytics_id:
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tools

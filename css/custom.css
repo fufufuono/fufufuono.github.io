@@ -293,10 +293,6 @@ body.darkmode {
   text-align: center;
 }
 
-#madewith {
-  text-align: center;
-}
-
 .posisi {
   text-align: center;
 }
@@ -309,10 +305,6 @@ body.darkmode {
   }
 
   #comments {
-    text-align: left;
-  }
-
-  #madewith {
     text-align: left;
   }
 
