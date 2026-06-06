@@ -7,7 +7,7 @@ timezone: "Europe/Berlin"
 
 permalink: /:year/:month/:day/:title/
 
-cloudflare_analytics_token:
+cloudflare_analytics_token: "e04f882bc3e842f7b185bb2eb74e2bcf"
 google_analytics_id:
 
 defaults:
