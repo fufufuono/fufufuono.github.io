@@ -1,9 +1,9 @@
-const CACHE_NAME='deutsch-drill-v1-11-3';
+const CACHE_NAME='deutsch-drill-v1-11-4';
 const APP_SHELL=[
   './',
   './index.html',
-  './style.css?v=1.11.3',
-  './app.js?v=1.11.3',
+  './style.css?v=1.11.4',
+  './app.js?v=1.11.4',
   './manifest.json',
   './data/questions.json',
   './data/skills.json',
