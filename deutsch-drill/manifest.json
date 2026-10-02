@@ -1,8 +1,12 @@
 {
+  "id": "./",
   "name": "Deutsch Drill",
   "short_name": "Deutsch",
+  "description": "Local-first German grammar practice from A1 to B1.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#F6F3EA",
   "theme_color": "#F6F3EA",
   "icons": [
@@ -16,9 +20,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "id": "./",
-  "scope": "./",
-  "orientation": "portrait-primary",
-  "description": "Local-first German grammar practice from A1 to B1."
+  ]
 }
