@@ -1,0 +1,5031 @@
+{
+  "version": "1.12.0",
+  "audited_at": "2026-10-02",
+  "entries": [
+    {
+      "id": "article_nom",
+      "summary": "Nominativ 是“主格”。最常见功能是标记句子的主语；sein / werden / bleiben 后表示身份或类别的名词也通常用 Nominativ。",
+      "sections": [
+        {
+          "title": "先判断它什么时候出现",
+          "bullets": [
+            "问“谁/什么在做这件事？”得到的通常是主语，因此用 Nominativ。",
+            "sein 后不是“宾语”：Er ist ein Arzt. 中 ein Arzt 仍是 Nominativ。",
+            "德语冠词必须同时反映名词的性别、数和格，所以要把名词连同 der/die/das 一起记。"
+          ]
+        },
+        {
+          "title": "定冠词和不定冠词",
+          "bullets": [
+            "阳性：der / ein；阴性：die / eine；中性：das / ein；复数：die，复数没有不定冠词 ein。",
+            "kein- 和物主冠词 mein-/dein- 等在很多位置按 ein- 类似的方式变化。"
+          ]
+        },
+        {
+          "title": "做题顺序",
+          "bullets": [
+            "先找主语 → 判断单复数 → 回忆名词性别 → 选择冠词。",
+            "不要根据中文里的“这个/那个”或自然性别去猜德语语法性别。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Nominativ 冠词",
+          "headers": [
+            "",
+            "阳性 m.",
+            "阴性 f.",
+            "中性 n.",
+            "复数 Pl."
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "der",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "不定冠词",
+              "ein",
+              "eine",
+              "ein",
+              "—"
+            ],
+            [
+              "否定冠词",
+              "kein",
+              "keine",
+              "kein",
+              "keine"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Der Zug kommt.",
+          "zh": "火车来了。",
+          "note": "der Zug 是主语。"
+        },
+        {
+          "de": "Das ist eine gute Idee.",
+          "zh": "这是一个好主意。",
+          "note": "eine gute Idee 在 sein 后仍是 Nominativ。"
+        },
+        {
+          "de": "Meine Freunde wohnen in Köln.",
+          "zh": "我的朋友们住在科隆。",
+          "note": "复数主语。"
+        }
+      ],
+      "pitfalls": [
+        "不要把 sein 后面的名词当成 Akkusativ。",
+        "句首不一定就是主语：Heute kommt der Zug. 中 der Zug 才是主语。"
+      ],
+      "memorize": [
+        "der Mann · die Frau · das Kind · die Kinder"
+      ],
+      "related": [
+        "article_acc",
+        "article_dat",
+        "possessive"
+      ]
+    },
+    {
+      "id": "article_acc",
+      "summary": "Akkusativ 是“宾格”。它最常见于直接宾语，也由一些介词固定支配。初学阶段最重要的视觉变化是阳性单数。",
+      "sections": [
+        {
+          "title": "什么时候用",
+          "bullets": [
+            "很多常见动词直接带 Akkusativ：haben, sehen, kaufen, brauchen, besuchen, fragen, kennen 等。",
+            "固定 Akkusativ 介词如 für, ohne, durch, gegen, um 也会触发 Akkusativ。",
+            "判断格要看动词/介词的要求，不是看这个宾语是不是“人”。"
+          ]
+        },
+        {
+          "title": "最关键的变化",
+          "bullets": [
+            "阳性：der → den，ein → einen，kein → keinen，mein → meinen。",
+            "阴性和中性在 Nominativ 与 Akkusativ 中的定冠词形式不变：die / das。",
+            "复数定冠词在 Nom./Akk. 都是 die。"
+          ]
+        },
+        {
+          "title": "做题顺序",
+          "bullets": [
+            "先确认这是直接宾语或 Akkusativ 介词宾语 → 判断名词性别/数 → 选冠词。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Akkusativ 冠词",
+          "headers": [
+            "",
+            "阳性 m.",
+            "阴性 f.",
+            "中性 n.",
+            "复数 Pl."
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "den",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "不定冠词",
+              "einen",
+              "eine",
+              "ein",
+              "—"
+            ],
+            [
+              "否定冠词",
+              "keinen",
+              "keine",
+              "kein",
+              "keine"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich sehe den Mann.",
+          "zh": "我看见那个男人。",
+          "note": "sehen + Akkusativ。"
+        },
+        {
+          "de": "Sie kauft ein Fahrrad.",
+          "zh": "她买一辆自行车。",
+          "note": "das Fahrrad → ein Fahrrad。"
+        },
+        {
+          "de": "Das Geschenk ist für meinen Bruder.",
+          "zh": "礼物是给我哥哥/弟弟的。",
+          "note": "für 固定 + Akkusativ。"
+        }
+      ],
+      "pitfalls": [
+        "最容易漏的是阳性 -n：den/einen/keinen/meinen。",
+        "“给某人”常可能是 Dativ，但 für jemanden 仍然是 Akkusativ，因为格由 für 决定。"
+      ],
+      "memorize": [
+        "阳性 Akkusativ：der→den；ein→einen"
+      ],
+      "related": [
+        "article_nom",
+        "article_dat",
+        "pron_acc",
+        "prep_acc"
+      ]
+    },
+    {
+      "id": "article_dat",
+      "summary": "Dativ 是“与格”。它常表示接收者、受影响者，也由一批动词和介词固定支配。",
+      "sections": [
+        {
+          "title": "什么时候用",
+          "bullets": [
+            "常见 Dativ 动词：helfen, danken, gefallen, gehören, antworten 等。",
+            "常见 Dativ 介词：aus, bei, mit, nach, seit, von, zu。",
+            "双宾语结构里，接收者常是 Dativ：Ich gebe dem Mann das Buch."
+          ]
+        },
+        {
+          "title": "冠词规律",
+          "bullets": [
+            "阳性和中性都是 dem；阴性是 der；复数是 den。",
+            "ein- 类：einem / einer / einem；复数物主词等有相应 -en 形式。",
+            "Dativ Plural 往往还要求名词本身加 -n：mit den Kindern。"
+          ]
+        },
+        {
+          "title": "常见缩合",
+          "bullets": [
+            "zu dem → zum，zu der → zur，bei dem → beim，von dem → vom。",
+            "缩合不改变格，只是书写和发音更自然。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Dativ 冠词",
+          "headers": [
+            "",
+            "阳性 m.",
+            "阴性 f.",
+            "中性 n.",
+            "复数 Pl."
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "dem",
+              "der",
+              "dem",
+              "den"
+            ],
+            [
+              "不定冠词",
+              "einem",
+              "einer",
+              "einem",
+              "—"
+            ],
+            [
+              "否定冠词",
+              "keinem",
+              "keiner",
+              "keinem",
+              "keinen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich helfe dem Mann.",
+          "zh": "我帮助那个男人。",
+          "note": "helfen + Dativ。"
+        },
+        {
+          "de": "Sie fährt mit dem Zug.",
+          "zh": "她坐火车。",
+          "note": "mit + Dativ。"
+        },
+        {
+          "de": "Wir sprechen mit den Kollegen.",
+          "zh": "我们和同事们交谈。",
+          "note": "Dativ Plural。"
+        }
+      ],
+      "pitfalls": [
+        "dem 是阳/中单数；den 在这里是复数 Dativ。",
+        "复数 Dativ 不只改冠词，还经常要检查名词是否需要加 -n。"
+      ],
+      "memorize": [
+        "dem · der · dem · den"
+      ],
+      "related": [
+        "pron_dat",
+        "prep_dat",
+        "dative_plural",
+        "double_object"
+      ]
+    },
+    {
+      "id": "pron_nom",
+      "summary": "主格人称代词代替主语，并决定动词的人称变化。它们是所有动词变位的基础。",
+      "sections": [
+        {
+          "title": "完整人称",
+          "bullets": [
+            "单数：ich（我）, du（你）, er（他/阳性名词）, sie（她/阴性名词）, es（它/中性名词）。",
+            "复数：wir（我们）, ihr（你们）, sie（他们/她们/它们）。",
+            "礼貌称呼：Sie（您/您们），始终首字母大写，动词按第三人称复数形式。"
+          ]
+        },
+        {
+          "title": "代词和语法性别",
+          "bullets": [
+            "指物时 er/sie/es 取决于德语名词性别：der Tisch → er，die Tasche → sie，das Buch → es。",
+            "自然性别和语法性别不是同一个概念。"
+          ]
+        },
+        {
+          "title": "与动词变位连接",
+          "bullets": [
+            "看到主语后立刻确定人称：ich → 1单，du → 2单，er/sie/es → 3单，wir/sie/Sie → 复数 -en 类形式。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "主格人称代词",
+          "headers": [
+            "人称",
+            "单数",
+            "复数"
+          ],
+          "rows": [
+            [
+              "第一人称",
+              "ich",
+              "wir"
+            ],
+            [
+              "第二人称",
+              "du",
+              "ihr"
+            ],
+            [
+              "第三人称",
+              "er / sie / es",
+              "sie"
+            ],
+            [
+              "礼貌",
+              "—",
+              "Sie"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich wohne in Darmstadt.",
+          "zh": "我住在达姆施塔特。",
+          "note": "ich 决定 wohne。"
+        },
+        {
+          "de": "Das Buch ist neu. Es ist teuer.",
+          "zh": "这本书是新的。它很贵。",
+          "note": "das Buch → es。"
+        },
+        {
+          "de": "Sie kommen aus Berlin.",
+          "zh": "您/您们来自柏林。",
+          "note": "大写 Sie + kommen。"
+        }
+      ],
+      "pitfalls": [
+        "句首的小写 sie 因句首规则也会写成 Sie，要靠语境区分“她/他们”还是礼貌 Sie。",
+        "德语普通陈述句通常不能随意省略主语代词。"
+      ],
+      "memorize": [
+        "ich · du · er/sie/es · wir · ihr · sie/Sie"
+      ],
+      "related": [
+        "pron_acc",
+        "pron_dat",
+        "present_regular",
+        "present_sein_haben"
+      ]
+    },
+    {
+      "id": "pron_acc",
+      "summary": "Akkusativ 人称代词替代直接宾语。最需要记住的特殊变化是 ich→mich、du→dich、er→ihn。",
+      "sections": [
+        {
+          "title": "完整形式",
+          "bullets": [
+            "ich → mich；du → dich；er → ihn；sie → sie；es → es。",
+            "wir → uns；ihr → euch；sie → sie；Sie → Sie。"
+          ]
+        },
+        {
+          "title": "什么时候使用",
+          "bullets": [
+            "先确认动词/介词要求 Akkusativ，再把原来的名词换成对应人称代词。",
+            "人称代词通常比完整名词更靠前，但位置仍受句型影响。"
+          ]
+        },
+        {
+          "title": "与 Dativ 对比",
+          "bullets": [
+            "er：Akk. ihn / Dat. ihm。",
+            "sie 单数：Akk. sie / Dat. ihr。",
+            "wir：Akk. uns / Dat. uns；ihr：Akk. euch / Dat. euch，形式相同但功能不同。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Personalpronomen im Akkusativ",
+          "headers": [
+            "Nominativ",
+            "Akkusativ"
+          ],
+          "rows": [
+            [
+              "ich",
+              "mich"
+            ],
+            [
+              "du",
+              "dich"
+            ],
+            [
+              "er",
+              "ihn"
+            ],
+            [
+              "sie",
+              "sie"
+            ],
+            [
+              "es",
+              "es"
+            ],
+            [
+              "wir",
+              "uns"
+            ],
+            [
+              "ihr",
+              "euch"
+            ],
+            [
+              "sie",
+              "sie"
+            ],
+            [
+              "Sie",
+              "Sie"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Kannst du mich hören?",
+          "zh": "你能听见我吗？",
+          "note": "hören + Akkusativ。"
+        },
+        {
+          "de": "Kennst du Anna? – Ja, ich kenne sie.",
+          "zh": "你认识 Anna 吗？——认识。",
+          "note": "Anna → sie。"
+        },
+        {
+          "de": "Ich sehe meinen Bruder. Ich sehe ihn jeden Tag.",
+          "zh": "我每天都看见我哥哥/弟弟。",
+          "note": "er → ihn。"
+        }
+      ],
+      "pitfalls": [
+        "不要把 ihn 和 ihm 混淆：ihn 是 Akkusativ，ihm 是 Dativ。",
+        "Sie（礼貌）在 Akkusativ 中仍为 Sie。"
+      ],
+      "memorize": [
+        "mich · dich · ihn · sie · es · uns · euch · sie · Sie"
+      ],
+      "related": [
+        "pron_nom",
+        "pron_dat",
+        "article_acc",
+        "pronoun_order"
+      ]
+    },
+    {
+      "id": "pron_dat",
+      "summary": "Dativ 人称代词常表示接收者，也用于固定 Dativ 动词和 Dativ 介词之后。",
+      "sections": [
+        {
+          "title": "完整形式",
+          "bullets": [
+            "ich → mir；du → dir；er → ihm；sie → ihr；es → ihm。",
+            "wir → uns；ihr → euch；sie → ihnen；Sie → Ihnen。"
+          ]
+        },
+        {
+          "title": "高频触发",
+          "bullets": [
+            "helfen, danken, gefallen, gehören, antworten 等动词。",
+            "mit, bei, von, zu 等 Dativ 介词。",
+            "给/展示/发送某物给某人时，“某人”常是 Dativ。"
+          ]
+        },
+        {
+          "title": "与 Akkusativ 对比",
+          "bullets": [
+            "er：ihn / ihm；sie：sie / ihr；复数 sie：sie / ihnen。",
+            "不要因为中文都译成“他/她/他们”就忽略格变化。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Personalpronomen im Dativ",
+          "headers": [
+            "Nominativ",
+            "Dativ"
+          ],
+          "rows": [
+            [
+              "ich",
+              "mir"
+            ],
+            [
+              "du",
+              "dir"
+            ],
+            [
+              "er",
+              "ihm"
+            ],
+            [
+              "sie",
+              "ihr"
+            ],
+            [
+              "es",
+              "ihm"
+            ],
+            [
+              "wir",
+              "uns"
+            ],
+            [
+              "ihr",
+              "euch"
+            ],
+            [
+              "sie",
+              "ihnen"
+            ],
+            [
+              "Sie",
+              "Ihnen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Kannst du mir helfen?",
+          "zh": "你能帮我吗？",
+          "note": "helfen + Dativ。"
+        },
+        {
+          "de": "Das Buch gehört ihm.",
+          "zh": "这本书属于他。",
+          "note": "gehören + Dativ。"
+        },
+        {
+          "de": "Ich schreibe ihnen heute.",
+          "zh": "我今天给他们写信。",
+          "note": "sie Plural → ihnen。"
+        }
+      ],
+      "pitfalls": [
+        "礼貌 Sie 的 Dativ 是 Ihnen，首字母大写。",
+        "er 的 Dativ 是 ihm，不是 ihn。"
+      ],
+      "memorize": [
+        "mir · dir · ihm · ihr · ihm · uns · euch · ihnen · Ihnen"
+      ],
+      "related": [
+        "pron_acc",
+        "article_dat",
+        "double_object",
+        "pronoun_order"
+      ]
+    },
+    {
+      "id": "possessive",
+      "summary": "物主冠词表示“我的、你的、他的……”；先选正确的词干，再像 ein- 类冠词一样根据后面名词的格、性和数加词尾。",
+      "sections": [
+        {
+          "title": "先选“谁的”",
+          "bullets": [
+            "ich → mein-；du → dein-；er/es → sein-；sie（她）→ ihr-。",
+            "wir → unser-；ihr → euer-；sie（他们）→ ihr-；Sie → Ihr-。",
+            "euer- 加词尾时常变为 eur-：eure, eurem。"
+          ]
+        },
+        {
+          "title": "再变格",
+          "bullets": [
+            "Nominativ：mein Bruder / meine Schwester / mein Kind / meine Freunde。",
+            "Akkusativ 阳性：meinen Bruder；阴/中/复与相应 ein- 模式一致。",
+            "Dativ：meinem Bruder, meiner Schwester, meinem Kind, meinen Freunden。"
+          ]
+        },
+        {
+          "title": "判断原则",
+          "bullets": [
+            "词干看拥有者，词尾看被拥有的名词。",
+            "例如“她的哥哥”：拥有者是 sie → ihr-；Bruder 是阳性主格 → ihr Bruder。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "物主词干",
+          "headers": [
+            "主语/拥有者",
+            "词干"
+          ],
+          "rows": [
+            [
+              "ich",
+              "mein-"
+            ],
+            [
+              "du",
+              "dein-"
+            ],
+            [
+              "er / es",
+              "sein-"
+            ],
+            [
+              "sie",
+              "ihr-"
+            ],
+            [
+              "wir",
+              "unser-"
+            ],
+            [
+              "ihr",
+              "euer-/eur-"
+            ],
+            [
+              "sie",
+              "ihr-"
+            ],
+            [
+              "Sie",
+              "Ihr-"
+            ]
+          ]
+        },
+        {
+          "title": "mein- 示例",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "mein",
+              "meine",
+              "mein",
+              "meine"
+            ],
+            [
+              "Akk.",
+              "meinen",
+              "meine",
+              "mein",
+              "meine"
+            ],
+            [
+              "Dat.",
+              "meinem",
+              "meiner",
+              "meinem",
+              "meinen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Das ist meine Wohnung.",
+          "zh": "这是我的公寓。",
+          "note": "die Wohnung → meine。"
+        },
+        {
+          "de": "Ich sehe deinen Bruder.",
+          "zh": "我看见你哥哥/弟弟。",
+          "note": "Akk. m. → deinen。"
+        },
+        {
+          "de": "Wir fahren mit seinem Auto.",
+          "zh": "我们开他的车。",
+          "note": "mit + Dat. n. → seinem。"
+        }
+      ],
+      "pitfalls": [
+        "词尾看“东西”的性别，不看拥有者的性别。",
+        "ihr- 可能是“她的”或“他们的”；Ihr- 是礼貌“您的”。"
+      ],
+      "memorize": [
+        "词干看拥有者，词尾看名词"
+      ],
+      "related": [
+        "article_nom",
+        "article_acc",
+        "article_dat",
+        "adj_ein"
+      ]
+    },
+    {
+      "id": "adj_def",
+      "summary": "定冠词 der/die/das 已经显示大部分格和性别信息，所以其后的形容词用“弱变化”：绝大多数位置是 -en，少数位置是 -e。",
+      "sections": [
+        {
+          "title": "最实用的规律",
+          "bullets": [
+            "Nominativ 单数三种性别都是 -e：der alte Mann, die alte Frau, das alte Kind。",
+            "Akkusativ 阴性/中性是 -e；Akkusativ 阳性是 -en。",
+            "复数以及 Dativ/Genitiv 基本都用 -en。"
+          ]
+        },
+        {
+          "title": "为什么叫弱变化",
+          "bullets": [
+            "因为定冠词已经清楚标出格/性/数，形容词不需要再承担太多信息。",
+            "做题时不要直接猜 -e/-en：先判格，再看定冠词。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "定冠词后形容词词尾",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "-e",
+              "-e",
+              "-e",
+              "-en"
+            ],
+            [
+              "Akk.",
+              "-en",
+              "-e",
+              "-e",
+              "-en"
+            ],
+            [
+              "Dat.",
+              "-en",
+              "-en",
+              "-en",
+              "-en"
+            ],
+            [
+              "Gen.",
+              "-en",
+              "-en",
+              "-en",
+              "-en"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "der neue Kollege",
+          "zh": "这位新同事",
+          "note": "Nom. m. → -e。"
+        },
+        {
+          "de": "Ich sehe den neuen Kollegen.",
+          "zh": "我看见这位新同事。",
+          "note": "Akk. m. → -en。"
+        },
+        {
+          "de": "Wir fahren mit dem alten Auto.",
+          "zh": "我们开这辆旧车。",
+          "note": "Dat. n. → -en。"
+        }
+      ],
+      "pitfalls": [
+        "不要把冠词本身的词尾复制到形容词上：der alter Mann 是错的。",
+        "定冠词后复数 Nominativ 也用 -en：die neuen Bücher。"
+      ],
+      "memorize": [
+        "定冠词后：少数 -e，其余大多 -en"
+      ],
+      "related": [
+        "adj_ein",
+        "adj_strong",
+        "adj_consolidated"
+      ]
+    },
+    {
+      "id": "adj_ein",
+      "summary": "ein-, kein- 和物主冠词后使用“混合变化”。当限定词没有显示格/性信息时，形容词需要把这部分信息补出来。",
+      "sections": [
+        {
+          "title": "核心概念",
+          "bullets": [
+            "ein 没有像 der 那样的 -r/-s 词尾，因此 Nom. m./n. 时形容词承担信息：ein alter Mann, ein altes Kind。",
+            "Akk. m. 里 einen 已经显示格，因此形容词用 -en。",
+            "Dativ 和 Genitiv 基本都用 -en。"
+          ]
+        },
+        {
+          "title": "哪些词属于 ein- 类",
+          "bullets": [
+            "ein/eine；kein/keine；mein/dein/sein/ihr/unser/euer/Ihr 等物主冠词。",
+            "复数没有 ein，但 meine/keine 等复数形式仍按这一类处理。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "ein- 类后形容词词尾",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl.*"
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "-er",
+              "-e",
+              "-es",
+              "-en"
+            ],
+            [
+              "Akk.",
+              "-en",
+              "-e",
+              "-es",
+              "-en"
+            ],
+            [
+              "Dat.",
+              "-en",
+              "-en",
+              "-en",
+              "-en"
+            ],
+            [
+              "Gen.",
+              "-en",
+              "-en",
+              "-en",
+              "-en"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "ein alter Mann",
+          "zh": "一位年长的男人",
+          "note": "Nom. m. → -er。"
+        },
+        {
+          "de": "ein kleines Kind",
+          "zh": "一个小孩",
+          "note": "Nom./Akk. n. → -es。"
+        },
+        {
+          "de": "mit meinem neuen Auto",
+          "zh": "开/用我的新车",
+          "note": "Dat. n. → -en。"
+        }
+      ],
+      "pitfalls": [
+        "*Pl.* 指 meine/keine 等可有复数的 ein- 类词；ein 本身没有复数。",
+        "mein neuer Chef 与 der neue Chef 的词尾不同，是因为限定词提供的信息不同。"
+      ],
+      "memorize": [
+        "限定词没显示的信息，形容词补出来"
+      ],
+      "related": [
+        "adj_def",
+        "adj_strong",
+        "possessive",
+        "adj_consolidated"
+      ]
+    },
+    {
+      "id": "prep_acc",
+      "summary": "durch, für, gegen, ohne, um 是最核心的固定 Akkusativ 介词。它们后面的名词/代词不因为“位置或方向”而改变格。",
+      "sections": [
+        {
+          "title": "必须记住的五个",
+          "bullets": [
+            "durch：穿过/通过；für：为了/给；gegen：对抗/朝向/大约；ohne：没有；um：围绕/在……点钟。",
+            "这些介词后固定 Akkusativ。"
+          ]
+        },
+        {
+          "title": "冠词怎么变",
+          "bullets": [
+            "阳性：für den Mann / ohne einen Mantel。",
+            "阴性：durch die Stadt；中性：für das Kind；复数：für die Freunde。",
+            "人称代词也用 Akkusativ：für mich, ohne dich, gegen ihn。"
+          ]
+        },
+        {
+          "title": "与双向介词区分",
+          "bullets": [
+            "in/auf/an 等才会根据 Wo/Wohin 在 Dat./Akk. 间切换。",
+            "für/ohne/durch/gegen/um 不切换。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "固定 Akkusativ 介词",
+          "headers": [
+            "介词",
+            "常见意思",
+            "例子"
+          ],
+          "rows": [
+            [
+              "durch",
+              "穿过/通过",
+              "durch den Park"
+            ],
+            [
+              "für",
+              "为了/给",
+              "für meinen Bruder"
+            ],
+            [
+              "gegen",
+              "反对/朝向/大约",
+              "gegen die Wand"
+            ],
+            [
+              "ohne",
+              "没有",
+              "ohne einen Regenschirm"
+            ],
+            [
+              "um",
+              "围绕/在…点",
+              "um den See / um acht Uhr"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Wir gehen durch den Park.",
+          "zh": "我们穿过公园。",
+          "note": "durch + Akk."
+        },
+        {
+          "de": "Das Geschenk ist für meinen Bruder.",
+          "zh": "礼物是给我哥哥/弟弟的。",
+          "note": "für + Akk."
+        },
+        {
+          "de": "Sie geht ohne die Tasche raus.",
+          "zh": "她没带那个包就出门了。",
+          "note": "ohne + Akk."
+        }
+      ],
+      "pitfalls": [
+        "不要写 *für dem Mann*。",
+        "“有移动”不是这里的判断标准；这些介词无条件固定 Akkusativ。"
+      ],
+      "memorize": [
+        "durch · für · gegen · ohne · um"
+      ],
+      "related": [
+        "prep_dat",
+        "two_way",
+        "article_acc"
+      ]
+    },
+    {
+      "id": "prep_dat",
+      "summary": "aus, bei, mit, nach, seit, von, zu 是最核心的固定 Dativ 介词。它们后面始终使用 Dativ。",
+      "sections": [
+        {
+          "title": "必须记住的七个",
+          "bullets": [
+            "aus：从……出来/来自；bei：在某人/机构处；mit：和/用；nach：去（城市/无冠词国家）/之后。",
+            "seit：自从；von：从/属于；zu：到某人/地点。"
+          ]
+        },
+        {
+          "title": "常见缩合",
+          "bullets": [
+            "bei dem → beim；von dem → vom；zu dem → zum；zu der → zur。",
+            "这些缩合在真实德语中非常常见，应当主动识别。"
+          ]
+        },
+        {
+          "title": "特别注意 nach",
+          "bullets": [
+            "城市和多数无冠词国家：nach Berlin, nach Deutschland。",
+            "有冠词国家通常用 in + Akkusativ 表方向：in die Schweiz。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "固定 Dativ 介词",
+          "headers": [
+            "介词",
+            "例子"
+          ],
+          "rows": [
+            [
+              "aus",
+              "aus dem Hotel"
+            ],
+            [
+              "bei",
+              "bei der Ärztin / beim Arzt"
+            ],
+            [
+              "mit",
+              "mit dem Zug"
+            ],
+            [
+              "nach",
+              "nach Berlin"
+            ],
+            [
+              "seit",
+              "seit einem Jahr"
+            ],
+            [
+              "von",
+              "von meinem Freund / vom Bahnhof"
+            ],
+            [
+              "zu",
+              "zu meiner Schwester / zum Arzt"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich fahre mit dem Zug.",
+          "zh": "我坐火车。",
+          "note": "mit + Dat."
+        },
+        {
+          "de": "Sie ist bei der Ärztin.",
+          "zh": "她在女医生那里。",
+          "note": "bei + Dat."
+        },
+        {
+          "de": "Wir gehen zum Bahnhof.",
+          "zh": "我们去火车站。",
+          "note": "zu dem → zum。"
+        }
+      ],
+      "pitfalls": [
+        "固定 Dativ 介词不看 Wo/Wohin。",
+        "nach Deutschland，但 in die Schweiz：是否带冠词会影响国家方向表达。"
+      ],
+      "memorize": [
+        "aus · bei · mit · nach · seit · von · zu"
+      ],
+      "related": [
+        "prep_acc",
+        "two_way",
+        "article_dat"
+      ]
+    },
+    {
+      "id": "two_way",
+      "summary": "Wechselpräpositionen（双向介词）可以接 Dativ 或 Akkusativ。真正的判断是“静态位置 Wo?”还是“方向/位置变化 Wohin?”，不是简单看有没有动作。",
+      "sections": [
+        {
+          "title": "九个双向介词",
+          "bullets": [
+            "an, auf, hinter, in, neben, über, unter, vor, zwischen。"
+          ]
+        },
+        {
+          "title": "核心判断",
+          "bullets": [
+            "Wo? 表示某物已经处在某位置 → Dativ：Das Buch liegt auf dem Tisch。",
+            "Wohin? 表示把/移动到某个位置 → Akkusativ：Ich lege das Buch auf den Tisch。",
+            "动作动词也可能是 Wo：Ich arbeite in der Küche. 这里仍是 Dativ。"
+          ]
+        },
+        {
+          "title": "常见成对动词",
+          "bullets": [
+            "stehen（站着）↔ stellen（放置/立起来）；liegen ↔ legen；sitzen ↔ setzen；hängen 可根据意义表示静态或放置。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "双向介词",
+          "headers": [
+            "an",
+            "auf",
+            "hinter",
+            "in",
+            "neben",
+            "über",
+            "unter",
+            "vor",
+            "zwischen"
+          ],
+          "rows": [
+            [
+              "在…边/上",
+              "在…上",
+              "在…后",
+              "在…里",
+              "在…旁",
+              "在…上方",
+              "在…下方",
+              "在…前",
+              "在…之间"
+            ]
+          ]
+        },
+        {
+          "title": "Wo / Wohin",
+          "headers": [
+            "问题",
+            "格",
+            "例子"
+          ],
+          "rows": [
+            [
+              "Wo?",
+              "Dativ",
+              "auf dem Tisch"
+            ],
+            [
+              "Wohin?",
+              "Akkusativ",
+              "auf den Tisch"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Das Bild hängt an der Wand.",
+          "zh": "画挂在墙上。",
+          "note": "Wo? → Dat."
+        },
+        {
+          "de": "Ich hänge das Bild an die Wand.",
+          "zh": "我把画挂到墙上。",
+          "note": "Wohin? → Akk."
+        },
+        {
+          "de": "Wir arbeiten im Büro.",
+          "zh": "我们在办公室工作。",
+          "note": "有动作，但表达位置 → Dat."
+        }
+      ],
+      "pitfalls": [
+        "“有移动 = Akkusativ”是过度简化，真正判断是位置 vs. 目标方向。",
+        "常见缩合：in dem→im，in das→ins，an dem→am，an das→ans。"
+      ],
+      "memorize": [
+        "Wo? → Dat.；Wohin? → Akk."
+      ],
+      "related": [
+        "prep_acc",
+        "prep_dat",
+        "article_acc",
+        "article_dat"
+      ]
+    },
+    {
+      "id": "present_irregular",
+      "summary": "很多高频强变化动词在 Präsens 的 du 和 er/sie/es 形式中会改变词干元音；其他人称往往更接近原形。",
+      "sections": [
+        {
+          "title": "常见变化类型",
+          "bullets": [
+            "a → ä：fahren → du fährst, er fährt；schlafen → schläfst/schläft。",
+            "e → i：helfen → hilfst/hilft；sprechen → sprichst/spricht；nehmen → nimmst/nimmt。",
+            "e → ie：lesen → liest/liest；sehen → siehst/sieht。"
+          ]
+        },
+        {
+          "title": "哪些人称变化",
+          "bullets": [
+            "通常只发生在 du 与 er/sie/es。",
+            "ich、wir、ihr、sie/Sie 不套这类词干元音变化，但仍要使用各自词尾。"
+          ]
+        },
+        {
+          "title": "怎么学习",
+          "bullets": [
+            "词典中可把强变化动词记成 fahren – fährt – fuhr – ist gefahren 等核心形式。",
+            "A1 先优先记高频 Präsens 变化，不必一次背完所有时态。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "几个高频例子",
+          "headers": [
+            "动词",
+            "ich",
+            "du",
+            "er/sie/es",
+            "wir"
+          ],
+          "rows": [
+            [
+              "fahren",
+              "fahre",
+              "fährst",
+              "fährt",
+              "fahren"
+            ],
+            [
+              "lesen",
+              "lese",
+              "liest",
+              "liest",
+              "lesen"
+            ],
+            [
+              "sehen",
+              "sehe",
+              "siehst",
+              "sieht",
+              "sehen"
+            ],
+            [
+              "nehmen",
+              "nehme",
+              "nimmst",
+              "nimmt",
+              "nehmen"
+            ],
+            [
+              "helfen",
+              "helfe",
+              "hilfst",
+              "hilft",
+              "helfen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Du fährst morgen nach Köln.",
+          "zh": "你明天去科隆。",
+          "note": "a→ä。"
+        },
+        {
+          "de": "Er liest jeden Abend.",
+          "zh": "他每天晚上读书。",
+          "note": "e→ie。"
+        },
+        {
+          "de": "Sie nimmt den Bus.",
+          "zh": "她坐公交。",
+          "note": "nehmen → nimmt。"
+        }
+      ],
+      "pitfalls": [
+        "不要把词干变化扩展到 wir：*wir fähren* 错。",
+        "不规则变化必须按具体动词记，不是所有 e 都变 i/ie。"
+      ],
+      "memorize": [
+        "du + er/sie/es 是词干变化高发区"
+      ],
+      "related": [
+        "present_regular",
+        "modal",
+        "partizip_rules"
+      ]
+    },
+    {
+      "id": "modal",
+      "summary": "情态动词表示能力、许可、必要、义务、意愿等。德语最核心的情态动词是 dürfen, können, mögen/möchten, müssen, sollen, wollen；它们与实义动词一起构成典型句框。",
+      "sections": [
+        {
+          "title": "情态动词有哪些",
+          "bullets": [
+            "dürfen：被允许/可以；können：能够/会；müssen：必须；sollen：应该/按要求要；wollen：想要/打算。",
+            "mögen：喜欢；möchten 是 mögen 的 Konjunktiv-II 形式，但在初级德语中常作为礼貌“想要”单独学习。",
+            "不同情态动词语气差很多：Ich muss gehen（必须走）≠ Ich soll gehen（别人要求/应该走）≠ Ich will gehen（我想走）。"
+          ]
+        },
+        {
+          "title": "主句词序",
+          "bullets": [
+            "情态动词按主语变位，放在主句有限动词位置；实义动词保持 Infinitiv，放句末。",
+            "Ich muss heute arbeiten. / Heute muss ich arbeiten.",
+            "Ja/Nein-Frage：Kannst du morgen kommen? 情态动词直接到第一位。"
+          ]
+        },
+        {
+          "title": "从句词序",
+          "bullets": [
+            "weil/dass 等从句里，实义动词 + 变位情态动词一起靠末尾：..., weil ich heute arbeiten muss。",
+            "情态动词后普通实义动词不加 zu：muss arbeiten，不是 *muss zu arbeiten。"
+          ]
+        },
+        {
+          "title": "mögen 和 möchten",
+          "bullets": [
+            "mögen 常直接接名词表示喜欢：Ich mag Kaffee。",
+            "möchten 表礼貌愿望：Ich möchte einen Kaffee. / Ich möchte gehen。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "六个核心情态动词 + möchten",
+          "headers": [
+            "人称",
+            "dürfen",
+            "können",
+            "mögen",
+            "müssen",
+            "sollen",
+            "wollen",
+            "möchten"
+          ],
+          "rows": [
+            [
+              "ich",
+              "darf",
+              "kann",
+              "mag",
+              "muss",
+              "soll",
+              "will",
+              "möchte"
+            ],
+            [
+              "du",
+              "darfst",
+              "kannst",
+              "magst",
+              "musst",
+              "sollst",
+              "willst",
+              "möchtest"
+            ],
+            [
+              "er/sie/es",
+              "darf",
+              "kann",
+              "mag",
+              "muss",
+              "soll",
+              "will",
+              "möchte"
+            ],
+            [
+              "wir",
+              "dürfen",
+              "können",
+              "mögen",
+              "müssen",
+              "sollen",
+              "wollen",
+              "möchten"
+            ],
+            [
+              "ihr",
+              "dürft",
+              "könnt",
+              "mögt",
+              "müsst",
+              "sollt",
+              "wollt",
+              "möchtet"
+            ],
+            [
+              "sie/Sie",
+              "dürfen",
+              "können",
+              "mögen",
+              "müssen",
+              "sollen",
+              "wollen",
+              "möchten"
+            ]
+          ]
+        },
+        {
+          "title": "意义速查",
+          "headers": [
+            "动词",
+            "核心意义",
+            "例子"
+          ],
+          "rows": [
+            [
+              "dürfen",
+              "许可",
+              "Du darfst gehen."
+            ],
+            [
+              "können",
+              "能力/可能",
+              "Ich kann schwimmen."
+            ],
+            [
+              "müssen",
+              "必要/必须",
+              "Wir müssen arbeiten."
+            ],
+            [
+              "sollen",
+              "义务/他人要求",
+              "Du sollst anrufen."
+            ],
+            [
+              "wollen",
+              "意愿",
+              "Ich will gehen."
+            ],
+            [
+              "mögen",
+              "喜欢",
+              "Ich mag Musik."
+            ],
+            [
+              "möchten",
+              "礼貌愿望",
+              "Ich möchte Kaffee."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich muss heute länger arbeiten.",
+          "zh": "我今天必须多工作一会儿。",
+          "note": "muss 变位，arbeiten 放句末。"
+        },
+        {
+          "de": "Wir können morgen früher gehen.",
+          "zh": "我们明天可以早点走。",
+          "note": "wir + können。"
+        },
+        {
+          "de": "Darf ich hier sitzen?",
+          "zh": "我可以坐这里吗？",
+          "note": "dürfen 表许可。"
+        },
+        {
+          "de": "Ich möchte einen Kaffee.",
+          "zh": "我想要一杯咖啡。",
+          "note": "möchten 比 wollen 更礼貌。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *ich muss zu arbeiten*；情态动词后直接接 Infinitiv。",
+        "ich/er/sie/es 的情态动词常没有普通 -e/-t 词尾：ich kann, er kann；ich muss, er muss。",
+        "sollen 常暗示外部要求/转述，不等同于 müssen 的客观必要。"
+      ],
+      "memorize": [
+        "变位情态动词在前，Infinitiv 在句末"
+      ],
+      "related": [
+        "satzklammer",
+        "v2",
+        "konj2_functions",
+        "preterite_basic"
+      ]
+    },
+    {
+      "id": "separable",
+      "summary": "可分动词由可分前缀 + 动词组成。主句中前缀被“拆”到句末；从句、zu-Infinitiv 和 Partizip II 中则按各自规则重新组合。",
+      "sections": [
+        {
+          "title": "常见可分前缀",
+          "bullets": [
+            "an-, auf-, aus-, ein-, mit-, nach-, vor-, weg-, zu-, zurück- 等常可分。",
+            "不可分前缀 be-, emp-, ent-, er-, ge-, miss-, ver-, zer- 通常不分。"
+          ]
+        },
+        {
+          "title": "四种结构",
+          "bullets": [
+            "主句：Ich rufe dich an. → rufe 在 V2，an 在句末。",
+            "从句：..., weil ich dich anrufe. → 前缀和动词合在一起并置末。",
+            "zu-Infinitiv：anzurufen, aufzustehen → zu 插在前缀和词干之间。",
+            "Partizip II：angerufen, aufgestanden → ge 通常插在可分前缀后。"
+          ]
+        },
+        {
+          "title": "有情态动词时",
+          "bullets": [
+            "可分动词作为 Infinitiv 不拆：Ich muss früh aufstehen。",
+            "情态动词承担变位，完整的 aufstehen 放句末。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "anrufen 的结构变化",
+          "headers": [
+            "结构",
+            "形式"
+          ],
+          "rows": [
+            [
+              "主句",
+              "Ich rufe dich an."
+            ],
+            [
+              "weil 从句",
+              "..., weil ich dich anrufe."
+            ],
+            [
+              "zu-Infinitiv",
+              "anzurufen"
+            ],
+            [
+              "Partizip II",
+              "angerufen"
+            ],
+            [
+              "Modalverb",
+              "Ich muss dich anrufen."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Wir stehen um sechs Uhr auf.",
+          "zh": "我们六点起床。",
+          "note": "主句拆分。"
+        },
+        {
+          "de": "Ich weiß, dass er früh aufsteht.",
+          "zh": "我知道他起得早。",
+          "note": "从句不拆。"
+        },
+        {
+          "de": "Sie versucht, mich anzurufen.",
+          "zh": "她试着给我打电话。",
+          "note": "zu 插在中间。"
+        }
+      ],
+      "pitfalls": [
+        "不要把所有前缀动词都当可分动词；verstehen、besuchen 不可分。",
+        "主句中可分前缀通常必须回到句末，不能漏掉。"
+      ],
+      "memorize": [
+        "主句拆；从句合；zu/ge 插中间"
+      ],
+      "related": [
+        "satzklammer",
+        "partizip_rules",
+        "inf_zu",
+        "modal"
+      ]
+    },
+    {
+      "id": "perfect_haben",
+      "summary": "Perfekt 是口语中最常用的过去时形式之一。大多数动词用变位 haben + Partizip II。",
+      "sections": [
+        {
+          "title": "基本结构",
+          "bullets": [
+            "主句：Subjekt + haben（变位）+ ... + Partizip II。",
+            "Ich habe gestern gearbeitet. / Gestern habe ich gearbeitet.",
+            "问句：Hast du das Buch gelesen?"
+          ]
+        },
+        {
+          "title": "哪些动词通常用 haben",
+          "bullets": [
+            "绝大多数及物动词：kaufen, sehen, machen, lernen, besuchen。",
+            "大多数表示持续活动而非“到达另一位置/状态变化”的不及物动词：arbeiten, schlafen 等。",
+            "反身动词通常用 haben：Ich habe mich gefreut。"
+          ]
+        },
+        {
+          "title": "Partizip II 是另一层规则",
+          "bullets": [
+            "haben 还是 sein 与 Partizip II 如何构成是两个独立问题。",
+            "规则、可分、不可分、-ieren 和强变化动词的 Partizip II 规则见“Partizip II”。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "haben 在 Perfekt 中",
+          "headers": [
+            "人称",
+            "助动词"
+          ],
+          "rows": [
+            [
+              "ich",
+              "habe"
+            ],
+            [
+              "du",
+              "hast"
+            ],
+            [
+              "er/sie/es",
+              "hat"
+            ],
+            [
+              "wir",
+              "haben"
+            ],
+            [
+              "ihr",
+              "habt"
+            ],
+            [
+              "sie/Sie",
+              "haben"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich habe Deutsch gelernt.",
+          "zh": "我学了德语。",
+          "note": "lernen → gelernt。"
+        },
+        {
+          "de": "Sie hat ihre Mutter angerufen.",
+          "zh": "她给妈妈打了电话。",
+          "note": "anrufen → angerufen。"
+        },
+        {
+          "de": "Wir haben einen Film gesehen.",
+          "zh": "我们看了一部电影。",
+          "note": "sehen → gesehen。"
+        }
+      ],
+      "pitfalls": [
+        "不要默认所有 Perfekt 都用 haben；gehen/kommen 等核心位移动词用 sein。",
+        "Partizip II 通常在主句句末。"
+      ],
+      "memorize": [
+        "多数动词：haben + Partizip II"
+      ],
+      "related": [
+        "perfect_sein",
+        "partizip_rules",
+        "satzklammer",
+        "preterite_basic"
+      ]
+    },
+    {
+      "id": "perfect_sein",
+      "summary": "一部分表示位置变化或状态变化的动词，以及 sein/bleiben 等，在 Perfekt 中用变位 sein + Partizip II。",
+      "sections": [
+        {
+          "title": "核心动词",
+          "bullets": [
+            "最常见：gehen, kommen, fahren（从 A 到 B）, fliegen, laufen（位移）, aufstehen, einschlafen, werden, bleiben。",
+            "sein 本身：Ich bin krank gewesen。"
+          ]
+        },
+        {
+          "title": "判断思路",
+          "bullets": [
+            "典型“从一个地点到另一个地点”的不及物运动动词常用 sein。",
+            "典型状态变化：aufstehen, einschlafen, werden 等常用 sein。",
+            "不是“只要动了就用 sein”；arbeiten、tanzen 等活动通常用 haben。"
+          ]
+        },
+        {
+          "title": "句框",
+          "bullets": [
+            "sein 变位后占 V2，Partizip II 放句末：Gestern bin ich nach Köln gefahren。",
+            "从句里：..., weil ich nach Köln gefahren bin。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "sein 在 Perfekt 中",
+          "headers": [
+            "人称",
+            "助动词"
+          ],
+          "rows": [
+            [
+              "ich",
+              "bin"
+            ],
+            [
+              "du",
+              "bist"
+            ],
+            [
+              "er/sie/es",
+              "ist"
+            ],
+            [
+              "wir",
+              "sind"
+            ],
+            [
+              "ihr",
+              "seid"
+            ],
+            [
+              "sie/Sie",
+              "sind"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich bin spät gekommen.",
+          "zh": "我来晚了。",
+          "note": "kommen → sein。"
+        },
+        {
+          "de": "Wir sind nach Berlin gefahren.",
+          "zh": "我们去了柏林。",
+          "note": "位移。"
+        },
+        {
+          "de": "Er ist zu Hause geblieben.",
+          "zh": "他留在家里了。",
+          "note": "bleiben 用 sein。"
+        }
+      ],
+      "pitfalls": [
+        "“移动”只是实用线索，不是绝对规则；某些动词会随意义和地区习惯变化。",
+        "不要写 *ich habe gegangen*。"
+      ],
+      "memorize": [
+        "gehen / kommen / fahren / bleiben → sein"
+      ],
+      "related": [
+        "perfect_haben",
+        "partizip_rules",
+        "temporal_clauses"
+      ]
+    },
+    {
+      "id": "negation",
+      "summary": "德语最重要的两种否定是 kein- 和 nicht。kein- 主要否定名词；nicht 的位置取决于你具体否定什么。",
+      "sections": [
+        {
+          "title": "什么时候用 kein-",
+          "bullets": [
+            "否定没有定冠词的名词或原本会用 ein- 的名词：Ich habe ein Auto → Ich habe kein Auto。",
+            "kein- 像 ein- 类冠词一样变格：keinen Bruder, keiner Frau, keinem Kind。"
+          ]
+        },
+        {
+          "title": "什么时候用 nicht",
+          "bullets": [
+            "否定形容词：Das ist nicht teuer。",
+            "否定时间/方式/地点等特定成分时，nicht 通常放在被否定成分前：nicht heute, nicht mit dem Bus。",
+            "否定整个谓语：Ich komme heute nicht. / Ich habe das Buch nicht gelesen. / Ich kann heute nicht kommen."
+          ]
+        },
+        {
+          "title": "否定范围很重要",
+          "bullets": [
+            "Ich kaufe das Auto nicht = 我不买这辆车。",
+            "Ich kaufe nicht das Auto, sondern das Fahrrad = 不是买车，而是买自行车。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "kein vs. nicht",
+          "headers": [
+            "目标",
+            "通常用",
+            "例子"
+          ],
+          "rows": [
+            [
+              "无定冠词/不定冠词名词",
+              "kein-",
+              "kein Auto"
+            ],
+            [
+              "形容词",
+              "nicht",
+              "nicht teuer"
+            ],
+            [
+              "动词/整个句子",
+              "nicht",
+              "Ich komme nicht."
+            ],
+            [
+              "介词短语/时间等成分",
+              "nicht",
+              "nicht mit dem Bus"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Sie hat keine Zeit.",
+          "zh": "她没时间。",
+          "note": "die Zeit → keine。"
+        },
+        {
+          "de": "Ich komme heute nicht.",
+          "zh": "我今天不来。",
+          "note": "否定整个动作。"
+        },
+        {
+          "de": "Das ist nicht mein Auto.",
+          "zh": "这不是我的车。",
+          "note": "否定带物主词的名词短语。"
+        }
+      ],
+      "pitfalls": [
+        "nicht 没有一个永远固定的位置；位置反映否定范围。",
+        "不要用 kein 否定带定冠词的具体名词：通常说 nicht das Auto，而不是 *kein das Auto。"
+      ],
+      "memorize": [
+        "kein- 否定名词；nicht 否定其他内容/整个句子"
+      ],
+      "related": [
+        "article_acc",
+        "v2",
+        "coord_conj"
+      ]
+    },
+    {
+      "id": "v2",
+      "summary": "德语陈述主句的有限动词位于第二个“句法位置”（Verbzweit），不是第二个单词。第一位置可以由一个完整成分占据。",
+      "sections": [
+        {
+          "title": "什么叫第二位置",
+          "bullets": [
+            "Ich arbeite heute zu Hause. → 主语占第一位置，arbeite 第二。",
+            "Heute arbeite ich zu Hause. → Heute 占第一位置，arbeite 仍第二。",
+            "Nach dem Kurs gehe ich nach Hause. → Nach dem Kurs 整个介词短语算一个位置。"
+          ]
+        },
+        {
+          "title": "第一位置能放什么",
+          "bullets": [
+            "主语、时间、地点、宾语或从句都可以占据前场。",
+            "第一位置不是主语时，主语通常出现在有限动词后。"
+          ]
+        },
+        {
+          "title": "与句框结合",
+          "bullets": [
+            "情态：Heute muss ich lange arbeiten。",
+            "Perfekt：Gestern habe ich lange gearbeitet。",
+            "可分动词：Heute rufe ich meine Mutter an。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "主句字段",
+          "headers": [
+            "位置 1",
+            "位置 2",
+            "中间",
+            "句末"
+          ],
+          "rows": [
+            [
+              "Heute",
+              "arbeite",
+              "ich zu Hause",
+              "—"
+            ],
+            [
+              "Gestern",
+              "habe",
+              "ich lange",
+              "gearbeitet"
+            ],
+            [
+              "Morgen",
+              "rufe",
+              "ich Anna",
+              "an"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Heute lerne ich Deutsch.",
+          "zh": "今天我学德语。",
+          "note": "Heute 是第一成分。"
+        },
+        {
+          "de": "Nach der Arbeit fahre ich nach Hause.",
+          "zh": "下班后我回家。",
+          "note": "整个短语占第一位置。"
+        },
+        {
+          "de": "Das Buch lese ich morgen.",
+          "zh": "这本书我明天读。",
+          "note": "宾语也可以前置。"
+        }
+      ],
+      "pitfalls": [
+        "V2 是第二个句法成分，不是第二个书面单词。",
+        "weil/dass 等从句不是 V2；有限动词通常去句末。"
+      ],
+      "memorize": [
+        "主句：一个成分 + 有限动词 + …"
+      ],
+      "related": [
+        "questions",
+        "satzklammer",
+        "weil",
+        "dass"
+      ]
+    },
+    {
+      "id": "weil",
+      "summary": "weil 引导原因从句，意思是“因为”。从句中有限动词放到末尾；如果 weil 从句前置，后面的主句仍遵守 V2。",
+      "sections": [
+        {
+          "title": "基本词序",
+          "bullets": [
+            "Ich bleibe zu Hause, weil ich krank bin。",
+            "weil 从句里的 bin 在末尾。"
+          ]
+        },
+        {
+          "title": "前置从句",
+          "bullets": [
+            "Weil ich krank bin, bleibe ich zu Hause。",
+            "整个 weil 从句占主句第一位置，所以逗号后直接是有限动词 bleibe，再接主语 ich。"
+          ]
+        },
+        {
+          "title": "复杂谓语",
+          "bullets": [
+            "情态：..., weil ich arbeiten muss。",
+            "Perfekt：..., weil ich lange gearbeitet habe。",
+            "可分动词：..., weil ich früh aufstehe。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "weil 词序",
+          "headers": [
+            "类型",
+            "结构"
+          ],
+          "rows": [
+            [
+              "后置",
+              "Hauptsatz, weil Subjekt ... Verb."
+            ],
+            [
+              "前置",
+              "Weil Subjekt ... Verb, Verb + Subjekt ..."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich komme später, weil ich noch arbeite.",
+          "zh": "我晚点来，因为我还在工作。"
+        },
+        {
+          "de": "Weil ich müde bin, gehe ich früh ins Bett.",
+          "zh": "因为我累，我早点睡。"
+        },
+        {
+          "de": "Er bleibt zu Hause, weil er arbeiten muss.",
+          "zh": "他待在家，因为他必须工作。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *weil ich bin müde*。",
+        "前置从句后不要写 *..., ich gehe...*；正确是 ..., gehe ich ...。"
+      ],
+      "memorize": [
+        "weil → 有限动词句末"
+      ],
+      "related": [
+        "dass",
+        "wenn",
+        "obwohl",
+        "v2"
+      ]
+    },
+    {
+      "id": "dass",
+      "summary": "dass 引导陈述性从句，常用于“说、想、相信、知道、希望”等内容从句。有限动词位于句末。",
+      "sections": [
+        {
+          "title": "常见触发词",
+          "bullets": [
+            "sagen, denken, glauben, wissen, hoffen, finden 等后面常接 dass 从句。",
+            "主句和 dass 从句之间用逗号。"
+          ]
+        },
+        {
+          "title": "词序",
+          "bullets": [
+            "Ich glaube, dass er heute arbeitet。",
+            "情态：..., dass er morgen kommen kann。",
+            "Perfekt：..., dass sie nach Köln gefahren ist。"
+          ]
+        },
+        {
+          "title": "dass vs. das",
+          "bullets": [
+            "dass 是连词，不能当冠词/代词。",
+            "das 可以是中性定冠词或代词：das Buch / Das ist gut。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "dass 从句",
+          "headers": [
+            "结构",
+            "例子"
+          ],
+          "rows": [
+            [
+              "简单谓语",
+              "..., dass er heute arbeitet."
+            ],
+            [
+              "情态",
+              "..., dass er kommen kann."
+            ],
+            [
+              "Perfekt",
+              "..., dass sie gekommen ist."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich denke, dass er recht hat.",
+          "zh": "我觉得他是对的。"
+        },
+        {
+          "de": "Sie sagt, dass sie keine Zeit hat.",
+          "zh": "她说她没时间。"
+        },
+        {
+          "de": "Wir hoffen, dass du kommen kannst.",
+          "zh": "我们希望你能来。"
+        }
+      ],
+      "pitfalls": [
+        "dass 和 das 拼写不同、功能不同。",
+        "从句里不要保留普通 V2：*dass er arbeitet heute* 通常错误。"
+      ],
+      "memorize": [
+        "dass → 内容从句 + 动词末位"
+      ],
+      "related": [
+        "weil",
+        "indirect_questions",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "obwohl",
+      "summary": "obwohl 引导让步从句，意思是“虽然/尽管”。它承认一个情况存在，但主句结果与通常预期不同。",
+      "sections": [
+        {
+          "title": "词序",
+          "bullets": [
+            "obwohl 是从属连词，有限动词放从句末尾：Obwohl ich müde bin, ...",
+            "前置 obwohl 从句占第一位置，主句有限动词紧跟逗号：..., arbeite ich weiter。"
+          ]
+        },
+        {
+          "title": "和 trotzdem 对比",
+          "bullets": [
+            "obwohl 引导从句：Obwohl es regnet, gehen wir raus。",
+            "trotzdem 是连接副词：Es regnet. Trotzdem gehen wir raus。",
+            "二者表达相近逻辑，但句法不同。"
+          ]
+        },
+        {
+          "title": "复杂谓语",
+          "bullets": [
+            "Perfekt：obwohl er spät gekommen ist。",
+            "情态：obwohl sie arbeiten muss。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "obwohl vs. trotzdem",
+          "headers": [
+            "词",
+            "类型",
+            "词序"
+          ],
+          "rows": [
+            [
+              "obwohl",
+              "从属连词",
+              "动词末位"
+            ],
+            [
+              "trotzdem",
+              "副词/连接副词",
+              "后面保持主句 V2"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Obwohl es regnet, gehen wir spazieren.",
+          "zh": "虽然下雨，我们还是去散步。"
+        },
+        {
+          "de": "Sie kommt zur Arbeit, obwohl sie krank ist.",
+          "zh": "虽然她生病了，她还是来上班。"
+        },
+        {
+          "de": "Obwohl wir früh aufstehen müssen, gehen wir spät schlafen.",
+          "zh": "虽然我们必须早起，我们还是很晚睡。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *obwohl ich bin müde*。",
+        "obwohl 已经表达“虽然”，通常不需要机械加 aber。"
+      ],
+      "memorize": [
+        "obwohl = 虽然 + 动词末位"
+      ],
+      "related": [
+        "deshalb",
+        "weil",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "deshalb",
+      "summary": "deshalb/deswegen/daher 表示“因此”，trotzdem 表示“尽管如此”。它们是连接副词，不是从属连词，所以后面仍是主句词序。",
+      "sections": [
+        {
+          "title": "V2 规则",
+          "bullets": [
+            "Deshalb 占第一位置 → 有限动词必须紧跟：Deshalb bleibe ich zu Hause。",
+            "Trotzdem gehe ich raus. 也是同样结构。"
+          ]
+        },
+        {
+          "title": "逻辑功能",
+          "bullets": [
+            "原因 → 结果：Ich bin krank. Deshalb bleibe ich zu Hause。",
+            "逆预期：Es regnet. Trotzdem gehe ich raus。"
+          ]
+        },
+        {
+          "title": "和 weil/obwohl 对比",
+          "bullets": [
+            "weil/obwohl 引导从句，动词末位。",
+            "deshalb/trotzdem 自己是第一成分，后面立刻有限动词。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "连接方式",
+          "headers": [
+            "意义",
+            "从句形式",
+            "主句副词形式"
+          ],
+          "rows": [
+            [
+              "原因→结果",
+              "weil ...",
+              "deshalb / deswegen / daher ..."
+            ],
+            [
+              "让步",
+              "obwohl ...",
+              "trotzdem ..."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich bin krank. Deshalb bleibe ich zu Hause.",
+          "zh": "我病了，所以待在家。"
+        },
+        {
+          "de": "Der Zug fällt aus. Deshalb nehmen wir den Bus.",
+          "zh": "火车停运，所以我们坐公交。"
+        },
+        {
+          "de": "Es regnet. Trotzdem gehen wir spazieren.",
+          "zh": "下雨了，但我们仍去散步。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *Deshalb ich bleibe...*。",
+        "deshalb 是“结果”；weil 引导的是“原因”。"
+      ],
+      "memorize": [
+        "deshalb/trotzdem + Verb + Subjekt"
+      ],
+      "related": [
+        "weil",
+        "obwohl",
+        "v2"
+      ]
+    },
+    {
+      "id": "comparative",
+      "summary": "比较级用于比较两者，最高级表示最高程度。基本形式通常是 -er 和 am ...-sten/-esten，但高频词有变音或不规则变化。",
+      "sections": [
+        {
+          "title": "比较级怎么构成",
+          "bullets": [
+            "多数形容词 + -er：schnell → schneller, klein → kleiner。",
+            "部分单音节常发生 Umlaut：alt → älter, groß → größer, jung → jünger。",
+            "teuer → teurer（省略一个 e）；dunkel → dunkler。"
+          ]
+        },
+        {
+          "title": "最高级怎么构成",
+          "bullets": [
+            "作副词/表语常用 am + -sten：am schnellsten。",
+            "以 -d/-t/-s/-ß/-sch/-x/-z 等结尾常用 -esten：am ältesten。",
+            "作定语时最高级还要像形容词一样变格：der schnellste Zug。"
+          ]
+        },
+        {
+          "title": "比较连接词",
+          "bullets": [
+            "不同程度：größer als。",
+            "相同程度：so groß wie。",
+            "不规则：gut → besser → am besten；viel → mehr → am meisten；gern → lieber → am liebsten。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "常见变化",
+          "headers": [
+            "原级",
+            "比较级",
+            "最高级"
+          ],
+          "rows": [
+            [
+              "schnell",
+              "schneller",
+              "am schnellsten"
+            ],
+            [
+              "alt",
+              "älter",
+              "am ältesten"
+            ],
+            [
+              "groß",
+              "größer",
+              "am größten"
+            ],
+            [
+              "gut",
+              "besser",
+              "am besten"
+            ],
+            [
+              "viel",
+              "mehr",
+              "am meisten"
+            ],
+            [
+              "gern",
+              "lieber",
+              "am liebsten"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Mein Fahrrad ist schneller als deins.",
+          "zh": "我的自行车比你的快。"
+        },
+        {
+          "de": "Anna ist so groß wie Lisa.",
+          "zh": "Anna 和 Lisa 一样高。"
+        },
+        {
+          "de": "Dieser Zug fährt am schnellsten.",
+          "zh": "这班火车开得最快。"
+        }
+      ],
+      "pitfalls": [
+        "比较“不同”用 als，不用 wie；相同程度用 wie。",
+        "放在名词前的比较级/最高级仍需要形容词词尾：ein größeres Auto。"
+      ],
+      "memorize": [
+        "-er + als；so ... wie；am ...sten"
+      ],
+      "related": [
+        "adj_consolidated"
+      ]
+    },
+    {
+      "id": "relative",
+      "summary": "关系从句补充说明一个先行词。关系代词的性和数由先行词决定，但格由它在关系从句中的语法功能决定。",
+      "sections": [
+        {
+          "title": "两步判断",
+          "bullets": [
+            "第一步：看先行词性别/数，确定 der/die/das/die 的基础系列。",
+            "第二步：看关系代词在从句里是主语还是宾语，决定 Nominativ 或 Akkusativ。"
+          ]
+        },
+        {
+          "title": "词序",
+          "bullets": [
+            "关系从句用逗号隔开，有限动词放句末。",
+            "Das ist der Mann, der dort arbeitet.（der 是从句主语）",
+            "Das ist der Mann, den ich kenne.（den 是从句宾语）"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "关系代词 Nom./Akk.",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "der",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Akk.",
+              "den",
+              "die",
+              "das",
+              "die"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Das ist die Frau, die dort arbeitet.",
+          "zh": "这就是在那里工作的女人。",
+          "note": "die 作主语。"
+        },
+        {
+          "de": "Das ist der Film, den ich gesehen habe.",
+          "zh": "这就是我看过的电影。",
+          "note": "Film m.，关系代词在从句中作 Akk.。"
+        },
+        {
+          "de": "Die Bücher, die auf dem Tisch liegen, sind neu.",
+          "zh": "桌上的书是新的。",
+          "note": "复数 Nom. die。"
+        }
+      ],
+      "pitfalls": [
+        "关系代词的格不是由先行词在主句中的格决定。",
+        "关系从句有限动词必须到末尾。"
+      ],
+      "memorize": [
+        "性/数看先行词；格看从句功能"
+      ],
+      "related": [
+        "relative_dat_prep",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "konj2",
+      "summary": "Konjunktiv II 表示假设、非现实、愿望、礼貌距离等。B1 最重要的是掌握 wäre, hätte, 情态动词形式以及 würde + Infinitiv。",
+      "sections": [
+        {
+          "title": "高频独立形式",
+          "bullets": [
+            "sein → wäre；haben → hätte。",
+            "können → könnte；müssen → müsste；dürfen → dürfte；sollen → sollte；wollen → wollte（形式与 Präteritum 相同，语境区分）。",
+            "这些形式通常比 würde sein / würde haben 更自然。"
+          ]
+        },
+        {
+          "title": "würde + Infinitiv",
+          "bullets": [
+            "很多普通动词用 würde + Infinitiv：Ich würde mehr reisen。",
+            "主句句框：würde ... reisen。",
+            "在口语和 B1 假设句中非常高频。"
+          ]
+        },
+        {
+          "title": "条件句",
+          "bullets": [
+            "Wenn ich mehr Zeit hätte, würde ich mehr lesen。",
+            "wenn 从句里 Konjunktiv II 有限动词放末尾；主句保持 V2。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "高频 Konjunktiv II",
+          "headers": [
+            "动词",
+            "ich",
+            "du",
+            "er/sie/es",
+            "wir",
+            "ihr",
+            "sie/Sie"
+          ],
+          "rows": [
+            [
+              "sein",
+              "wäre",
+              "wärest/wärst",
+              "wäre",
+              "wären",
+              "wäret/wärt",
+              "wären"
+            ],
+            [
+              "haben",
+              "hätte",
+              "hättest",
+              "hätte",
+              "hätten",
+              "hättet",
+              "hätten"
+            ],
+            [
+              "können",
+              "könnte",
+              "könntest",
+              "könnte",
+              "könnten",
+              "könntet",
+              "könnten"
+            ],
+            [
+              "müssen",
+              "müsste",
+              "müsstest",
+              "müsste",
+              "müssten",
+              "müsstet",
+              "müssten"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich hätte gern mehr Zeit.",
+          "zh": "我希望有更多时间。"
+        },
+        {
+          "de": "Wir könnten morgen kommen.",
+          "zh": "我们明天可以来（较委婉/假设）。"
+        },
+        {
+          "de": "Wenn ich reich wäre, würde ich weniger arbeiten.",
+          "zh": "如果我很有钱，我会少工作。"
+        }
+      ],
+      "pitfalls": [
+        "不要把 hätte/wäre 当普通过去时；它们在这里表达虚拟。",
+        "普通动词常用 würde + Infinitiv，但 sein/haben/情态动词通常直接用自身 Konjunktiv-II 形式。"
+      ],
+      "memorize": [
+        "wäre · hätte · könnte · müsste · würde + Infinitiv"
+      ],
+      "related": [
+        "konj2_functions",
+        "wenn",
+        "preterite_basic"
+      ]
+    },
+    {
+      "id": "passive",
+      "summary": "Vorgangspassiv（过程被动）强调“动作发生/某物被处理”，现在时用 werden + Partizip II。",
+      "sections": [
+        {
+          "title": "主动变被动",
+          "bullets": [
+            "主动：Die Firma liefert das Paket。",
+            "被动：Das Paket wird geliefert。原来的 Akkusativ 宾语成为被动句主语。",
+            "执行者如果重要，可用 von + Dativ：Das Paket wird von der Firma geliefert。"
+          ]
+        },
+        {
+          "title": "现在时变位",
+          "bullets": [
+            "werden 根据被动句主语变位：wird（单数）/ werden（复数）。",
+            "Partizip II 放在句末，形成句框。"
+          ]
+        },
+        {
+          "title": "过程 vs. 状态",
+          "bullets": [
+            "Das Paket wird geliefert = 正在/会被送达，强调过程。",
+            "Das Paket ist geliefert = 已处于送达状态，属于 Zustandspassiv/状态描述。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Passiv Präsens",
+          "headers": [
+            "主语",
+            "werden",
+            "Partizip II"
+          ],
+          "rows": [
+            [
+              "das Paket",
+              "wird",
+              "geliefert"
+            ],
+            [
+              "die Pakete",
+              "werden",
+              "geliefert"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Die Ware wird morgen geliefert.",
+          "zh": "货物明天会被送达。"
+        },
+        {
+          "de": "Der Vertrag wird heute unterschrieben.",
+          "zh": "合同今天被签署。"
+        },
+        {
+          "de": "Das Auto wird in Deutschland produziert.",
+          "zh": "这辆车在德国生产。"
+        }
+      ],
+      "pitfalls": [
+        "werden + Partizip II 是过程被动；sein + Partizip II 通常是状态。",
+        "被动中 werden 要和新的主语一致变位。"
+      ],
+      "memorize": [
+        "Passiv Präsens = werden + Partizip II"
+      ],
+      "related": [
+        "passive_past",
+        "partizip_rules",
+        "satzklammer"
+      ]
+    },
+    {
+      "id": "inf_zu",
+      "summary": "zu-Infinitiv 是“带 zu 的不定式结构”。常跟在某些动词、形容词、名词之后，用来表达另一个动作而不建立完整有限从句。",
+      "sections": [
+        {
+          "title": "常见触发",
+          "bullets": [
+            "动词：versuchen, hoffen, planen, vergessen, anfangen, vorhaben 等。",
+            "形容词表达：Es ist wichtig, ... zu ... / Es ist schwer, ... zu ...。",
+            "名词表达：Ich habe Lust/Zeit, ... zu ...。"
+          ]
+        },
+        {
+          "title": "zu 放在哪里",
+          "bullets": [
+            "普通动词：zu kommen, zu lernen。",
+            "可分动词：aufzustehen, anzurufen，zu 插在前缀与词干之间。",
+            "不可分前缀：zu besuchen；-ieren：zu studieren。"
+          ]
+        },
+        {
+          "title": "什么时候没有 zu",
+          "bullets": [
+            "情态动词后：Ich muss arbeiten。",
+            "lassen, sehen, hören 等一些结构后通常不用 zu：Ich höre ihn singen。",
+            "gehen/fahren + 活动也常不加 zu：Ich gehe einkaufen。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "zu-Infinitiv 构成",
+          "headers": [
+            "类型",
+            "例子"
+          ],
+          "rows": [
+            [
+              "普通",
+              "kommen → zu kommen"
+            ],
+            [
+              "可分",
+              "aufstehen → aufzustehen"
+            ],
+            [
+              "不可分",
+              "besuchen → zu besuchen"
+            ],
+            [
+              "-ieren",
+              "studieren → zu studieren"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich versuche, früher zu kommen.",
+          "zh": "我努力早点来。"
+        },
+        {
+          "de": "Sie hat vergessen, die Tür zu schließen.",
+          "zh": "她忘了关门。"
+        },
+        {
+          "de": "Wir haben vor, morgen früh aufzustehen.",
+          "zh": "我们打算明天早起。"
+        }
+      ],
+      "pitfalls": [
+        "情态动词后不要加 zu：*muss zu arbeiten* 错。",
+        "可分动词不是 *zu aufstehen*，而是 aufzustehen。"
+      ],
+      "memorize": [
+        "普通：zu + Infinitiv；可分：前缀 + zu + 词干"
+      ],
+      "related": [
+        "inf_purpose",
+        "separable",
+        "modal"
+      ]
+    },
+    {
+      "id": "present_sein_haben",
+      "summary": "sein 和 haben 是德语最核心的两个不规则动词，既能独立表达状态/拥有，也充当 Perfekt 的助动词。",
+      "sections": [
+        {
+          "title": "sein 的用法",
+          "bullets": [
+            "身份/类别：Ich bin Student。",
+            "状态：Sie ist müde。",
+            "地点：Wir sind zu Hause。",
+            "作为 Perfekt 助动词：Ich bin gekommen。"
+          ]
+        },
+        {
+          "title": "haben 的用法",
+          "bullets": [
+            "拥有：Ich habe ein Auto。",
+            "固定表达：Zeit haben, Hunger haben, Angst haben。",
+            "作为 Perfekt 助动词：Ich habe gearbeitet。"
+          ]
+        },
+        {
+          "title": "必须整体记忆",
+          "bullets": [
+            "这两个动词的单数变化不遵循普通规则词干，不能只套 -e/-st/-t。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Präsens",
+          "headers": [
+            "人称",
+            "sein",
+            "haben"
+          ],
+          "rows": [
+            [
+              "ich",
+              "bin",
+              "habe"
+            ],
+            [
+              "du",
+              "bist",
+              "hast"
+            ],
+            [
+              "er/sie/es",
+              "ist",
+              "hat"
+            ],
+            [
+              "wir",
+              "sind",
+              "haben"
+            ],
+            [
+              "ihr",
+              "seid",
+              "habt"
+            ],
+            [
+              "sie/Sie",
+              "sind",
+              "haben"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich bin heute müde.",
+          "zh": "我今天很累。"
+        },
+        {
+          "de": "Du hast morgen einen Termin.",
+          "zh": "你明天有个预约。"
+        },
+        {
+          "de": "Wir sind in Darmstadt.",
+          "zh": "我们在达姆施塔特。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *ich ist*、*du hat*。",
+        "sein 后表示身份的名词通常是 Nominativ，不是 Akkusativ。"
+      ],
+      "memorize": [
+        "bin/bist/ist/sind/seid/sind · habe/hast/hat/haben/habt/haben"
+      ],
+      "related": [
+        "present_regular",
+        "perfect_haben",
+        "perfect_sein"
+      ]
+    },
+    {
+      "id": "present_regular",
+      "summary": "规则动词现在时由“词干 + 人称词尾”构成。掌握这套词尾后，大量新动词都能直接变位。",
+      "sections": [
+        {
+          "title": "基本词尾",
+          "bullets": [
+            "ich -e；du -st；er/sie/es -t；wir -en；ihr -t；sie/Sie -en。",
+            "lernen → lerne, lernst, lernt, lernen, lernt, lernen。"
+          ]
+        },
+        {
+          "title": "发音导致的 e",
+          "bullets": [
+            "词干以 -d/-t 等结尾时常插入 e：arbeiten → du arbeitest, er arbeitet, ihr arbeitet。",
+            "这样避免难发音的辅音堆叠。"
+          ]
+        },
+        {
+          "title": "du 的拼写简化",
+          "bullets": [
+            "词干以 s/ß/x/z 常不再额外保留完整 -st 中的 s：heißen → du heißt；tanzen → du tanzt。",
+            "reisen → du reist。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "规则词尾",
+          "headers": [
+            "人称",
+            "词尾",
+            "machen"
+          ],
+          "rows": [
+            [
+              "ich",
+              "-e",
+              "mache"
+            ],
+            [
+              "du",
+              "-st",
+              "machst"
+            ],
+            [
+              "er/sie/es",
+              "-t",
+              "macht"
+            ],
+            [
+              "wir",
+              "-en",
+              "machen"
+            ],
+            [
+              "ihr",
+              "-t",
+              "macht"
+            ],
+            [
+              "sie/Sie",
+              "-en",
+              "machen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich lerne Deutsch.",
+          "zh": "我学德语。"
+        },
+        {
+          "de": "Du arbeitest heute zu Hause.",
+          "zh": "你今天在家工作。"
+        },
+        {
+          "de": "Ihr tanzt sehr gut.",
+          "zh": "你们跳舞跳得很好。"
+        }
+      ],
+      "pitfalls": [
+        "不要把 infinitive -en 用在所有人称。",
+        "词干变化动词另有规则；规则词尾并不能覆盖所有高频动词。"
+      ],
+      "memorize": [
+        "-e · -st · -t · -en · -t · -en"
+      ],
+      "related": [
+        "present_irregular",
+        "present_sein_haben",
+        "v2"
+      ]
+    },
+    {
+      "id": "questions",
+      "summary": "德语直接问句主要分 W-Frage 和 Ja/Nein-Frage。关键是有限动词的位置。",
+      "sections": [
+        {
+          "title": "W-Frage",
+          "bullets": [
+            "W-Wort + 有限动词 + 主语 + ...?",
+            "常见：wer 谁，was 什么，wann 何时，wo 哪里，wohin 去哪里，woher 从哪里，warum 为什么，wie 如何，wie viel 多少。",
+            "例：Wann beginnt der Kurs?"
+          ]
+        },
+        {
+          "title": "Ja/Nein-Frage",
+          "bullets": [
+            "没有疑问词，有限动词直接到第一位：Wohnst du in Darmstadt?",
+            "情态动词同样第一位：Kannst du kommen?"
+          ]
+        },
+        {
+          "title": "wer / wen / wem",
+          "bullets": [
+            "问人也要分格：Wer kommt?（Nom.）Wen siehst du?（Akk.）Wem hilfst du?（Dat.）"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "直接问句结构",
+          "headers": [
+            "类型",
+            "结构",
+            "例子"
+          ],
+          "rows": [
+            [
+              "W-Frage",
+              "W-Wort + Verb + Subjekt",
+              "Wo wohnst du?"
+            ],
+            [
+              "Ja/Nein",
+              "Verb + Subjekt",
+              "Wohnst du hier?"
+            ],
+            [
+              "问人",
+              "wer/wen/wem",
+              "Wem hilfst du?"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Warum lernst du Deutsch?",
+          "zh": "你为什么学德语？"
+        },
+        {
+          "de": "Hast du heute Zeit?",
+          "zh": "你今天有时间吗？"
+        },
+        {
+          "de": "Wem gehört das Fahrrad?",
+          "zh": "这辆自行车属于谁？"
+        }
+      ],
+      "pitfalls": [
+        "Ja/Nein-Frage 中有限动词是第一位，不是第二位。",
+        "直接问句和间接问句词序不同：Weißt du, wann der Kurs beginnt?"
+      ],
+      "memorize": [
+        "W-Frage：W + Verb + Subjekt；Ja/Nein：Verb + Subjekt"
+      ],
+      "related": [
+        "v2",
+        "indirect_questions",
+        "pron_nom"
+      ]
+    },
+    {
+      "id": "plural_nouns",
+      "summary": "德语名词复数没有一个万能公式。最可靠的学习方式是把单数、性别和复数作为一个词条一起记。",
+      "sections": [
+        {
+          "title": "常见复数模式",
+          "bullets": [
+            "-e：der Tisch → die Tische；有时加 Umlaut：der Stuhl → die Stühle。",
+            "-er：das Kind → die Kinder；常伴 Umlaut：das Buch → die Bücher。",
+            "-n/-en：die Tasche → die Taschen；die Frau → die Frauen。",
+            "-s：das Auto → die Autos，很多外来词用 -s。",
+            "零词尾：der Lehrer → die Lehrer；das Mädchen → die Mädchen。"
+          ]
+        },
+        {
+          "title": "一些有用倾向",
+          "bullets": [
+            "以 -ung/-heit/-keit/-schaft/-ion 结尾的阴性名词通常用 -en/-n。",
+            "-chen/-lein 小词通常复数形式不变。",
+            "这些只是高频规律，不是绝对算法。"
+          ]
+        },
+        {
+          "title": "冠词和格",
+          "bullets": [
+            "所有复数 Nominativ/Akkusativ 定冠词都是 die。",
+            "Dativ Plural 常额外给名词加 -n：mit den Kindern。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "常见复数",
+          "headers": [
+            "模式",
+            "例子"
+          ],
+          "rows": [
+            [
+              "-e",
+              "Tisch → Tische"
+            ],
+            [
+              "-er",
+              "Kind → Kinder"
+            ],
+            [
+              "-(e)n",
+              "Tasche → Taschen"
+            ],
+            [
+              "-s",
+              "Auto → Autos"
+            ],
+            [
+              "零词尾",
+              "Lehrer → Lehrer"
+            ],
+            [
+              "Umlaut + 词尾",
+              "Buch → Bücher"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "ein Buch – zwei Bücher",
+          "zh": "一本书——两本书。"
+        },
+        {
+          "de": "Die Kinder spielen draußen.",
+          "zh": "孩子们在外面玩。"
+        },
+        {
+          "de": "Ich spreche mit den Freunden.",
+          "zh": "我和朋友们聊天。"
+        }
+      ],
+      "pitfalls": [
+        "不要只凭名词结尾百分之百猜复数。",
+        "词典记忆建议写成：das Buch – die Bücher。"
+      ],
+      "memorize": [
+        "性别 + 单数 + 复数一起记"
+      ],
+      "related": [
+        "dative_plural",
+        "article_nom"
+      ]
+    },
+    {
+      "id": "adj_strong",
+      "summary": "无冠词时，前面没有限定词帮你显示格、性、数，所以形容词必须使用“强变化”来承担这些信息。",
+      "sections": [
+        {
+          "title": "为什么要强变化",
+          "bullets": [
+            "guter Kaffee 中 -er 相当于显示“阳性主格”的信息。",
+            "kaltes Wasser 中 -es 显示中性 Nom./Akk.。",
+            "Dativ 的强词尾很醒目：gutem Kaffee, frischer Milch。"
+          ]
+        },
+        {
+          "title": "学习方法",
+          "bullets": [
+            "可以把强变化词尾与 der/die/das/dem/der 等定冠词词尾进行类比。",
+            "但 Genitiv m./n. 的现代标准强变化通常为 -en：guten Weines。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "无冠词形容词词尾",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "-er",
+              "-e",
+              "-es",
+              "-e"
+            ],
+            [
+              "Akk.",
+              "-en",
+              "-e",
+              "-es",
+              "-e"
+            ],
+            [
+              "Dat.",
+              "-em",
+              "-er",
+              "-em",
+              "-en"
+            ],
+            [
+              "Gen.",
+              "-en",
+              "-er",
+              "-en",
+              "-er"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Frisches Brot schmeckt gut.",
+          "zh": "新鲜面包很好吃。"
+        },
+        {
+          "de": "Ich trinke kaltes Wasser.",
+          "zh": "我喝冷水。"
+        },
+        {
+          "de": "Mit starkem Kaffee arbeite ich besser.",
+          "zh": "喝浓咖啡时我工作更好。"
+        }
+      ],
+      "pitfalls": [
+        "无冠词不是“不变格”，反而是形容词承担最多信息。",
+        "Dativ Plural 除形容词 -en 外，名词还可能需要 -n。"
+      ],
+      "memorize": [
+        "无冠词 → 形容词自己显示格/性/数"
+      ],
+      "related": [
+        "adj_def",
+        "adj_ein",
+        "adj_consolidated"
+      ]
+    },
+    {
+      "id": "dative_plural",
+      "summary": "Dativ Plural 有一个额外规则：除了限定词常出现 den/-en 外，复数名词通常还要再加 -n。",
+      "sections": [
+        {
+          "title": "基本规则",
+          "bullets": [
+            "die Freunde → mit den Freunden。",
+            "die Kinder → mit den Kindern。",
+            "die Bücher → mit den Büchern。"
+          ]
+        },
+        {
+          "title": "什么时候不再加 -n",
+          "bullets": [
+            "复数本身已经以 -n/-en 结尾：die Kollegen → mit den Kollegen。",
+            "复数以 -s 结尾：die Autos → mit den Autos。"
+          ]
+        },
+        {
+          "title": "和形容词一起",
+          "bullets": [
+            "mit den alten Freunden：den + 形容词 -en + 名词复数 -n。",
+            "mit meinen kleinen Kindern：meinen + kleinen + Kindern。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Dativ Plural",
+          "headers": [
+            "普通复数",
+            "Dativ Plural"
+          ],
+          "rows": [
+            [
+              "Freunde",
+              "Freunden"
+            ],
+            [
+              "Kinder",
+              "Kindern"
+            ],
+            [
+              "Bücher",
+              "Büchern"
+            ],
+            [
+              "Kollegen",
+              "Kollegen"
+            ],
+            [
+              "Autos",
+              "Autos"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich spreche mit meinen Freunden.",
+          "zh": "我和我的朋友们聊天。"
+        },
+        {
+          "de": "Wir fahren mit den Autos.",
+          "zh": "我们开这些车。"
+        },
+        {
+          "de": "Sie arbeitet mit den neuen Kollegen.",
+          "zh": "她和新同事们一起工作。"
+        }
+      ],
+      "pitfalls": [
+        "不要只改冠词 den，忘记名词可能也要加 -n。",
+        "-n/-en 和 -s 结尾的复数通常不再额外加 n。"
+      ],
+      "memorize": [
+        "Dativ Plural：den + 复数通常再 +n"
+      ],
+      "related": [
+        "article_dat",
+        "plural_nouns",
+        "adj_def"
+      ]
+    },
+    {
+      "id": "n_declension",
+      "summary": "N-Deklination 是一组阳性名词的特殊变格：除了 Nominativ Singular 外，单数其他格通常加 -n/-en。",
+      "sections": [
+        {
+          "title": "典型词",
+          "bullets": [
+            "der Student → den Studenten / dem Studenten。",
+            "der Kollege → den Kollegen / dem Kollegen。",
+            "der Kunde, der Junge, der Mensch, der Herr 等也常属于这一类。"
+          ]
+        },
+        {
+          "title": "如何识别",
+          "bullets": [
+            "很多表示男性人的外来词，特别是 -ent/-ant/-ist 等结尾常属于 N-Deklination：Student, Praktikant, Journalist。",
+            "但不能只靠词尾完全判断，最好把变化一起记。"
+          ]
+        },
+        {
+          "title": "特殊提醒",
+          "bullets": [
+            "der Herr → den Herrn / dem Herrn（缩短形式）。",
+            "der Name 属于类似弱变化的混合型：den Namen, dem Namen, des Namens。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Student 的单数变格",
+          "headers": [
+            "格",
+            "形式"
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "der Student"
+            ],
+            [
+              "Akk.",
+              "den Studenten"
+            ],
+            [
+              "Dat.",
+              "dem Studenten"
+            ],
+            [
+              "Gen.",
+              "des Studenten"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich sehe den Studenten.",
+          "zh": "我看见那位学生。"
+        },
+        {
+          "de": "Sie hilft dem Kollegen.",
+          "zh": "她帮助那位同事。"
+        },
+        {
+          "de": "Wir sprechen mit dem Kunden.",
+          "zh": "我们和客户交谈。"
+        }
+      ],
+      "pitfalls": [
+        "不要写 *den Student*。",
+        "Nominativ Singular 保持基本形式，变化主要出现在其他格。"
+      ],
+      "memorize": [
+        "Nominativ 原形；其余单数常 -n/-en"
+      ],
+      "related": [
+        "article_acc",
+        "article_dat",
+        "genitive_basic"
+      ]
+    },
+    {
+      "id": "partizip_rules",
+      "summary": "Partizip II 是 Perfekt 和被动态的核心非变位形式。它的构成取决于动词是规则、强变化、可分、不可分还是 -ieren 动词。",
+      "sections": [
+        {
+          "title": "规则动词",
+          "bullets": [
+            "ge- + 词干 + -t：machen → gemacht, lernen → gelernt。",
+            "词干以 -t/-d 等时常用 -et：arbeiten → gearbeitet。"
+          ]
+        },
+        {
+          "title": "前缀和 -ieren",
+          "bullets": [
+            "可分：前缀 + ge + 词干 + 词尾：einkaufen → eingekauft；anrufen → angerufen。",
+            "不可分前缀 be-, emp-, ent-, er-, ge-, miss-, ver-, zer- 通常无 ge-：besuchen → besucht, verstehen → verstanden。",
+            "-ieren 无 ge-：studieren → studiert。"
+          ]
+        },
+        {
+          "title": "强变化/不规则",
+          "bullets": [
+            "强变化动词常以 -en 结尾并可能改词干：sehen → gesehen, schreiben → geschrieben, fahren → gefahren。",
+            "高频强变化形式需要单独记。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "构成模式",
+          "headers": [
+            "类型",
+            "模式",
+            "例子"
+          ],
+          "rows": [
+            [
+              "规则",
+              "ge-...-t",
+              "machen→gemacht"
+            ],
+            [
+              "规则 -t/-d",
+              "ge-...-et",
+              "arbeiten→gearbeitet"
+            ],
+            [
+              "可分",
+              "Präfix+ge+...",
+              "einkaufen→eingekauft"
+            ],
+            [
+              "不可分",
+              "无 ge-",
+              "besuchen→besucht"
+            ],
+            [
+              "-ieren",
+              "无 ge-",
+              "studieren→studiert"
+            ],
+            [
+              "强变化",
+              "常 ge-...-en",
+              "sehen→gesehen"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich habe lange gearbeitet.",
+          "zh": "我工作了很久。"
+        },
+        {
+          "de": "Sie hat ihre Mutter angerufen.",
+          "zh": "她给妈妈打了电话。"
+        },
+        {
+          "de": "Wir sind nach Köln gefahren.",
+          "zh": "我们去了科隆。"
+        }
+      ],
+      "pitfalls": [
+        "不要给所有动词机械加 ge-。",
+        "Partizip II 的构成与 Perfekt 选 haben/sein 是两个不同问题。"
+      ],
+      "memorize": [
+        "规则 ge...t；不可分/-ieren 无 ge；强变化常 ...en"
+      ],
+      "related": [
+        "perfect_haben",
+        "perfect_sein",
+        "passive"
+      ]
+    },
+    {
+      "id": "preterite_basic",
+      "summary": "Präteritum 是简单过去时。日常口语里最常见的是 sein、haben 和情态动词；普通实义动词在口语中往往更常用 Perfekt。",
+      "sections": [
+        {
+          "title": "sein / haben",
+          "bullets": [
+            "sein：war, warst, war, waren, wart, waren。",
+            "haben：hatte, hattest, hatte, hatten, hattet, hatten。"
+          ]
+        },
+        {
+          "title": "情态动词过去时",
+          "bullets": [
+            "können → konnte；müssen → musste；dürfen → durfte；sollen → sollte；wollen → wollte。",
+            "过去时形式通常不带 Umlaut：konnte，不是 *könnte*（后者是 Konjunktiv II）。"
+          ]
+        },
+        {
+          "title": "使用范围",
+          "bullets": [
+            "口语：Gestern war ich krank. / Ich musste arbeiten. 很自然。",
+            "叙事、新闻、书面语中，更多普通动词也会使用 Präteritum。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "常用 Präteritum",
+          "headers": [
+            "人称",
+            "sein",
+            "haben",
+            "können",
+            "müssen"
+          ],
+          "rows": [
+            [
+              "ich",
+              "war",
+              "hatte",
+              "konnte",
+              "musste"
+            ],
+            [
+              "du",
+              "warst",
+              "hattest",
+              "konntest",
+              "musstest"
+            ],
+            [
+              "er/sie/es",
+              "war",
+              "hatte",
+              "konnte",
+              "musste"
+            ],
+            [
+              "wir",
+              "waren",
+              "hatten",
+              "konnten",
+              "mussten"
+            ],
+            [
+              "ihr",
+              "wart",
+              "hattet",
+              "konntet",
+              "musstet"
+            ],
+            [
+              "sie/Sie",
+              "waren",
+              "hatten",
+              "konnten",
+              "mussten"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Gestern war ich krank.",
+          "zh": "昨天我病了。"
+        },
+        {
+          "de": "Wir hatten keine Zeit.",
+          "zh": "我们当时没时间。"
+        },
+        {
+          "de": "Du musstest lange arbeiten.",
+          "zh": "你当时不得不工作很久。"
+        }
+      ],
+      "pitfalls": [
+        "konnte（过去时）和 könnte（虚拟式）意义不同。",
+        "不要把 Präteritum 和 Perfekt 混成 *ich war gearbeitet*。"
+      ],
+      "memorize": [
+        "war · hatte · konnte · musste"
+      ],
+      "related": [
+        "perfect_haben",
+        "konj2",
+        "modal"
+      ]
+    },
+    {
+      "id": "reflexive",
+      "summary": "反身动词里，反身代词和主语指向同一个人/事物。很多反身结构必须作为完整搭配记忆。",
+      "sections": [
+        {
+          "title": "Akkusativ 反身代词",
+          "bullets": [
+            "ich mich；du dich；er/sie/es sich；wir uns；ihr euch；sie/Sie sich。",
+            "常见：sich freuen, sich interessieren, sich erinnern, sich beeilen, sich treffen。"
+          ]
+        },
+        {
+          "title": "Dativ 反身代词",
+          "bullets": [
+            "当句子已经有另一个 Akkusativ 宾语时，反身代词可能用 Dativ：Ich wasche mir die Hände。",
+            "Dativ 形式：mir, dir, sich, uns, euch, sich。"
+          ]
+        },
+        {
+          "title": "固定介词",
+          "bullets": [
+            "sich interessieren für + Akk.；sich erinnern an + Akk.；sich freuen auf + Akk.（期待未来）/ über + Akk.（对已发生/已有事物高兴）。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "反身代词",
+          "headers": [
+            "主语",
+            "Akk.",
+            "Dat."
+          ],
+          "rows": [
+            [
+              "ich",
+              "mich",
+              "mir"
+            ],
+            [
+              "du",
+              "dich",
+              "dir"
+            ],
+            [
+              "er/sie/es",
+              "sich",
+              "sich"
+            ],
+            [
+              "wir",
+              "uns",
+              "uns"
+            ],
+            [
+              "ihr",
+              "euch",
+              "euch"
+            ],
+            [
+              "sie/Sie",
+              "sich",
+              "sich"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich interessiere mich für Kunst.",
+          "zh": "我对艺术感兴趣。"
+        },
+        {
+          "de": "Wir treffen uns um acht.",
+          "zh": "我们八点见。"
+        },
+        {
+          "de": "Ich wasche mir die Hände.",
+          "zh": "我洗手。",
+          "note": "die Hände 是 Akk.，反身代词变 Dat. mir。"
+        }
+      ],
+      "pitfalls": [
+        "不要漏掉反身代词：*ich interessiere für Kunst* 错。",
+        "sich freuen auf 和 sich freuen über 的时间/语义不同。"
+      ],
+      "memorize": [
+        "ich mich/mir · du dich/dir · sich · uns · euch · sich"
+      ],
+      "related": [
+        "verb_prep",
+        "pron_acc",
+        "pron_dat"
+      ]
+    },
+    {
+      "id": "wenn",
+      "summary": "wenn 既可表示“如果”，也可表示现在/未来或过去反复发生的“当……时”。从句有限动词位于末尾。",
+      "sections": [
+        {
+          "title": "条件",
+          "bullets": [
+            "Wenn es regnet, nehme ich den Bus = 如果下雨，我坐公交。",
+            "真实/可能条件可用直陈式；非现实条件常与 Konjunktiv II 搭配。"
+          ]
+        },
+        {
+          "title": "时间",
+          "bullets": [
+            "现在/未来：Wenn ich frei habe, koche ich。",
+            "过去反复：Wenn wir Ferien hatten, fuhren wir ans Meer。",
+            "过去一次性的时间背景通常用 als：Als ich ein Kind war, ..."
+          ]
+        },
+        {
+          "title": "词序",
+          "bullets": [
+            "wenn 从句末位动词；前置从句后主句直接有限动词：Wenn ich Zeit habe, komme ich。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "wenn / als",
+          "headers": [
+            "场景",
+            "连词"
+          ],
+          "rows": [
+            [
+              "条件",
+              "wenn"
+            ],
+            [
+              "现在/未来时间",
+              "wenn"
+            ],
+            [
+              "过去反复",
+              "wenn"
+            ],
+            [
+              "过去一次",
+              "als"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Wenn ich Zeit habe, lerne ich Deutsch.",
+          "zh": "如果/当我有时间时，我学德语。"
+        },
+        {
+          "de": "Wenn es morgen regnet, bleiben wir zu Hause.",
+          "zh": "如果明天下雨，我们待在家。"
+        },
+        {
+          "de": "Als ich ein Kind war, wohnte ich in Changsha.",
+          "zh": "我小时候住在长沙。"
+        }
+      ],
+      "pitfalls": [
+        "过去“一次性”时间背景通常不用 wenn，而用 als。",
+        "前置 wenn 从句后主句要倒装：..., komme ich。"
+      ],
+      "memorize": [
+        "wenn：条件/重复；als：过去一次"
+      ],
+      "related": [
+        "temporal_clauses",
+        "konj2_functions",
+        "weil"
+      ]
+    },
+    {
+      "id": "coord_conj",
+      "summary": "und, aber, oder, denn, sondern 是并列连词。它们连接同等级成分，不把后面的有限动词推到句末。",
+      "sections": [
+        {
+          "title": "五个核心连词",
+          "bullets": [
+            "und：并且；aber：但是；oder：或者；denn：因为；sondern：而是。",
+            "denn 的意义可接近 weil，但 denn 后仍是主句词序。",
+            "sondern 通常用于前面有否定的纠正：nicht A, sondern B。"
+          ]
+        },
+        {
+          "title": "词序",
+          "bullets": [
+            "Ich bin müde, aber ich arbeite weiter。",
+            "Er kommt nicht, denn er ist krank。",
+            "连词本身通常不占 V2 的第一位置；后面的独立主句仍按正常主句排列。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "并列连词",
+          "headers": [
+            "词",
+            "意义",
+            "例子"
+          ],
+          "rows": [
+            [
+              "und",
+              "和/并且",
+              "..., und ich komme."
+            ],
+            [
+              "aber",
+              "但是",
+              "..., aber ich arbeite."
+            ],
+            [
+              "oder",
+              "或者",
+              "..., oder du bleibst."
+            ],
+            [
+              "denn",
+              "因为",
+              "..., denn er ist krank."
+            ],
+            [
+              "sondern",
+              "而是",
+              "nicht A, sondern B"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich bin müde, aber ich arbeite weiter.",
+          "zh": "我很累，但我继续工作。"
+        },
+        {
+          "de": "Er kommt nicht, denn er ist krank.",
+          "zh": "他不来，因为他病了。"
+        },
+        {
+          "de": "Ich trinke keinen Kaffee, sondern Tee.",
+          "zh": "我不喝咖啡，而喝茶。"
+        }
+      ],
+      "pitfalls": [
+        "不要把 denn 写成从句词序：*denn er krank ist* 错。",
+        "sondern 前通常需要一个被否定的选项。"
+      ],
+      "memorize": [
+        "并列连词后仍是主句词序"
+      ],
+      "related": [
+        "weil",
+        "v2",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "satzklammer",
+      "summary": "Satzklammer（句框）是德语主句的核心结构：有限动词在前部，谓语的另一部分在句末，把中间信息“夹”在中间。",
+      "sections": [
+        {
+          "title": "三种最常见句框",
+          "bullets": [
+            "情态：Ich muss heute lange arbeiten。",
+            "Perfekt：Ich habe gestern lange gearbeitet。",
+            "可分动词：Ich rufe meine Mutter an。"
+          ]
+        },
+        {
+          "title": "为什么重要",
+          "bullets": [
+            "初学者常只注意前面的有限动词，却漏掉句末的 Infinitiv/Partizip/前缀。",
+            "句子越长，句框越能帮助你识别谓语整体。"
+          ]
+        },
+        {
+          "title": "从句会改变位置",
+          "bullets": [
+            "weil/dass 从句中，有限动词也移到末尾：..., weil ich lange arbeiten muss。",
+            "因此主句句框和从句动词末位要分开掌握。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "句框模式",
+          "headers": [
+            "结构",
+            "前框",
+            "后框"
+          ],
+          "rows": [
+            [
+              "Modalverb",
+              "muss",
+              "arbeiten"
+            ],
+            [
+              "Perfekt",
+              "hat",
+              "gearbeitet"
+            ],
+            [
+              "可分动词",
+              "ruft",
+              "an"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Wir können morgen früher kommen.",
+          "zh": "我们明天可以早点来。"
+        },
+        {
+          "de": "Sie hat gestern lange gearbeitet.",
+          "zh": "她昨天工作了很久。"
+        },
+        {
+          "de": "Er steht jeden Tag früh auf.",
+          "zh": "他每天很早起床。"
+        }
+      ],
+      "pitfalls": [
+        "看到前面的有限动词后，仍要继续找句末是否还有谓语成分。",
+        "从句不能简单照搬主句句框位置。"
+      ],
+      "memorize": [
+        "前框：有限动词；后框：Infinitiv/Partizip/前缀"
+      ],
+      "related": [
+        "v2",
+        "modal",
+        "separable",
+        "perfect_haben"
+      ]
+    },
+    {
+      "id": "double_object",
+      "summary": "geben, zeigen, schicken, schenken, erklären 等常带两个宾语：接收者通常是 Dativ，事物通常是 Akkusativ。",
+      "sections": [
+        {
+          "title": "语义角色",
+          "bullets": [
+            "jemandem（Dat.）etwas（Akk.）geben = 给某人某物。",
+            "“人”不是天生 Dativ；这里是因为动词结构把接收者标为 Dativ。"
+          ]
+        },
+        {
+          "title": "中性顺序",
+          "bullets": [
+            "两个都是完整名词时通常 Dat. 在 Akk. 前：Ich gebe meinem Freund das Buch。",
+            "若出现人称代词，代词通常更靠前；两个都是代词时通常 Akk.-Pron. 在 Dat.-Pron. 前：Ich gebe es ihm。"
+          ]
+        },
+        {
+          "title": "常见动词",
+          "bullets": [
+            "geben, zeigen, schicken, senden, schenken, erklären, erzählen, bringen 等经常出现这种结构。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "结构",
+          "headers": [
+            "角色",
+            "格",
+            "例子"
+          ],
+          "rows": [
+            [
+              "接收者",
+              "Dativ",
+              "meinem Freund"
+            ],
+            [
+              "事物",
+              "Akkusativ",
+              "das Buch"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich gebe meinem Freund das Buch.",
+          "zh": "我把书给朋友。"
+        },
+        {
+          "de": "Sie zeigt ihrer Kollegin die Wohnung.",
+          "zh": "她给同事看公寓。"
+        },
+        {
+          "de": "Wir schicken unseren Eltern die Fotos.",
+          "zh": "我们把照片发给父母。"
+        }
+      ],
+      "pitfalls": [
+        "不要因为“事物”就自动 Akk./“人”就自动 Dat.；必须看具体动词。",
+        "代词出现时宾语顺序会变化。"
+      ],
+      "memorize": [
+        "接收者 Dat. + 事物 Akk."
+      ],
+      "related": [
+        "pron_dat",
+        "pronoun_order",
+        "article_dat",
+        "article_acc"
+      ]
+    },
+    {
+      "id": "indirect_questions",
+      "summary": "间接问句把一个问题嵌入另一个句子里。它是从句，因此有限动词位于末尾。",
+      "sections": [
+        {
+          "title": "Ja/Nein 问题",
+          "bullets": [
+            "直接：Kommt Anna morgen?",
+            "间接：Ich weiß nicht, ob Anna morgen kommt。",
+            "没有 W-Wort 的问题用 ob。"
+          ]
+        },
+        {
+          "title": "W-Frage",
+          "bullets": [
+            "直接：Wann fährt der Zug?",
+            "间接：Weißt du, wann der Zug fährt?",
+            "原来的 W-Wort 保留。"
+          ]
+        },
+        {
+          "title": "常见引导",
+          "bullets": [
+            "Ich weiß nicht, ...；Weißt du, ...?；Kannst du mir sagen, ...?；Ich frage mich, ...。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "直接 → 间接",
+          "headers": [
+            "直接问题",
+            "间接问句"
+          ],
+          "rows": [
+            [
+              "Kommt er?",
+              "..., ob er kommt."
+            ],
+            [
+              "Wann kommt er?",
+              "..., wann er kommt."
+            ],
+            [
+              "Wo wohnt er?",
+              "..., wo er wohnt."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Weißt du, wann der Kurs beginnt?",
+          "zh": "你知道课程什么时候开始吗？"
+        },
+        {
+          "de": "Ich weiß nicht, ob Anna kommt.",
+          "zh": "我不知道 Anna 来不来。"
+        },
+        {
+          "de": "Kannst du mir sagen, wo der Bahnhof ist?",
+          "zh": "你能告诉我火车站在哪里吗？"
+        }
+      ],
+      "pitfalls": [
+        "间接问句不再使用直接问句的 Verb-first/V2 词序。",
+        "ob 只替代 Ja/Nein 问题，不替代 wann/wo/warum 等疑问词。"
+      ],
+      "memorize": [
+        "间接问句 = 从句词序，动词末位"
+      ],
+      "related": [
+        "questions",
+        "dass",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "temporal_clauses",
+      "summary": "时间从句用不同连词表达“一次、反复、之前、之后、同时、直到、自从、一……就”等时间关系。",
+      "sections": [
+        {
+          "title": "核心连词",
+          "bullets": [
+            "als：过去一次性事件/阶段；wenn：现在未来或反复。",
+            "bevor：在……之前；nachdem：在……之后；während：在……同时。",
+            "bis：直到；seitdem：自从；sobald：一……就……。"
+          ]
+        },
+        {
+          "title": "词序",
+          "bullets": [
+            "这些都是从属连词，有限动词放末尾。",
+            "前置从句后主句按 V2：Nachdem ich gegessen habe, gehe ich spazieren。"
+          ]
+        },
+        {
+          "title": "时态关系",
+          "bullets": [
+            "nachdem 强调从句动作先发生。现在语境可用 Perfekt + Präsens：Nachdem ich gegessen habe, gehe ich...",
+            "过去叙事中标准书面语常见 Plusquamperfekt + Präteritum：Nachdem ich gegessen hatte, ging ich...（作为 B1+ 预览）。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "时间连词速查",
+          "headers": [
+            "连词",
+            "关系",
+            "例子"
+          ],
+          "rows": [
+            [
+              "als",
+              "过去一次",
+              "als ich klein war"
+            ],
+            [
+              "wenn",
+              "条件/反复",
+              "wenn ich Zeit habe"
+            ],
+            [
+              "bevor",
+              "之前",
+              "bevor ich gehe"
+            ],
+            [
+              "nachdem",
+              "之后",
+              "nachdem ich gegessen habe"
+            ],
+            [
+              "während",
+              "同时",
+              "während ich arbeite"
+            ],
+            [
+              "bis",
+              "直到",
+              "bis du kommst"
+            ],
+            [
+              "seitdem",
+              "自从",
+              "seitdem ich hier wohne"
+            ],
+            [
+              "sobald",
+              "一…就…",
+              "sobald ich fertig bin"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Als ich ein Kind war, wohnte ich in Changsha.",
+          "zh": "我小时候住在长沙。"
+        },
+        {
+          "de": "Bevor ich zur Arbeit gehe, frühstücke ich.",
+          "zh": "上班前我吃早餐。"
+        },
+        {
+          "de": "Nachdem ich gegessen habe, gehe ich spazieren.",
+          "zh": "吃完饭后我去散步。"
+        }
+      ],
+      "pitfalls": [
+        "过去一次性的“当……时”通常用 als，不用 wenn。",
+        "先后关系不只是连词问题，长句中还要检查时态是否符合时间顺序。"
+      ],
+      "memorize": [
+        "als 一次；wenn 反复/条件；bevor 前；nachdem 后"
+      ],
+      "related": [
+        "wenn",
+        "complex_sentences",
+        "perfect_haben"
+      ]
+    },
+    {
+      "id": "relative_dat_prep",
+      "summary": "关系从句里如果关系代词受 Dativ 动词或介词支配，就必须用相应 Dativ/介词形式。介词放在关系代词前。",
+      "sections": [
+        {
+          "title": "Dativ 关系代词",
+          "bullets": [
+            "m. dem；f. der；n. dem；Pl. denen。",
+            "例如 helfen + Dat.：Der Mann, dem ich helfe, ..."
+          ]
+        },
+        {
+          "title": "介词 + 关系代词",
+          "bullets": [
+            "mit dem, bei der, an dem, über das, für den 等。",
+            "格由介词或动词决定：sprechen über + Akk.；arbeiten mit + Dat.；teilnehmen an + Dat.。"
+          ]
+        },
+        {
+          "title": "完整关系代词表作为参考",
+          "bullets": [
+            "Genitiv 关系代词是 dessen（m./n.）和 deren（f./Pl.），B1 阅读中也会遇到。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "关系代词全表",
+          "headers": [
+            "格",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "Nom.",
+              "der",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Akk.",
+              "den",
+              "die",
+              "das",
+              "die"
+            ],
+            [
+              "Dat.",
+              "dem",
+              "der",
+              "dem",
+              "denen"
+            ],
+            [
+              "Gen.",
+              "dessen",
+              "deren",
+              "dessen",
+              "deren"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Das ist der Kollege, mit dem ich arbeite.",
+          "zh": "这是和我一起工作的同事。"
+        },
+        {
+          "de": "Die Firma, bei der ich arbeite, ist international.",
+          "zh": "我工作的那家公司是国际化企业。"
+        },
+        {
+          "de": "Das Thema, über das wir sprechen, ist wichtig.",
+          "zh": "我们讨论的主题很重要。"
+        }
+      ],
+      "pitfalls": [
+        "格由关系代词在从句中的功能决定，而不是主句里先行词的格。",
+        "Plural Dativ 是 denen，不是 den。"
+      ],
+      "memorize": [
+        "介词放关系代词前；Dat. Pl. = denen"
+      ],
+      "related": [
+        "relative",
+        "verb_prep",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "konj2_functions",
+      "summary": "Konjunktiv II 的实用价值主要体现在礼貌请求、建议、愿望和非现实条件。学形式之外，更要学每种场景的固定表达。",
+      "sections": [
+        {
+          "title": "礼貌请求",
+          "bullets": [
+            "Könnten Sie mir helfen? 比 Können Sie... 更委婉。",
+            "Würden Sie bitte...? 也是常见礼貌形式。"
+          ]
+        },
+        {
+          "title": "建议",
+          "bullets": [
+            "Du solltest früher schlafen。",
+            "An deiner Stelle würde ich früher anfangen。",
+            "Ich würde dir empfehlen, ... 也是常见表达。"
+          ]
+        },
+        {
+          "title": "愿望",
+          "bullets": [
+            "Ich hätte gern einen Kaffee。",
+            "Ich wäre jetzt gern zu Hause。",
+            "Ich würde gern mehr reisen。"
+          ]
+        },
+        {
+          "title": "非现实条件",
+          "bullets": [
+            "Wenn ich mehr Zeit hätte, würde ich mehr lesen。",
+            "从句和主句都可使用 Konjunktiv II，表达与现实有距离的假设。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "功能速查",
+          "headers": [
+            "功能",
+            "典型形式"
+          ],
+          "rows": [
+            [
+              "礼貌",
+              "Könnten Sie ...? / Würden Sie ...?"
+            ],
+            [
+              "建议",
+              "Du solltest ... / Ich würde ..."
+            ],
+            [
+              "愿望",
+              "Ich hätte/wäre/würde gern ..."
+            ],
+            [
+              "非现实",
+              "Wenn ... hätte/wäre, würde ..."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Könnten Sie mir bitte helfen?",
+          "zh": "您能帮我一下吗？"
+        },
+        {
+          "de": "An deiner Stelle würde ich früher anfangen.",
+          "zh": "如果我是你，我会早点开始。"
+        },
+        {
+          "de": "Wenn ich mehr Geld hätte, würde ich öfter reisen.",
+          "zh": "如果我钱更多，我会更常旅行。"
+        }
+      ],
+      "pitfalls": [
+        "礼貌 Konjunktiv II 不是在陈述“过去”。",
+        "sein/haben/情态动词通常直接用 wäre/hätte/könnte 等，不必机械写 würde sein/haben。"
+      ],
+      "memorize": [
+        "礼貌：könnte/würde；建议：sollte；愿望：hätte/wäre/würde gern"
+      ],
+      "related": [
+        "konj2",
+        "wenn",
+        "modal"
+      ]
+    },
+    {
+      "id": "passive_past",
+      "summary": "过去的过程被动常用 Präteritum 或 Perfekt。Präteritum 用 wurde/wurden + Partizip II；Perfekt 用 sein + Partizip II + worden。",
+      "sections": [
+        {
+          "title": "Passiv Präteritum",
+          "bullets": [
+            "单数：wurde + Partizip II；复数：wurden + Partizip II。",
+            "Das Paket wurde gestern geliefert。"
+          ]
+        },
+        {
+          "title": "Passiv Perfekt",
+          "bullets": [
+            "ist/sind + Partizip II + worden。",
+            "Das Paket ist geliefert worden。",
+            "这里必须是 worden，不是 geworden。"
+          ]
+        },
+        {
+          "title": "为什么有 worden",
+          "bullets": [
+            "werden 的普通 Partizip II 是 geworden：Er ist Arzt geworden。",
+            "但在过程被动 Perfekt 中使用特殊形式 worden。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "过去被动",
+          "headers": [
+            "时态",
+            "结构",
+            "例子"
+          ],
+          "rows": [
+            [
+              "Präteritum",
+              "wurde/wurden + Partizip II",
+              "Das Paket wurde geliefert."
+            ],
+            [
+              "Perfekt",
+              "ist/sind + Partizip II + worden",
+              "Das Paket ist geliefert worden."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Der Vertrag wurde gestern unterschrieben.",
+          "zh": "合同昨天被签署了。"
+        },
+        {
+          "de": "Die Rechnungen wurden bezahlt.",
+          "zh": "账单被支付了。"
+        },
+        {
+          "de": "Die Ware ist bereits verschickt worden.",
+          "zh": "货物已经被寄出了。"
+        }
+      ],
+      "pitfalls": [
+        "Passiv Perfekt 用 worden，不是 geworden。",
+        "war geliefert 更偏状态；wurde geliefert 是过程。"
+      ],
+      "memorize": [
+        "wurde + Partizip；ist + Partizip + worden"
+      ],
+      "related": [
+        "passive",
+        "partizip_rules",
+        "temporal_clauses"
+      ]
+    },
+    {
+      "id": "inf_purpose",
+      "summary": "um ... zu、ohne ... zu、anstatt ... zu 是三个高频 Infinitiv 结构，分别表示目的、缺少某动作、替代动作。通常两个动作共享同一个逻辑主语。",
+      "sections": [
+        {
+          "title": "um ... zu",
+          "bullets": [
+            "表示目的：Ich lerne viel, um die Prüfung zu bestehen。",
+            "如果目的从句主语不同，通常改用 damit：Ich spreche langsam, damit du mich verstehst。"
+          ]
+        },
+        {
+          "title": "ohne ... zu",
+          "bullets": [
+            "表示“没有做某事就……”：Er geht, ohne sich zu verabschieden。"
+          ]
+        },
+        {
+          "title": "anstatt ... zu",
+          "bullets": [
+            "表示“不是做 A，而是……”：Anstatt zu kochen, bestellen wir Pizza。"
+          ]
+        },
+        {
+          "title": "可分动词",
+          "bullets": [
+            "仍按 zu-Infinitiv 构成：ankommen → anzukommen；abschließen → abzuschließen。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "三个结构",
+          "headers": [
+            "结构",
+            "功能",
+            "例子"
+          ],
+          "rows": [
+            [
+              "um ... zu",
+              "目的",
+              "um pünktlich anzukommen"
+            ],
+            [
+              "ohne ... zu",
+              "没有…",
+              "ohne zu frühstücken"
+            ],
+            [
+              "anstatt ... zu",
+              "替代",
+              "anstatt zu arbeiten"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich lerne viel, um die Prüfung zu bestehen.",
+          "zh": "我努力学习，为了通过考试。"
+        },
+        {
+          "de": "Sie geht zur Arbeit, ohne zu frühstücken.",
+          "zh": "她没吃早饭就去上班。"
+        },
+        {
+          "de": "Anstatt zu fahren, nehmen wir den Zug.",
+          "zh": "我们不自己开车，而是坐火车。"
+        }
+      ],
+      "pitfalls": [
+        "um ... zu 通常要求主句和不定式结构的逻辑主语相同；不同主语用 damit。",
+        "可分动词的 zu 要插在前缀中间。"
+      ],
+      "memorize": [
+        "目的 um；没有 ohne；替代 anstatt"
+      ],
+      "related": [
+        "inf_zu",
+        "complex_sentences"
+      ]
+    },
+    {
+      "id": "verb_prep",
+      "summary": "许多德语动词固定搭配某个介词和某个格。学习时最好把“动词 + 介词 + 格”作为一个词汇单位记住。",
+      "sections": [
+        {
+          "title": "为什么要整体记",
+          "bullets": [
+            "中文或英语对应介词不能可靠预测德语搭配。",
+            "同一个介词可与不同格搭配，但在固定动词搭配中通常格也是固定的。"
+          ]
+        },
+        {
+          "title": "高频搭配",
+          "bullets": [
+            "warten auf + Akk.；denken an + Akk.；sich erinnern an + Akk.。",
+            "sich interessieren für + Akk.；bitten um + Akk.；sprechen über + Akk.。",
+            "teilnehmen an + Dat.；abhängen von + Dat.；sprechen mit + Dat.。",
+            "sich freuen auf + Akk.（期待未来）/ über + Akk.（对已发生/已有事物高兴）。"
+          ]
+        },
+        {
+          "title": "与代副词连接",
+          "bullets": [
+            "问事物：Worauf wartest du?；回指事物：Ich warte darauf。",
+            "问人则用介词 + wen/wem：Auf wen wartest du?"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "常见动词 + 介词",
+          "headers": [
+            "搭配",
+            "格",
+            "意义"
+          ],
+          "rows": [
+            [
+              "warten auf",
+              "Akk.",
+              "等待"
+            ],
+            [
+              "denken an",
+              "Akk.",
+              "想到"
+            ],
+            [
+              "sich erinnern an",
+              "Akk.",
+              "想起"
+            ],
+            [
+              "sich interessieren für",
+              "Akk.",
+              "对…感兴趣"
+            ],
+            [
+              "bitten um",
+              "Akk.",
+              "请求"
+            ],
+            [
+              "sprechen über",
+              "Akk.",
+              "谈论"
+            ],
+            [
+              "teilnehmen an",
+              "Dat.",
+              "参加"
+            ],
+            [
+              "abhängen von",
+              "Dat.",
+              "取决于"
+            ],
+            [
+              "sprechen mit",
+              "Dat.",
+              "和…交谈"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich warte auf den Bus.",
+          "zh": "我在等公交。"
+        },
+        {
+          "de": "Sie interessiert sich für Kunst.",
+          "zh": "她对艺术感兴趣。"
+        },
+        {
+          "de": "Wir nehmen an dem Kurs teil.",
+          "zh": "我们参加这个课程。"
+        }
+      ],
+      "pitfalls": [
+        "不要逐字翻译母语介词。",
+        "记搭配时连格一起记：warten auf + Akk.，不是只记 auf。"
+      ],
+      "memorize": [
+        "动词 + 介词 + 格，一整块记"
+      ],
+      "related": [
+        "pronominal_adverbs",
+        "reflexive",
+        "relative_dat_prep"
+      ]
+    },
+    {
+      "id": "pronominal_adverbs",
+      "summary": "当介词宾语指“事物/事情”时，德语常用 da(r)- 代副词回指，用 wo(r)- 代副词提问；指人时通常不用这一套。",
+      "sections": [
+        {
+          "title": "如何构成",
+          "bullets": [
+            "介词以辅音开头：dafür, damit, davon；wodurch, wofür, womit。",
+            "介词以元音开头时插入 r：darauf, daran, darüber；worauf, woran, worüber。"
+          ]
+        },
+        {
+          "title": "事物 vs. 人",
+          "bullets": [
+            "事物：Ich warte auf den Bus. → Ich warte darauf. / Worauf wartest du?",
+            "人：Ich warte auf Anna. → Ich warte auf sie. / Auf wen wartest du?",
+            "因此 da-/wo- 主要替代事物、内容、整件事情。"
+          ]
+        },
+        {
+          "title": "依赖原搭配",
+          "bullets": [
+            "先知道动词固定介词，再构造代副词：denken an → daran/woran；sprechen über → darüber/worüber。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "常见对应",
+          "headers": [
+            "介词",
+            "回指",
+            "提问"
+          ],
+          "rows": [
+            [
+              "auf",
+              "darauf",
+              "worauf"
+            ],
+            [
+              "an",
+              "daran",
+              "woran"
+            ],
+            [
+              "über",
+              "darüber",
+              "worüber"
+            ],
+            [
+              "für",
+              "dafür",
+              "wofür"
+            ],
+            [
+              "mit",
+              "damit",
+              "womit"
+            ],
+            [
+              "von",
+              "davon",
+              "wovon"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Worauf wartest du? – Ich warte darauf.",
+          "zh": "你在等什么？——我在等那个/这件事。"
+        },
+        {
+          "de": "Wir sprechen oft darüber.",
+          "zh": "我们经常谈论这件事。"
+        },
+        {
+          "de": "Auf wen wartest du? – Auf Anna.",
+          "zh": "你在等谁？——Anna。",
+          "note": "人不用 worauf/darauf。"
+        }
+      ],
+      "pitfalls": [
+        "指人时通常不用 darauf/worauf。",
+        "r 只在介词以元音开头时插入：darauf，但 dafür。"
+      ],
+      "memorize": [
+        "事物：da(r)- / wo(r)-；人：介词 + 代词/wer"
+      ],
+      "related": [
+        "verb_prep",
+        "relative_dat_prep"
+      ]
+    },
+    {
+      "id": "pronoun_order",
+      "summary": "德语中场里的宾语顺序受“名词还是代词”影响。B1 先掌握中性默认顺序，再理解语境焦点可以改变排列。",
+      "sections": [
+        {
+          "title": "两个完整名词",
+          "bullets": [
+            "中性默认通常 Dativ 在 Akkusativ 前：Ich gebe meinem Freund das Buch。"
+          ]
+        },
+        {
+          "title": "一个代词",
+          "bullets": [
+            "人称代词通常比完整名词更靠前：Ich gebe ihm das Buch。 / Ich gebe es meinem Freund。"
+          ]
+        },
+        {
+          "title": "两个都是人称代词",
+          "bullets": [
+            "通常 Akkusativ 代词在 Dativ 代词前：Ich gebe es ihm。",
+            "Sie zeigt sie ihr。形式可能语义含糊，真实表达中常通过上下文或改写避免歧义。"
+          ]
+        },
+        {
+          "title": "不是绝对铁律",
+          "bullets": [
+            "强调、对比、重音可改变中场顺序；本模块训练的是无特殊强调的中性顺序。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "中性宾语顺序",
+          "headers": [
+            "宾语类型",
+            "常见顺序"
+          ],
+          "rows": [
+            [
+              "两个名词",
+              "Dat. 名词 → Akk. 名词"
+            ],
+            [
+              "一个代词 + 一个名词",
+              "代词通常在前"
+            ],
+            [
+              "两个代词",
+              "Akk.-Pron. → Dat.-Pron."
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich gebe meinem Freund das Buch.",
+          "zh": "我把书给朋友。"
+        },
+        {
+          "de": "Ich gebe ihm das Buch.",
+          "zh": "我把书给他。"
+        },
+        {
+          "de": "Ich gebe es ihm.",
+          "zh": "我把它给他。"
+        }
+      ],
+      "pitfalls": [
+        "“Dativ 永远在 Akkusativ 前”是错误概括。",
+        "代词太多容易造成指代不清，真实德语会通过上下文或重复名词解决。"
+      ],
+      "memorize": [
+        "两个代词：Akk. 在 Dat. 前"
+      ],
+      "related": [
+        "double_object",
+        "pron_acc",
+        "pron_dat"
+      ]
+    },
+    {
+      "id": "genitive_basic",
+      "summary": "Genitiv（属格）主要表示所属关系，也用于 wegen, trotz, während 等介词。标准书面德语中仍然非常重要。",
+      "sections": [
+        {
+          "title": "冠词",
+          "bullets": [
+            "阳性/中性：des；阴性/复数：der。",
+            "阳性/中性单数名词通常还加 -s 或 -es：des Chefs, des Mannes, des Hauses。"
+          ]
+        },
+        {
+          "title": "-s 还是 -es",
+          "bullets": [
+            "很多多音节名词常加 -s：des Autos, des Lehrers。",
+            "许多单音节或以 s/ß/x/z 等结尾的名词常用 -es：des Hauses, des Glases。",
+            "具体形式可通过词典确认。"
+          ]
+        },
+        {
+          "title": "常见 Genitiv 介词",
+          "bullets": [
+            "wegen des Wetters；trotz des Regens；während des Meetings。",
+            "口语中部分地区会听到 Dativ，但本课程按标准书面语训练 Genitiv。"
+          ]
+        },
+        {
+          "title": "人名所有格",
+          "bullets": [
+            "人名常直接加 -s：Annas Buch；以 s/x/z/ß 音结尾时常用撇号：Max' Auto。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "Genitiv 定冠词",
+          "headers": [
+            "",
+            "m.",
+            "f.",
+            "n.",
+            "Pl."
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "des",
+              "der",
+              "des",
+              "der"
+            ],
+            [
+              "名词变化",
+              "常 +s/-es",
+              "—",
+              "常 +s/-es",
+              "—"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Das Auto des Mannes ist neu.",
+          "zh": "那个男人的车是新的。"
+        },
+        {
+          "de": "Wegen des schlechten Wetters bleiben wir zu Hause.",
+          "zh": "因为天气不好，我们待在家。"
+        },
+        {
+          "de": "Annas Wohnung ist klein.",
+          "zh": "Anna 的公寓很小。"
+        }
+      ],
+      "pitfalls": [
+        "阳/中单数常别忘名词自身的 -s/-es。",
+        "wegen/trotz/während 在标准书面语里通常按 Genitiv 学。"
+      ],
+      "memorize": [
+        "des + m./n. 名词 -s/-es；der + f./Pl."
+      ],
+      "related": [
+        "adj_consolidated",
+        "n_declension"
+      ]
+    },
+    {
+      "id": "adj_consolidated",
+      "summary": "形容词变格综合的核心不是死背三张表，而是按固定流程判断：格 → 性/数 → 限定词类型 → 词尾。",
+      "sections": [
+        {
+          "title": "第一步：判格",
+          "bullets": [
+            "主语/sein 表语附近常 Nom.；直接宾语常 Akk.；Dativ 动词/介词触发 Dat.；所属/某些介词触发 Gen.。"
+          ]
+        },
+        {
+          "title": "第二步：看限定词",
+          "bullets": [
+            "der/die/das 类 → 弱变化。",
+            "ein/kein/mein 类 → 混合变化。",
+            "没有冠词 → 强变化。"
+          ]
+        },
+        {
+          "title": "第三步：看谁在“显示信息”",
+          "bullets": [
+            "定冠词已经显示清楚，形容词多为 -e/-en。",
+            "ein- 某些位置没显示信息，形容词补出 -er/-es 等。",
+            "无冠词时形容词承担最多信息。"
+          ]
+        },
+        {
+          "title": "比较级/最高级放名词前",
+          "bullets": [
+            "比较级和最高级作为定语同样要变格：ein größeres Auto, der schnellste Zug。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "三个体系对比（Nom. m.）",
+          "headers": [
+            "限定词类型",
+            "例子"
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "der alte Mann"
+            ],
+            [
+              "ein- 类",
+              "ein alter Mann"
+            ],
+            [
+              "无冠词",
+              "alter Wein"
+            ]
+          ]
+        },
+        {
+          "title": "三个体系对比（Akk. m.）",
+          "headers": [
+            "限定词类型",
+            "例子"
+          ],
+          "rows": [
+            [
+              "定冠词",
+              "den alten Mann"
+            ],
+            [
+              "ein- 类",
+              "einen alten Mann"
+            ],
+            [
+              "无冠词",
+              "guten Kaffee"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Ich kaufe einen schwarzen Mantel.",
+          "zh": "我买一件黑色外套。"
+        },
+        {
+          "de": "Der neue Kollege ist nett.",
+          "zh": "新同事人很好。"
+        },
+        {
+          "de": "Mit frischer Milch schmeckt es besser.",
+          "zh": "加新鲜牛奶味道更好。"
+        }
+      ],
+      "pitfalls": [
+        "不要先看形容词再猜词尾；格必须先判断。",
+        "形容词体系不同不是随机，而是取决于前面的限定词提供了多少信息。"
+      ],
+      "memorize": [
+        "格 → 性/数 → 冠词类型 → 词尾"
+      ],
+      "related": [
+        "adj_def",
+        "adj_ein",
+        "adj_strong"
+      ]
+    },
+    {
+      "id": "complex_sentences",
+      "summary": "复杂句不是一个新的单独规则，而是把多个已学规则同时应用。最可靠的方法是先切分子句，再逐个确定有限动词和其他谓语成分的位置。",
+      "sections": [
+        {
+          "title": "第一步：找边界",
+          "bullets": [
+            "先圈出逗号、连词和关系代词：weil, dass, obwohl, wenn, ob, der/die/das 等。",
+            "把长句拆成主句、从句、关系从句，再分别处理。"
+          ]
+        },
+        {
+          "title": "第二步：找每个子句的有限动词",
+          "bullets": [
+            "主句通常 V2；Ja/Nein 问句有限动词第一位。",
+            "从属从句/关系从句有限动词末位。",
+            "前置从句整体占主句第一位置，所以主句逗号后常直接出现有限动词。"
+          ]
+        },
+        {
+          "title": "第三步：再处理句框",
+          "bullets": [
+            "Perfekt：hat ... gemacht；Modal：muss ... arbeiten；Passiv：wird ... geliefert。",
+            "在从句里这些结构整体靠末尾：..., weil er arbeiten muss / ..., weil es geliefert wurde。"
+          ]
+        },
+        {
+          "title": "推荐检查顺序",
+          "bullets": [
+            "① 切子句 → ② 找主语 → ③ 找有限动词 → ④ 判主句/从句位置 → ⑤ 检查 Infinitiv/Partizip/前缀。"
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "title": "有限动词位置总览",
+          "headers": [
+            "句型",
+            "有限动词"
+          ],
+          "rows": [
+            [
+              "陈述主句",
+              "第 2 句法位置"
+            ],
+            [
+              "Ja/Nein 问句",
+              "第 1 位"
+            ],
+            [
+              "weil/dass/wenn/obwohl 从句",
+              "末位"
+            ],
+            [
+              "关系从句",
+              "末位"
+            ],
+            [
+              "间接问句",
+              "末位"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "de": "Obwohl ich müde bin, arbeite ich weiter, weil ich fertig werden muss.",
+          "zh": "虽然我累，我仍继续工作，因为我必须完成。"
+        },
+        {
+          "de": "Die Ware wird geliefert, nachdem sie geprüft wurde.",
+          "zh": "货物检查完之后会被交付。"
+        },
+        {
+          "de": "Wenn ich mehr Zeit hätte, würde ich den Kurs machen, über den wir gesprochen haben.",
+          "zh": "如果我时间更多，我会参加我们讨论过的课程。"
+        }
+      ],
+      "pitfalls": [
+        "不要尝试一次凭语感排列整个长句；先拆子句。",
+        "同一句里可以同时出现 V2、从句末位和句框，必须分层处理。"
+      ],
+      "memorize": [
+        "切子句 → 找有限动词 → 再排句框"
+      ],
+      "related": [
+        "v2",
+        "weil",
+        "obwohl",
+        "relative",
+        "passive",
+        "konj2_functions"
+      ]
+    }
+  ]
+}
