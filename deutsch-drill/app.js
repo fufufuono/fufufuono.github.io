@@ -1,4 +1,4 @@
-const APP_VERSION = '1.11.4';
+const APP_VERSION = '1.12.0';
 const DATA_SCHEMA_VERSION = 2;
 
 function readJSONStorage(key, fallback){
@@ -500,8 +500,23 @@ function guideLevels(level){
 function hydratedPrompt(q){
   return q.prompt.replace(/\[\[(\d+)\]\]/g,(_,n)=>q.blanks?.[Number(n)]?.answer || '___');
 }
-function buildGuide(){
+function buildGuide(detailEntries=null){
+  const details=new Map((detailEntries||[]).map(x=>[x.id,x]));
   S.guide=S.skills.map(s=>{
+    const d=details.get(s.id);
+    if(d){
+      return {
+        ...d,
+        id:s.id,
+        name_zh:s.name_zh,
+        name_de:s.name_de,
+        group:s.group||'Grammar',
+        level_display:s.level,
+        filter_levels:guideLevels(s.level)
+      };
+    }
+
+    // Safe fallback if the standalone guide file cannot be loaded.
     const qs=S.questions.filter(q=>q.skills?.includes(s.id));
     const rules=[];
     for(const q of qs){
@@ -527,13 +542,15 @@ function buildGuide(){
       level_display:s.level,
       filter_levels:guideLevels(s.level),
       summary:GUIDE_SUMMARIES[s.id] || s.name_zh,
-      rules:rules.length?rules:[GUIDE_SUMMARIES[s.id]||s.name_zh],
+      sections:[{title:'核心规则',bullets:rules.length?rules:[GUIDE_SUMMARIES[s.id]||s.name_zh]}],
+      tables:[],
       examples,
-      pitfalls:GUIDE_TIPS[s.id] || ['先判断这个语法点在句子中的功能，再选择形式。','如果另一个答案在当前语境中也成立，请把题目视为需要复核，而不是机械接受唯一答案。']
+      pitfalls:GUIDE_TIPS[s.id] || ['先判断这个语法点在句子中的功能，再选择形式。'],
+      memorize:[],
+      related:[]
     };
   });
 }
-
 function guideEntry(id){
   return S.guide.find(x=>x.id===id);
 }
@@ -598,7 +615,14 @@ function guideMatches(g){
   if(!levelOK) return false;
   const q=norm(S.guideQuery);
   if(!q) return true;
-  return norm([g.name_zh,g.name_de,g.summary,g.group,...g.rules,...g.examples.flatMap(x=>[x.de,x.zh])].join(' ')).includes(q);
+  const sectionText=(g.sections||[]).flatMap(x=>[x.title,...(x.bullets||[])]);
+  const tableText=(g.tables||[]).flatMap(x=>[x.title,...(x.headers||[]),...(x.rows||[]).flat()]);
+  const exampleText=(g.examples||[]).flatMap(x=>[x.de,x.zh,x.note||'']);
+  return norm([
+    g.name_zh,g.name_de,g.summary,g.group,
+    ...sectionText,...tableText,...exampleText,
+    ...(g.pitfalls||[]),...(g.memorize||[])
+  ].join(' ')).includes(q);
 }
 function renderGuideList(){
   const rows=S.guide.filter(guideMatches);
@@ -627,15 +651,72 @@ function openGuideDetail(skillId,from='guide'){
   S.guideDetailReturnView=from;
   $('#guideDetailTopTitle').textContent=g.name_zh;
   $('#guideDetailLevel').textContent=g.level_display;
+
+  const sections=(g.sections||[]).map(section=>`
+    <section class="guide-detail-section">
+      <h3>${esc(section.title)}</h3>
+      <ul>${(section.bullets||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+    </section>`).join('');
+
+  const tables=(g.tables||[]).map(table=>`
+    <section class="guide-detail-section">
+      <h3>${esc(table.title)}</h3>
+      <div class="grammar-table-wrap">
+        <table class="grammar-table">
+          <thead><tr>${(table.headers||[]).map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead>
+          <tbody>${(table.rows||[]).map(row=>`<tr>${row.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table>
+      </div>
+    </section>`).join('');
+
+  const examples=(g.examples||[]).map(x=>`
+    <div class="example-row">
+      <strong>${esc(x.de)}</strong>
+      <span>${esc(x.zh)}</span>
+      ${x.note?`<em>${esc(x.note)}</em>`:''}
+    </div>`).join('');
+
+  const memory=(g.memorize||[]).length ? `
+    <section class="guide-memory">
+      <span>记忆重点</span>
+      ${g.memorize.map(x=>`<strong>${esc(x)}</strong>`).join('')}
+    </section>` : '';
+
+  const related=(g.related||[]).map(guideEntry).filter(Boolean);
+  const relatedHtml=related.length ? `
+    <section class="guide-detail-section">
+      <h3>相关语法</h3>
+      <div class="related-links">
+        ${related.map(x=>`<button type="button" data-related-id="${esc(x.id)}">${esc(x.name_zh)} <span>›</span></button>`).join('')}
+      </div>
+    </section>` : '';
+
   $('#guideDetailContent').innerHTML=`
-    <div class="guide-detail-title"><span class="guide-group">${esc(g.group)}</span><h1>${esc(g.name_de)}</h1><p>${esc(g.name_zh)}</p></div>
+    <div class="guide-detail-title">
+      <span class="guide-group">${esc(g.group)}</span>
+      <h1>${esc(g.name_de)}</h1>
+      <p>${esc(g.name_zh)}</p>
+    </div>
     <div class="guide-summary">${esc(g.summary)}</div>
-    <section class="guide-detail-section"><h3>核心规则</h3><ul>${g.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
-    <section class="guide-detail-section"><h3>例句</h3><div class="example-list">${g.examples.map(x=>`<div class="example-row"><strong>${esc(x.de)}</strong><span>${esc(x.zh)}</span></div>`).join('')}</div></section>
-    <section class="guide-detail-section warning"><h3>常见错误 / 提示</h3><ul>${g.pitfalls.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>`;
+    ${memory}
+    ${sections}
+    ${tables}
+    <section class="guide-detail-section">
+      <h3>例句</h3>
+      <div class="example-list">${examples}</div>
+    </section>
+    <section class="guide-detail-section warning">
+      <h3>常见错误 / 提示</h3>
+      <ul>${(g.pitfalls||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+    </section>
+    ${relatedHtml}
+  `;
+
+  [...document.querySelectorAll('#guideDetailContent [data-related-id]')].forEach(btn=>{
+    btn.onclick=()=>openGuideDetail(btn.dataset.relatedId,'guideDetail');
+  });
   showView('guideDetail');
 }
-
 function setDataStatus(message){
   const el = $('#dataStatus');
   if(el) el.textContent = message || '';
@@ -796,19 +877,25 @@ async function applyUpdate(){
 }
 
 async function boot(){
+  let guidePayload=null;
   if(window.__Q){
     S.questions = window.__Q;
     S.skills = window.__SK;
+    guidePayload = window.__GUIDE || null;
   } else {
-    const [a,b] = await Promise.all([
+    const [a,b,guideResponse] = await Promise.all([
       fetch('data/questions.json'),
-      fetch('data/skills.json')
+      fetch('data/skills.json'),
+      fetch('data/grammar-guide.json').catch(()=>null)
     ]);
     S.questions = await a.json();
     S.skills = await b.json();
+    if(guideResponse?.ok){
+      guidePayload = await guideResponse.json();
+    }
   }
 
-  buildGuide();
+  buildGuide(guidePayload?.entries || guidePayload || null);
   createGuideUI();
   if(!S.guide.length) throw new Error('Grammar guide failed to initialize.');
 
