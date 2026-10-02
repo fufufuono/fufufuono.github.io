@@ -391,7 +391,7 @@ function renderStats(){
       <div class="bar"><i style="width:${x.total?pct:0}%"></i></div>
     </button>`;
   }).join('');
-  $('#skillsGrid [data-guide-skill]').forEach(btn=>{
+  [...document.querySelectorAll('#skillsGrid [data-guide-skill]')].forEach(btn=>{
     btn.onclick=()=>openGuideDetail(btn.dataset.guideSkill,'stats');
   });
 }
@@ -587,9 +587,9 @@ function createGuideUI(){
   $('#closeGuideBtn').onclick=()=>showView(S.guideReturnView);
   $('#closeGuideDetailBtn').onclick=()=>showView(S.guideDetailReturnView);
   $('#guideSearch').oninput=e=>{S.guideQuery=e.target.value||'';renderGuideList();};
-  $('.guide-level').forEach(btn=>btn.onclick=()=>{
+  [...document.querySelectorAll('.guide-level')].forEach(btn=>btn.onclick=()=>{
     S.guideLevel=btn.dataset.guideLevel;
-    $('.guide-level').forEach(x=>x.classList.toggle('active',x===btn));
+    [...document.querySelectorAll('.guide-level')].forEach(x=>x.classList.toggle('active',x===btn));
     renderGuideList();
   });
 }
@@ -616,7 +616,7 @@ function renderGuideList(){
           <span class="guide-card-side"><span>${esc(g.level_display)}</span><b>›</b></span>
         </button>`).join('')}</div>
     </section>`).join('');
-  $('#guideList [data-guide-id]').forEach(btn=>btn.onclick=()=>openGuideDetail(btn.dataset.guideId,'guide'));
+  [...document.querySelectorAll('#guideList [data-guide-id]')].forEach(btn=>btn.onclick=()=>openGuideDetail(btn.dataset.guideId,'guide'));
 }
 function openGuide(from='home'){
   S.guideReturnView=from;createGuideUI();renderGuideList();showView('guide');
