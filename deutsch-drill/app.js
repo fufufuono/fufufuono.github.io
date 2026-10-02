@@ -1,4 +1,4 @@
-const APP_VERSION = '1.11.3';
+const APP_VERSION = '1.11.4';
 const DATA_SCHEMA_VERSION = 2;
 
 function readJSONStorage(key, fallback){
@@ -705,9 +705,6 @@ function sanitizeImportedStats(stats){
 }
 
 function sanitizeImportedMistakes(items){
-  buildGuide();
-  createGuideUI();
-
   const validIds = new Set(S.questions.map(q=>q.id));
   if(!Array.isArray(items)) return [];
   return [...new Set(items.filter(id=>typeof id === 'string' && validIds.has(id)))];
@@ -810,6 +807,10 @@ async function boot(){
     S.questions = await a.json();
     S.skills = await b.json();
   }
+
+  buildGuide();
+  createGuideUI();
+  if(!S.guide.length) throw new Error('Grammar guide failed to initialize.');
 
   const validIds = new Set(S.questions.map(q=>q.id));
   S.mistakes = S.mistakes.filter(id=>validIds.has(id));
