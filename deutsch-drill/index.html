@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#F6F3EA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Deutsch Drill">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Deutsch Drill</title>
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <div id="updateBanner" class="update-banner hidden" role="status">
+      <div>
+        <strong>New version available</strong>
+        <small id="updateVersionText">A newer Deutsch Drill is ready.</small>
+      </div>
+      <button id="updateNowBtn" type="button">Update</button>
+    </div>
+
+    <!-- HOME -->
+    <section id="homeView" class="view home-view">
+      <header class="home-header">
+        <div class="brand">
+          <div class="brand-mark">⌁</div>
+          <div>
+            <h1>Deutsch Drill</h1>
+            <p>Practice German. Build confidence.</p>
+          </div>
+        </div>
+        <button id="statsBtn" class="icon-button" aria-label="查看学习进度">
+          <span class="bar-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h2>Hallo!</h2>
+          <p>Ready to practice<br>your German today?</p>
+        </div>
+        <img src="data:image/webp;base64,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" alt="" class="hero-image">
+      </section>
+
+      <section class="home-actions">
+        <button id="startBtn" class="primary-cta">
+          <span class="cta-icon">▣</span>
+          <span id="startLabel">Start practicing</span>
+          <span class="arrow">›</span>
+        </button>
+
+        <button id="mistakesBtn" class="secondary-cta">
+          <span class="cta-icon subtle">↻</span>
+          <span>
+            <strong id="reviewLabel">Review mistakes</strong>
+            <small id="mistakeCount">No mistakes yet</small>
+          </span>
+          <span class="arrow dark">›</span>
+        </button>
+      </section>
+
+
+      <section class="level-filter" aria-label="题目等级">
+        <span class="level-filter-label">Level</span>
+        <div class="level-segment">
+          <button class="level-option active" data-level="all">All</button>
+          <button class="level-option" data-level="A1">A1</button>
+          <button class="level-option" data-level="A2">A2</button>
+          <button class="level-option" data-level="B1">B1</button>
+        </div>
+      </section>
+
+      <div class="mode-dock" aria-label="练习模式">
+        <button class="mode-pill active" data-home-mode="atomic">
+          <span class="mode-symbol">✦</span>
+          <span>Atomic</span>
+        </button>
+        <button class="mode-pill" data-home-mode="composite">
+          <span class="mode-symbol">▱</span>
+          <span>Composite</span>
+        </button>
+        <button class="mode-pill" data-home-mode="mixed">
+          <span class="mode-symbol">⌘</span>
+          <span>Mixed</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section id="practiceView" class="view practice-view hidden">
+      <header class="practice-topbar">
+        <button id="closePracticeBtn" class="plain-icon" aria-label="返回主页">×</button>
+        <div class="progress-wrap">
+          <div class="progress-track"><i id="sessionProgress"></i></div>
+        </div>
+        <div id="progressText" class="progress-text">1 / 10</div>
+        <button id="practiceStatsBtn" class="icon-button compact" aria-label="查看学习进度">
+          <span class="bar-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </header>
+
+      <section class="practice-content">
+        <div class="question-meta">
+          <div id="levelTag" class="level-tag">A1</div>
+          <div id="skillTag" class="skill-tag">Grammar</div>
+        </div>
+        <h2>Fill in the blanks</h2>
+        <p class="instruction">Use the cue in brackets when provided, and type the correct German form into each box.</p>
+
+        <article class="question-card">
+          <div id="question" class="question"></div>
+        </article>
+
+        <button id="hintBtn" class="hint-card" type="button">
+          <span class="bulb">◌</span>
+          <span>
+            <strong>Need a hint?</strong>
+            <small id="hintText">Show the grammar focus</small>
+          </span>
+          <span class="hint-chevron">⌄</span>
+        </button>
+
+        <div id="feedback" class="feedback hidden"></div>
+      </section>
+
+      <footer class="practice-actions">
+        <button id="skipBtn" class="skip-button">Skip</button>
+        <button id="checkBtn" class="check-button">
+          <span>Check answer</span><span>›</span>
+        </button>
+        <button id="nextBtn" class="check-button hidden">
+          <span>Next question</span><span>›</span>
+        </button>
+      </footer>
+    </section>
+
+    <!-- STATS -->
+    <section id="statsView" class="view stats-view hidden">
+      <header class="stats-header">
+        <button id="closeStatsBtn" class="plain-icon" aria-label="返回">‹</button>
+        <div>
+          <p class="overline">YOUR PROGRESS</p>
+          <h2>Grammar skills</h2>
+        </div>
+        <button id="resetBtn" class="text-button">Reset</button>
+      </header>
+
+      <section class="stats-summary">
+        <div>
+          <strong id="totalAttempts">0</strong>
+          <span>answered blanks</span>
+        </div>
+        <div>
+          <strong id="overallAccuracy">—</strong>
+          <span>overall accuracy</span>
+        </div>
+      </section>
+
+      <section class="skill-list-wrap">
+        <div class="list-title">
+          <h3>Skill record</h3>
+          <p>弱项会在练习中被提高抽取权重。</p>
+        </div>
+        <div id="skillsGrid" class="skills-grid"></div>
+      </section>
+
+      <section class="app-data-wrap">
+        <div class="list-title">
+          <h3>App & data</h3>
+          <p>学习记录保存在这台设备上。更新 App 不会主动清空记录。</p>
+        </div>
+
+        <div class="app-data-card">
+          <div class="app-version-row">
+            <span>
+              <strong>Deutsch Drill</strong>
+              <small id="appVersionText">v1.10.0</small>
+            </span>
+            <button id="installHelpBtn" class="mini-button" type="button">iPhone setup</button>
+          </div>
+
+          <div class="data-actions">
+            <button id="exportBtn" class="data-button" type="button">
+              <strong>Export backup</strong>
+              <small>保存错题、统计和设置</small>
+            </button>
+            <button id="importBtn" class="data-button" type="button">
+              <strong>Import backup</strong>
+              <small>从备份恢复这台设备</small>
+            </button>
+          </div>
+          <input id="importFileInput" type="file" accept="application/json,.json" hidden>
+          <p id="dataStatus" class="data-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <div id="installSheet" class="sheet-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+    <section class="install-sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div>
+          <p class="overline">IPHONE</p>
+          <h2 id="installTitle">Add to Home Screen</h2>
+        </div>
+        <button id="closeInstallSheetBtn" class="plain-icon compact-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <ol class="install-steps">
+        <li>用 <strong>Safari</strong> 打开 Deutsch Drill 的固定网址。</li>
+        <li>点 Safari 底部或顶部的 <strong>分享</strong> 按钮。</li>
+        <li>选择 <strong>添加到主屏幕</strong>。</li>
+        <li>以后直接从主屏幕图标打开。更新版本时不需要重新添加。</li>
+      </ol>
+      <p class="install-note">学习记录保存在当前浏览器的本地存储里。换手机、清除 Safari 网站数据或更换网址前，请先 Export backup。</p>
+      <button id="installDoneBtn" class="sheet-primary" type="button">Got it</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
