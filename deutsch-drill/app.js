@@ -1,4 +1,4 @@
-const APP_VERSION = '1.11.2';
+const APP_VERSION = '1.11.3';
 const DATA_SCHEMA_VERSION = 2;
 
 function readJSONStorage(key, fallback){
