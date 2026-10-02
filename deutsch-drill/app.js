@@ -1,4 +1,4 @@
-const APP_VERSION = '1.12.0';
+const APP_VERSION = '1.12.1';
 const DATA_SCHEMA_VERSION = 2;
 
 function readJSONStorage(key, fallback){
@@ -62,7 +62,9 @@ const S = {
   guideLevel: 'all',
   guideQuery: '',
   guideReturnView: 'home',
-  guideDetailReturnView: 'guide',
+  guideDetailOrigin: 'guide',
+  guideDetailHistory: [],
+  guideCurrentSkill: null,
   homeMode: localStorage.getItem('dd_home_mode') || 'atomic',
   levelFilter: localStorage.getItem('dd_level_filter') || 'all',
   current: null,
@@ -602,7 +604,7 @@ function createGuideUI(){
   $('#app').appendChild(detail);
   guideButton.onclick=()=>openGuide('home');
   $('#closeGuideBtn').onclick=()=>showView(S.guideReturnView);
-  $('#closeGuideDetailBtn').onclick=()=>showView(S.guideDetailReturnView);
+  $('#closeGuideDetailBtn').onclick=handleGuideDetailBack;
   $('#guideSearch').oninput=e=>{S.guideQuery=e.target.value||'';renderGuideList();};
   [...document.querySelectorAll('.guide-level')].forEach(btn=>btn.onclick=()=>{
     S.guideLevel=btn.dataset.guideLevel;
@@ -643,12 +645,40 @@ function renderGuideList(){
   [...document.querySelectorAll('#guideList [data-guide-id]')].forEach(btn=>btn.onclick=()=>openGuideDetail(btn.dataset.guideId,'guide'));
 }
 function openGuide(from='home'){
-  S.guideReturnView=from;createGuideUI();renderGuideList();showView('guide');
+  S.guideReturnView=from;
+  S.guideDetailOrigin='guide';
+  S.guideDetailHistory=[];
+  S.guideCurrentSkill=null;
+  createGuideUI();
+  renderGuideList();
+  showView('guide');
+}
+
+function handleGuideDetailBack(){
+  if(S.guideDetailHistory.length){
+    const previousSkill=S.guideDetailHistory.pop();
+    openGuideDetail(previousSkill,'history');
+    return;
+  }
+
+  const target=S.guideDetailOrigin || 'guide';
+  S.guideCurrentSkill=null;
+  showView(target);
 }
 function openGuideDetail(skillId,from='guide'){
   const g=guideEntry(skillId); if(!g) return;
   createGuideUI();
-  S.guideDetailReturnView=from;
+
+  if(from==='guideDetail'){
+    if(S.guideCurrentSkill && S.guideCurrentSkill!==skillId){
+      S.guideDetailHistory.push(S.guideCurrentSkill);
+    }
+  } else if(from!=='history'){
+    S.guideDetailOrigin=from;
+    S.guideDetailHistory=[];
+  }
+  S.guideCurrentSkill=skillId;
+
   $('#guideDetailTopTitle').textContent=g.name_zh;
   $('#guideDetailLevel').textContent=g.level_display;
 
