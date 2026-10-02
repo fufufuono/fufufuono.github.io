@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-drill-v1-10-0';
+const CACHE_NAME='deutsch-drill-v1-11-1';
 const APP_SHELL=[
   './',
   './index.html',
