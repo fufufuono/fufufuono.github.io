@@ -544,20 +544,20 @@ function createGuideUI(){
   guideButton.id='grammarGuideBtn';
   guideButton.className='guide-entry-button';
   guideButton.type='button';
-  guideButton.innerHTML=\`
+  guideButton.innerHTML=`
     <span class="guide-book">Aa</span>
-    <span><strong>Grammar guide</strong><small>\${S.guide.length} 个语法 · A1–B1 详细解释</small></span>
-    <span class="arrow dark">›</span>\`;
+    <span><strong>Grammar guide</strong><small>${S.guide.length} 个语法 · A1–B1 详细解释</small></span>
+    <span class="arrow dark">›</span>`;
   $('#homeView .home-actions').appendChild(guideButton);
 
   const list=document.createElement('section');
   list.id='guideView';
   list.className='view guide-view hidden';
-  list.innerHTML=\`
+  list.innerHTML=`
     <header class="guide-header">
       <button id="closeGuideBtn" class="plain-icon" type="button" aria-label="返回">‹</button>
       <div><p class="overline">REFERENCE</p><h2>Grammar guide</h2></div>
-      <div class="guide-count">\${S.guide.length}</div>
+      <div class="guide-count">${S.guide.length}</div>
     </header>
     <div class="guide-tools">
       <label class="guide-search"><span>⌕</span><input id="guideSearch" type="search" inputmode="search" placeholder="搜索语法，例如 Dativ / 关系从句"></label>
@@ -568,18 +568,18 @@ function createGuideUI(){
         <button class="guide-level" data-guide-level="B1">B1</button>
       </div>
     </div>
-    <div id="guideList" class="guide-list"></div>\`;
+    <div id="guideList" class="guide-list"></div>`;
 
   const detail=document.createElement('section');
   detail.id='guideDetailView';
   detail.className='view guide-detail-view hidden';
-  detail.innerHTML=\`
+  detail.innerHTML=`
     <header class="guide-header detail-head">
       <button id="closeGuideDetailBtn" class="plain-icon" type="button" aria-label="返回">‹</button>
       <div><p class="overline">GRAMMAR</p><h2 id="guideDetailTopTitle">Details</h2></div>
       <span id="guideDetailLevel" class="level-tag">A1</span>
     </header>
-    <article id="guideDetailContent" class="guide-detail-content"></article>\`;
+    <article id="guideDetailContent" class="guide-detail-content"></article>`;
 
   $('#app').appendChild(list);
   $('#app').appendChild(detail);
@@ -607,15 +607,15 @@ function renderGuideList(){
   if(!rows.length){$('#guideList').innerHTML='<div class="guide-empty">没有找到匹配的语法。</div>';return;}
   const grouped=new Map();
   rows.forEach(g=>{const l=g.filter_levels[0]||'B1';if(!grouped.has(l))grouped.set(l,[]);grouped.get(l).push(g);});
-  $('#guideList').innerHTML=['A1','A2','B1'].filter(l=>grouped.has(l)).map(level=>\`
+  $('#guideList').innerHTML=['A1','A2','B1'].filter(l=>grouped.has(l)).map(level=>`
     <section class="guide-level-section">
-      <div class="guide-section-title"><span class="level-tag small">\${level}</span><strong>\${level} grammar</strong><small>\${grouped.get(level).length}</small></div>
-      <div class="guide-cards">\${grouped.get(level).map(g=>\`
-        <button class="guide-card" type="button" data-guide-id="\${esc(g.id)}">
-          <span class="guide-card-main"><strong>\${esc(g.name_de)}</strong><small>\${esc(g.name_zh)}</small><em>\${esc(g.summary)}</em></span>
-          <span class="guide-card-side"><span>\${esc(g.level_display)}</span><b>›</b></span>
-        </button>\`).join('')}</div>
-    </section>\`).join('');
+      <div class="guide-section-title"><span class="level-tag small">${level}</span><strong>${level} grammar</strong><small>${grouped.get(level).length}</small></div>
+      <div class="guide-cards">${grouped.get(level).map(g=>`
+        <button class="guide-card" type="button" data-guide-id="${esc(g.id)}">
+          <span class="guide-card-main"><strong>${esc(g.name_de)}</strong><small>${esc(g.name_zh)}</small><em>${esc(g.summary)}</em></span>
+          <span class="guide-card-side"><span>${esc(g.level_display)}</span><b>›</b></span>
+        </button>`).join('')}</div>
+    </section>`).join('');
   $('#guideList [data-guide-id]').forEach(btn=>btn.onclick=()=>openGuideDetail(btn.dataset.guideId,'guide'));
 }
 function openGuide(from='home'){
@@ -627,12 +627,12 @@ function openGuideDetail(skillId,from='guide'){
   S.guideDetailReturnView=from;
   $('#guideDetailTopTitle').textContent=g.name_zh;
   $('#guideDetailLevel').textContent=g.level_display;
-  $('#guideDetailContent').innerHTML=\`
-    <div class="guide-detail-title"><span class="guide-group">\${esc(g.group)}</span><h1>\${esc(g.name_de)}</h1><p>\${esc(g.name_zh)}</p></div>
-    <div class="guide-summary">\${esc(g.summary)}</div>
-    <section class="guide-detail-section"><h3>核心规则</h3><ul>\${g.rules.map(x=>\`<li>\${esc(x)}</li>\`).join('')}</ul></section>
-    <section class="guide-detail-section"><h3>例句</h3><div class="example-list">\${g.examples.map(x=>\`<div class="example-row"><strong>\${esc(x.de)}</strong><span>\${esc(x.zh)}</span></div>\`).join('')}</div></section>
-    <section class="guide-detail-section warning"><h3>常见错误 / 提示</h3><ul>\${g.pitfalls.map(x=>\`<li>\${esc(x)}</li>\`).join('')}</ul></section>\`;
+  $('#guideDetailContent').innerHTML=`
+    <div class="guide-detail-title"><span class="guide-group">${esc(g.group)}</span><h1>${esc(g.name_de)}</h1><p>${esc(g.name_zh)}</p></div>
+    <div class="guide-summary">${esc(g.summary)}</div>
+    <section class="guide-detail-section"><h3>核心规则</h3><ul>${g.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
+    <section class="guide-detail-section"><h3>例句</h3><div class="example-list">${g.examples.map(x=>`<div class="example-row"><strong>${esc(x.de)}</strong><span>${esc(x.zh)}</span></div>`).join('')}</div></section>
+    <section class="guide-detail-section warning"><h3>常见错误 / 提示</h3><ul>${g.pitfalls.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>`;
   showView('guideDetail');
 }
 
