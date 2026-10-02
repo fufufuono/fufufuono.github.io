@@ -1,0 +1,6 @@
+Deutsch Drill v1.10 GitHub Pages deployment bundle.
+Target path: /deutsch-drill/
+Permanent URL: https://fufufuono.github.io/deutsch-drill/
+
+Question bank is gzip-compressed + base64 encoded only to make deployment transport smaller.
+It is decompressed locally in the browser; no server/API is used.
