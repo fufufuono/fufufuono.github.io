@@ -1,4 +1,4 @@
-const APP_VERSION = '1.10.0';
+const APP_VERSION = '1.11.1';
 const DATA_SCHEMA_VERSION = 2;
 
 function readJSONStorage(key, fallback){
@@ -58,6 +58,11 @@ migrateStorage();
 const S = {
   questions: [],
   skills: [],
+  guide: [],
+  guideLevel: 'all',
+  guideQuery: '',
+  guideReturnView: 'home',
+  guideDetailReturnView: 'guide',
   homeMode: localStorage.getItem('dd_home_mode') || 'atomic',
   levelFilter: localStorage.getItem('dd_level_filter') || 'all',
   current: null,
@@ -79,7 +84,7 @@ const norm = s => (s || '').trim().toLocaleLowerCase('de-DE').replace(/\s+/g,' '
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 
 function showView(name){
-  ['home','practice','stats'].forEach(v => $(`#${v}View`).classList.toggle('hidden', v !== name));
+  ['home','practice','stats','guide','guideDetail'].forEach(v => $(`#${v}View`)?.classList.toggle('hidden', v !== name));
   window.scrollTo({top:0,behavior:'instant'});
 }
 function st(id){
@@ -212,7 +217,9 @@ function renderQuestion(){
 
   const names = S.current.skills.map(skillName);
   $('#levelTag').textContent = S.current.level;
-  $('#skillTag').textContent = names.length === 1 ? names[0] : `${names[0]} +${names.length-1}`;
+  $('#skillTag').textContent = names.length === 1 ? `${names[0]} · 解释 ›` : `${names[0]} +${names.length-1} · 解释 ›`;
+  $('#skillTag').classList.add('clickable-skill');
+  $('#skillTag').onclick = ()=>openGuideDetail(S.current.skills[0],'practice');
   $('#hintText').textContent = 'Show the grammar focus';
   $('#hintBtn').dataset.open = '0';
 
@@ -292,9 +299,11 @@ function checkAnswer(){
     <div class="feedback-title">${all?'✓ Correct':'Review this one'}</div>
     ${rows.join('')}
     ${nounNotesHtml()}
-    <div class="feedback-rule">${esc(S.current.explanation_zh)}</div>`;
+    <div class="feedback-rule">${esc(S.current.explanation_zh)}</div>
+    <button id="feedbackGuideBtn" class="feedback-guide-button" type="button">查看「${esc(skillName(S.current.skills[0]))}」详细解释 ›</button>`;
 
   $('#feedback').classList.remove('hidden');
+  $('#feedbackGuideBtn').onclick=()=>openGuideDetail(S.current.skills[0],'practice');
   $('#checkBtn').classList.add('hidden');
   $('#nextBtn').classList.remove('hidden');
 
@@ -374,14 +383,17 @@ function renderStats(){
   $('#skillsGrid').innerHTML = ordered.map(s=>{
     const x = st(s.id);
     const pct = Math.round(mastery(s.id)*100);
-    return `<article class="skill">
+    return `<button class="skill skill-link" data-guide-skill="${esc(s.id)}" type="button">
       <div class="skill-top">
         <span class="skill-name">${esc(s.name_zh)}</span>
-        <span class="skill-score">${x.total ? pct+'% · '+x.total+'次' : '未练'}</span>
+        <span class="skill-score">${x.total ? pct+'% · '+x.total+'次' : '未练'} · 查看 ›</span>
       </div>
       <div class="bar"><i style="width:${x.total?pct:0}%"></i></div>
-    </article>`;
+    </button>`;
   }).join('');
+  $('#skillsGrid [data-guide-skill]').forEach(btn=>{
+    btn.onclick=()=>openGuideDetail(btn.dataset.guideSkill,'stats');
+  });
 }
 
 function openStats(from){
@@ -402,6 +414,227 @@ function toggleHint(){
     : `This question practices: ${S.current.skills.map(skillName).join(' · ')}`;
 }
 
+
+
+const GUIDE_SUMMARIES = {
+  article_nom:'Nominativ 主要标记主语，也用于 sein/werden/bleiben 后的表语。冠词必须同时匹配名词的性别和单复数。',
+  article_acc:'Akkusativ 常表示直接宾语。最明显的冠词变化是阳性单数：der → den，ein → einen。',
+  article_dat:'Dativ 常表示接收者，也由许多介词和动词固定支配：dem/der/dem/den。',
+  pron_nom:'主格人称代词代替句子主语，并决定动词的人称变化：ich, du, er/sie/es, wir, ihr, sie/Sie。',
+  pron_acc:'Akkusativ 人称代词用于直接宾语：mich, dich, ihn, sie, es, uns, euch, sie/Sie。',
+  pron_dat:'Dativ 人称代词常表示接收者：mir, dir, ihm, ihr, ihm, uns, euch, ihnen/Ihnen。',
+  possessive:'mein/dein/sein/ihr/unser/euer/Ihr 像 ein-类冠词一样变格；词尾取决于后面名词的格、性和数。',
+  adj_def:'定冠词已经显示大量语法信息，因此后面的形容词使用弱变化，主要在 -e 和 -en 之间选择。',
+  adj_ein:'ein-/kein-/物主冠词后使用混合变化；限定词没显示出的格/性信息由形容词词尾补出。',
+  adj_strong:'无冠词时形容词自己承担格、性、数信息，因此使用强变化。',
+  prep_acc:'durch, für, gegen, ohne, um 等介词固定支配 Akkusativ，不由“是否移动”决定。',
+  prep_dat:'aus, bei, mit, nach, seit, von, zu 等介词固定支配 Dativ。',
+  two_way:'an, auf, hinter, in, neben, über, unter, vor, zwischen 可接 Dativ 或 Akkusativ：Wo? → Dat.；Wohin? → Akk.',
+  present_regular:'规则动词 Präsens 通常使用 -e/-st/-t/-en/-t/-en 的人称词尾。',
+  present_irregular:'部分高频动词在 du 和 er/sie/es 中改变词干元音，如 fahren → fährst/fährt，lesen → liest。',
+  present_sein_haben:'sein 和 haben 是最重要的高频不规则动词：bin/bist/ist… 与 habe/hast/hat…。',
+  modal:'情态动词表达能力、必要、意愿、许可等；变位情态动词在前，实义动词 infinitive 通常位于句末。',
+  separable:'可分动词在主句中把前缀分到句末；从句、Partizip II 和 zu-Infinitiv 中结构会重新组合。',
+  perfect_haben:'大多数动词的 Perfekt 用 haben + Partizip II；haben 变位，Partizip II 通常位于句末。',
+  perfect_sein:'部分位移/状态变化动词以及 bleiben 等在 Perfekt 中用 sein + Partizip II。',
+  negation:'kein- 主要否定名词；nicht 否定动词、形容词、副词、介词短语或带定冠词的成分。',
+  v2:'德语陈述主句的变位动词位于第二个句法位置；第一位置可以是主语、时间、地点等整个成分。',
+  questions:'W-Frage 通常是 W-Wort + Verb + Subjekt；Ja/Nein-Frage 以变位动词开头。',
+  plural_nouns:'德语复数没有单一规则，常见 -e/-er/-en/-s/零词尾，部分还发生 Umlaut；建议连同单数一起记。',
+  weil:'weil 引导原因从句，变位动词位于从句末尾；若从句前置，后面的主句直接以变位动词开始。',
+  dass:'dass 引导陈述性从句，常见于 sagen/denken/glauben/wissen/hoffen 后，有限动词位于末尾。',
+  comparative:'比较级通常加 -er，最高级常用 am ...-sten/-esten；不同对象用 als，相同程度用 wie。',
+  dative_plural:'Dativ Plural 常用 den，且复数名词通常再加 -n；若本来以 -n/-s 结尾通常不再添加。',
+  n_declension:'部分阳性名词除 Nominativ Singular 外加 -n/-en，如 der Student → den/dem Studenten。',
+  partizip_rules:'规则 Partizip II 常为 ge-...-t；可分前缀把 ge 放中间，不可分前缀和 -ieren 动词通常不用 ge-。',
+  preterite_basic:'A2 阶段重点掌握 sein/haben/Modalverben 的 Präteritum：war, hatte, konnte, musste 等。',
+  reflexive:'反身代词与主语同指：mich/dich/sich/uns/euch/sich；很多反身动词还固定搭配介词。',
+  wenn:'wenn 表示条件或重复发生的时间关系；从句动词末位。过去一次性的时间背景通常用 als。',
+  coord_conj:'aber/denn/sondern/oder 等并列连词不会把动词推到句末，后面仍保持主句 V2。',
+  satzklammer:'句框把变位谓语放前部，另一部分谓语放句末：muss ... arbeiten / hat ... gearbeitet / ruft ... an。',
+  double_object:'geben/zeigen/schicken/schenken 等常带 Dativ 接收者 + Akkusativ 事物。',
+  indirect_questions:'间接问句使用 ob 或保留 W-Wort，并把变位动词放到从句末尾。',
+  obwohl:'obwohl 引导让步从句“虽然……”，有限动词位于从句末尾。',
+  deshalb:'deshalb 表示结果，trotzdem 表示“尽管如此”；它们占主句第一位时，变位动词紧随其后。',
+  relative:'关系代词的性和数看先行词，格看它在关系从句中的功能；关系从句有限动词末位。',
+  temporal_clauses:'als/wenn/bevor/nachdem/während/bis/seitdem/sobald 等表达一次、重复、先后、同时等时间关系。',
+  relative_dat_prep:'复杂关系从句中关系代词可用 Dativ 或跟介词：mit dem, bei der, über das, an dem；动词仍末位。',
+  konj2:'Konjunktiv II 表达假设、愿望和距离感；高频形式包括 wäre, hätte, könnte, müsste, dürfte, sollte。',
+  konj2_functions:'Konjunktiv II 常用于礼貌请求、建议、愿望和非现实条件：Könnten Sie… / Du solltest… / Wenn ich… hätte…',
+  passive:'Vorgangspassiv Präsens 用 werden + Partizip II，强调动作或过程而不是执行者。',
+  passive_past:'过去被动态：Präteritum 用 wurde/wurden + Partizip II；Perfekt 用 ist/sind + Partizip II + worden。',
+  inf_zu:'zu-Infinitiv 常跟 versuchen/hoffen/planen/vergessen 等；可分动词把 zu 放在前缀和词干之间。',
+  inf_purpose:'um ... zu 表目的，ohne ... zu 表示未做某事，anstatt ... zu 表替代；通常两个动作共享主语。',
+  verb_prep:'很多动词固定搭配介词和格，如 warten auf + Akk., teilnehmen an + Dat.，需要整体记忆。',
+  pronominal_adverbs:'介词宾语指事物时常用 da(r)- 代副词，提问用 wo(r)-：darauf/worauf, daran/woran 等。',
+  pronoun_order:'宾语顺序受名词/代词影响：两个完整名词常 Dat. → Akk.；两个代词常 Akk.-Pron. → Dat.-Pron.',
+  genitive_basic:'Genitiv 表所属关系，也用于 wegen/trotz/während 等；阳/中单数常用 des 并给名词加 -s/-es。',
+  adj_consolidated:'形容词变化综合要按“格 → 性/数 → 冠词类型”判断，再选择弱变化、混合变化或强变化。',
+  complex_sentences:'复杂句应先按逗号和连词拆成子句，再分别检查 V2、从句动词末位、句框、关系从句和被动等规则。'
+};
+
+const GUIDE_TIPS = {
+  article_acc:['重点检查阳性单数：den / einen / keinen / meinen。','不要因为宾语是“人”就自动用 Dativ；格由动词或介词决定。'],
+  article_dat:['Dativ Plural 常同时出现 den + 名词 -n。','dem 是阳/中单数；den 是复数 Dativ。'],
+  two_way:['关键是“位置还是方向”，不是“有没有动作”。','in dem → im；in das → ins 是常见缩合。'],
+  adj_def:['先判断格，再看定冠词后该用 -e 还是 -en。','Dativ 和很多复数位置通常使用 -en。'],
+  adj_ein:['ein-/mein- 没有显示出的语法信息常由形容词补出。','Akkusativ 阳性：einen alten Mann。'],
+  adj_strong:['无冠词并不代表“不变格”，反而由形容词承担更多信息。','做题顺序仍应先判断格。'],
+  prep_acc:['für/ohne/durch/gegen/um 后固定 Akkusativ。','不要写 *für dem Mann*。'],
+  prep_dat:['mit/bei/von/zu/aus/seit/nach 后固定 Dativ。','zu dem/zur、bei dem/beim 等缩合要能识别。'],
+  v2:['“第二位”指第二个句法成分，不是第二个单词。','从句不是 V2：weil/dass 等把有限动词推到末尾。'],
+  weil:['不要写 *weil ich bin müde*。','前置 weil 从句后主句应是“..., gehe ich ...”。'],
+  dass:['注意 dass 连词与 das 冠词/代词的拼写。','dass 从句有限动词末位。'],
+  passive_past:['被动 Perfekt 用 worden，不用 geworden。','wurde geliefert 是过程；war geliefert 更偏状态。'],
+  pronominal_adverbs:['da(r)-/wo(r)- 通常指事物；指人仍用介词 + 人称代词/wer。','形式取决于原动词固定介词。'],
+  pronoun_order:['“Dativ 永远在 Akkusativ 前”不是绝对规则。','两个都是人称代词时常为 Akk. 代词在前：es ihm。'],
+  genitive_basic:['阳/中单数名词常别忘 -s/-es。','本课程按标准书面德语训练；口语地区差异另论。'],
+  complex_sentences:['先分子句再排词序，比一次凭语感处理整句更可靠。','每个子句都要单独判断有限动词位置。']
+};
+
+function guideLevels(level){
+  if(level==='A1-A2') return ['A1','A2'];
+  if(level==='A2-B1') return ['A2','B1'];
+  return [level];
+}
+function hydratedPrompt(q){
+  return q.prompt.replace(/\[\[(\d+)\]\]/g,(_,n)=>q.blanks?.[Number(n)]?.answer || '___');
+}
+function buildGuide(){
+  S.guide=S.skills.map(s=>{
+    const qs=S.questions.filter(q=>q.skills?.includes(s.id));
+    const rules=[];
+    for(const q of qs){
+      const t=(q.explanation_zh||'').trim();
+      if(t && !rules.includes(t)) rules.push(t);
+      if(rules.length>=4) break;
+    }
+    const examples=[];
+    const seen=new Set();
+    for(const q of qs){
+      const de=hydratedPrompt(q).replace(/\s*\([^)]*\)\s*$/,'').trim();
+      if(de && !seen.has(de)){
+        seen.add(de);
+        examples.push({de,zh:q.explanation_zh||''});
+      }
+      if(examples.length>=2) break;
+    }
+    return {
+      id:s.id,
+      name_zh:s.name_zh,
+      name_de:s.name_de,
+      group:s.group||'Grammar',
+      level_display:s.level,
+      filter_levels:guideLevels(s.level),
+      summary:GUIDE_SUMMARIES[s.id] || s.name_zh,
+      rules:rules.length?rules:[GUIDE_SUMMARIES[s.id]||s.name_zh],
+      examples,
+      pitfalls:GUIDE_TIPS[s.id] || ['先判断这个语法点在句子中的功能，再选择形式。','如果另一个答案在当前语境中也成立，请把题目视为需要复核，而不是机械接受唯一答案。']
+    };
+  });
+}
+
+function guideEntry(id){
+  return S.guide.find(x=>x.id===id);
+}
+function createGuideUI(){
+  if($('#guideView')) return;
+
+  const guideButton=document.createElement('button');
+  guideButton.id='grammarGuideBtn';
+  guideButton.className='guide-entry-button';
+  guideButton.type='button';
+  guideButton.innerHTML=\`
+    <span class="guide-book">Aa</span>
+    <span><strong>Grammar guide</strong><small>\${S.guide.length} 个语法 · A1–B1 详细解释</small></span>
+    <span class="arrow dark">›</span>\`;
+  $('#homeView .home-actions').appendChild(guideButton);
+
+  const list=document.createElement('section');
+  list.id='guideView';
+  list.className='view guide-view hidden';
+  list.innerHTML=\`
+    <header class="guide-header">
+      <button id="closeGuideBtn" class="plain-icon" type="button" aria-label="返回">‹</button>
+      <div><p class="overline">REFERENCE</p><h2>Grammar guide</h2></div>
+      <div class="guide-count">\${S.guide.length}</div>
+    </header>
+    <div class="guide-tools">
+      <label class="guide-search"><span>⌕</span><input id="guideSearch" type="search" inputmode="search" placeholder="搜索语法，例如 Dativ / 关系从句"></label>
+      <div class="guide-levels">
+        <button class="guide-level active" data-guide-level="all">All</button>
+        <button class="guide-level" data-guide-level="A1">A1</button>
+        <button class="guide-level" data-guide-level="A2">A2</button>
+        <button class="guide-level" data-guide-level="B1">B1</button>
+      </div>
+    </div>
+    <div id="guideList" class="guide-list"></div>\`;
+
+  const detail=document.createElement('section');
+  detail.id='guideDetailView';
+  detail.className='view guide-detail-view hidden';
+  detail.innerHTML=\`
+    <header class="guide-header detail-head">
+      <button id="closeGuideDetailBtn" class="plain-icon" type="button" aria-label="返回">‹</button>
+      <div><p class="overline">GRAMMAR</p><h2 id="guideDetailTopTitle">Details</h2></div>
+      <span id="guideDetailLevel" class="level-tag">A1</span>
+    </header>
+    <article id="guideDetailContent" class="guide-detail-content"></article>\`;
+
+  $('#app').appendChild(list);
+  $('#app').appendChild(detail);
+  guideButton.onclick=()=>openGuide('home');
+  $('#closeGuideBtn').onclick=()=>showView(S.guideReturnView);
+  $('#closeGuideDetailBtn').onclick=()=>showView(S.guideDetailReturnView);
+  $('#guideSearch').oninput=e=>{S.guideQuery=e.target.value||'';renderGuideList();};
+  $('.guide-level').forEach(btn=>btn.onclick=()=>{
+    S.guideLevel=btn.dataset.guideLevel;
+    $('.guide-level').forEach(x=>x.classList.toggle('active',x===btn));
+    renderGuideList();
+  });
+}
+function guideMatches(g){
+  const levelOK=S.guideLevel==='all'||g.filter_levels.includes(S.guideLevel);
+  if(!levelOK) return false;
+  const q=norm(S.guideQuery);
+  if(!q) return true;
+  return norm([g.name_zh,g.name_de,g.summary,g.group,...g.rules,...g.examples.flatMap(x=>[x.de,x.zh])].join(' ')).includes(q);
+}
+function renderGuideList(){
+  const rows=S.guide.filter(guideMatches);
+  const rank=g=>g.filter_levels.includes('A1')?1:(g.filter_levels.includes('A2')?2:3);
+  rows.sort((a,b)=>rank(a)-rank(b)||a.group.localeCompare(b.group)||a.name_de.localeCompare(b.name_de));
+  if(!rows.length){$('#guideList').innerHTML='<div class="guide-empty">没有找到匹配的语法。</div>';return;}
+  const grouped=new Map();
+  rows.forEach(g=>{const l=g.filter_levels[0]||'B1';if(!grouped.has(l))grouped.set(l,[]);grouped.get(l).push(g);});
+  $('#guideList').innerHTML=['A1','A2','B1'].filter(l=>grouped.has(l)).map(level=>\`
+    <section class="guide-level-section">
+      <div class="guide-section-title"><span class="level-tag small">\${level}</span><strong>\${level} grammar</strong><small>\${grouped.get(level).length}</small></div>
+      <div class="guide-cards">\${grouped.get(level).map(g=>\`
+        <button class="guide-card" type="button" data-guide-id="\${esc(g.id)}">
+          <span class="guide-card-main"><strong>\${esc(g.name_de)}</strong><small>\${esc(g.name_zh)}</small><em>\${esc(g.summary)}</em></span>
+          <span class="guide-card-side"><span>\${esc(g.level_display)}</span><b>›</b></span>
+        </button>\`).join('')}</div>
+    </section>\`).join('');
+  $('#guideList [data-guide-id]').forEach(btn=>btn.onclick=()=>openGuideDetail(btn.dataset.guideId,'guide'));
+}
+function openGuide(from='home'){
+  S.guideReturnView=from;createGuideUI();renderGuideList();showView('guide');
+}
+function openGuideDetail(skillId,from='guide'){
+  const g=guideEntry(skillId); if(!g) return;
+  createGuideUI();
+  S.guideDetailReturnView=from;
+  $('#guideDetailTopTitle').textContent=g.name_zh;
+  $('#guideDetailLevel').textContent=g.level_display;
+  $('#guideDetailContent').innerHTML=\`
+    <div class="guide-detail-title"><span class="guide-group">\${esc(g.group)}</span><h1>\${esc(g.name_de)}</h1><p>\${esc(g.name_zh)}</p></div>
+    <div class="guide-summary">\${esc(g.summary)}</div>
+    <section class="guide-detail-section"><h3>核心规则</h3><ul>\${g.rules.map(x=>\`<li>\${esc(x)}</li>\`).join('')}</ul></section>
+    <section class="guide-detail-section"><h3>例句</h3><div class="example-list">\${g.examples.map(x=>\`<div class="example-row"><strong>\${esc(x.de)}</strong><span>\${esc(x.zh)}</span></div>\`).join('')}</div></section>
+    <section class="guide-detail-section warning"><h3>常见错误 / 提示</h3><ul>\${g.pitfalls.map(x=>\`<li>\${esc(x)}</li>\`).join('')}</ul></section>\`;
+  showView('guideDetail');
+}
 
 function setDataStatus(message){
   const el = $('#dataStatus');
@@ -472,6 +705,9 @@ function sanitizeImportedStats(stats){
 }
 
 function sanitizeImportedMistakes(items){
+  buildGuide();
+  createGuideUI();
+
   const validIds = new Set(S.questions.map(q=>q.id));
   if(!Array.isArray(items)) return [];
   return [...new Set(items.filter(id=>typeof id === 'string' && validIds.has(id)))];
