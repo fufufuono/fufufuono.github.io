@@ -15,12 +15,12 @@ window.VALENCIA_DATA = {
     address: "C/ de Luis García-Berlanga Martí, 19–21, 46023 Valencia, Spain"
   },
   dinners: [
-    { date: "2026-11-22", time: "19:45", name: "Restaurante Pato Laqueado", address: "Calle del Escultor, C/ de Vicente Beltrán Grimal, 26, Camins al Grau, 46023 València, Valencia, Spain" },
-    { date: "2026-11-23", time: "20:00", name: "Restaurante La Disfrutona", address: "Av. de l'Institut Obrer de València, 13, Quatre Carreres, 46013 València, Valencia, Spain" },
-    { date: "2026-11-24", time: "20:00", name: "Tapearte Arrocería desde 1992", address: "Carrer Escultor, Carrer de Luis Bolinches Compañ, 10, 46023 València, Valencia, Spain" },
-    { date: "2026-11-25", time: "20:00", name: "Número Uno Steakhouse", address: "Av. de les Balears, 32, Camins al Grau, 46023 València, Valencia, Spain" },
-    { date: "2026-11-26", time: "20:00", name: "Restaurante Rocalla", address: "Av. de l'Institut Obrer de València, nº20, Quatre Carreres, 46013 València, Valencia, Spain" },
-    { date: "2026-11-27", time: "19:45", name: "Restaurante Pato Laqueado", address: "Calle del Escultor, C/ de Vicente Beltrán Grimal, 26, Camins al Grau, 46023 València, Valencia, Spain" }
+    { date: "2026-11-22", time: "19:45", name: "Restaurante Pato Laqueado", address: "Calle del Escultor, C/ de Vicente Beltrán Grimal, 26, Camins al Grau, 46023 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/s7Y2uukH1JjMYJrQ6?g_st=ic" },
+    { date: "2026-11-23", time: "20:00", name: "Restaurante La Disfrutona", address: "Av. de l'Institut Obrer de València, 13, Quatre Carreres, 46013 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/NEGVeW7d1EzcrdXk8?g_st=ic" },
+    { date: "2026-11-24", time: "20:00", name: "Tapearte Arrocería desde 1992", address: "Carrer Escultor, Carrer de Luis Bolinches Compañ, 10, 46023 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/UZQbiVStYXrwY1qAA?g_st=ic" },
+    { date: "2026-11-25", time: "20:00", name: "Número Uno Steakhouse", address: "Av. de les Balears, 32, Camins al Grau, 46023 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/RQz7P41BeoFFsxtY8?g_st=ic" },
+    { date: "2026-11-26", time: "20:00", name: "Restaurante Rocalla", address: "Av. de l'Institut Obrer de València, nº20, Quatre Carreres, 46013 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/iLEiAvFhkvGySzcQ6?g_st=ic" },
+    { date: "2026-11-27", time: "19:45", name: "Restaurante Pato Laqueado", address: "Calle del Escultor, C/ de Vicente Beltrán Grimal, 26, Camins al Grau, 46023 València, Valencia, Spain", mapUrl: "https://maps.app.goo.gl/s7Y2uukH1JjMYJrQ6?g_st=ic" }
   ],
   teamActivity: {
     date: "2026-11-25",
