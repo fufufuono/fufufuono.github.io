@@ -32,7 +32,7 @@
       events.push({time:D.teamActivity.time, title:D.teamActivity.title, kind:"Team activity", description:"Meet at " + D.teamActivity.meetingPoint + " · Transportation arranged", address:D.hotel.address});
     }
     D.dinners.filter(function (r) { return r.date === date; }).forEach(function (r) {
-      events.push({time:r.time, title:"Team dinner", kind:"Dinner", description:r.name, address:r.address, dinner:true});
+      events.push({time:r.time, title:"Team dinner", kind:"Dinner", description:r.name, address:r.address, mapLink:r.mapUrl, dinner:true});
     });
     return events.sort(function (a,b) { return a.time.localeCompare(b.time); });
   };
@@ -42,8 +42,9 @@
     return first ? first.date : D.dates[D.dates.length-1].date;
   })();
   function dayMeta(date) { return D.dates.find(function (d) { return d.date === date; }) || D.dates[0]; }
-  function linkToMap(address,label,klass) {
-    return '<a class="' + (klass || "mini-action") + '" href="' + escapeHtml(mapUrl(address)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || "Get directions") + ' <span aria-hidden="true">↗</span></a>';
+  function linkToMap(address,label,klass,directLink) {
+    const destination = directLink || mapUrl(address);
+    return '<a class="' + (klass || "mini-action") + '" href="' + escapeHtml(destination) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || "Get directions") + ' <span aria-hidden="true">↗</span></a>';
   }
   function renderTabs(id) {
     const root=document.getElementById(id);
@@ -67,7 +68,7 @@
       html+='<div class="timeline">';
       events.forEach(function(ev) {
         html+='<div class="timeline-item"><span class="timeline-time">' + escapeHtml(ev.time) + '</span><span class="timeline-track"><span class="timeline-dot"></span></span><article class="timeline-card"><span class="category">' + escapeHtml(ev.kind.toUpperCase()) + '</span><h3>' + escapeHtml(ev.title) + '</h3><p>' + escapeHtml(ev.description) + '</p>';
-        if(ev.dinner) html+='<a href="#dining" data-route="dining" class="mini-action">See dinner details ↗</a>';
+        if(ev.dinner) html+='<a href="#dining" data-route="dining" class="mini-action">See dinner details ↗</a> · '+linkToMap(ev.address,"Open in Google Maps","mini-action",ev.mapLink);
         else if(ev.kind==="Team activity") html+='<a href="#info" data-route="info" class="mini-action">See activity details ↗</a>';
         else if(ev.address) html+=linkToMap(ev.address, "Directions");
         html+='</article></div>';
@@ -81,7 +82,7 @@
     const d=D.dinners.find(function(r){return r.date===selectedDate;});
     let html="";
     if(d) {
-      html='<article class="card dinner-card"><span class="card-kicker">DINNER · ' + escapeHtml(dayMeta(selectedDate).label.toUpperCase()) + ' ' + dayMeta(selectedDate).number + ' NOV</span><h2>' + escapeHtml(d.name) + '</h2><div class="dinner-time">' + escapeHtml(d.time) + ' · Valencia local time</div><p class="dinner-address">' + escapeHtml(d.address) + '</p><div class="button-row">' + linkToMap(d.address,"Open in Google Maps","button button-green") + '</div></article>';
+      html='<article class="card dinner-card"><span class="card-kicker">DINNER · ' + escapeHtml(dayMeta(selectedDate).label.toUpperCase()) + ' ' + dayMeta(selectedDate).number + ' NOV</span><h2>' + escapeHtml(d.name) + '</h2><div class="dinner-time">' + escapeHtml(d.time) + ' · Valencia local time</div><p class="dinner-address">' + escapeHtml(d.address) + '</p><div class="button-row">' + linkToMap(d.address,"Open in Google Maps","button button-green",d.mapUrl) + '</div></article>';
     }
     document.getElementById("dining-detail").innerHTML=html;
     renderMeals();
