@@ -12,7 +12,10 @@
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
   };
   const getLocalDate = function () {
-    return new Intl.DateTimeFormat("en-CA", {timeZone:D.timezone, year:"numeric", month:"2-digit", day:"2-digit"}).format(new Date());
+    const parts = new Intl.DateTimeFormat("en-GB", {timeZone:D.timezone, year:"numeric", month:"2-digit", day:"2-digit"}).formatToParts(new Date());
+    const values = {};
+    parts.forEach(function(p){ values[p.type] = p.value; });
+    return values.year + "-" + values.month + "-" + values.day;
   };
   const makeTime = function (date, time) {
     /* Valencia is CET (UTC+1) throughout the 22–27 November 2026 meeting. */
@@ -139,7 +142,7 @@
     });
     if(route==="schedule")renderSchedule();
     if(route==="dining")renderDining();
-    window.scrollTo({top:0,behavior:"instant"});
+    window.scrollTo({top:0,behavior:"auto"});
   }
   document.addEventListener("click",function(ev) {
     const btn=ev.target.closest("[data-select-date]");
