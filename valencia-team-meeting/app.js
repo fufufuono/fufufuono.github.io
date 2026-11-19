@@ -87,19 +87,32 @@
     document.getElementById("dining-detail").innerHTML=html;
     renderMeals();
   }
+  function normalizeMealName(value) {
+    return String(value || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+      .trim().replace(/\s+/g, " ").toLocaleLowerCase("en");
+  }
   function renderMeals() {
-    const term=document.getElementById("meal-name").value.trim().toLocaleLowerCase();
+    const term=normalizeMealName(document.getElementById("meal-name").value);
     const root=document.getElementById("meal-results");
     const matches=D.mealSelections.filter(function(r) {
-      return r.date===selectedDate && term && r.name.toLocaleLowerCase().includes(term);
+      if (r.date!==selectedDate || !term) return false;
+      const full=normalizeMealName(r.name);
+      // Allow a full name, exact given name, or multiple leading name tokens.
+      // Avoid arbitrary substring matches (e.g. "ann" must not match "Joanna").
+      return full===term || full.split(" ")[0]===term || full.startsWith(term+" ");
     });
     if (!D.mealSelections.length) {
       root.innerHTML='<span class="empty-dot"></span> Meal information has not been uploaded yet.';
     } else if (!term) {
-      root.innerHTML='<span class="empty-dot"></span> Enter a name to look up a pre-selected meal.';
+      root.innerHTML='<span class="empty-dot"></span> Enter your first name or full name to see your pre-selected meal.';
     } else if (!matches.length) {
-      root.innerHTML='<span class="empty-dot"></span> No published meal record matches this search for ' + escapeHtml(dayMeta(selectedDate).label) + '.';
+      root.innerHTML='<span class="empty-dot"></span> No published meal record matches this name for ' + escapeHtml(dayMeta(selectedDate).label) + '.';
     } else {
+      const uniqueNames=[...new Set(matches.map(function(r){return normalizeMealName(r.name);} ))];
+      if (uniqueNames.length>1) {
+        root.innerHTML='<div class="meal-result-person">More than one person matches this name</div><p>Please enter your full name to identify the right meal. Matches: '+matches.map(function(r){return escapeHtml(r.name);}).filter(function(v,i,a){return a.indexOf(v)===i;}).join(", ")+'.</p>';
+        return;
+      }
       root.innerHTML=matches.map(function(r) {
         const courses=(r.courses||[]).map(function(c){return '<div class="meal-course"><strong>'+escapeHtml(c.label)+':</strong> '+escapeHtml(c.value)+'</div>';}).join("");
         return '<div class="meal-result-person">'+escapeHtml(r.name)+'</div>'+courses;
