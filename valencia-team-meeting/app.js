@@ -2,7 +2,7 @@
   "use strict";
   const D = window.VALENCIA_DATA;
   if (!D) return;
-  const names = ["home", "schedule", "dining", "info"];
+  const names = ["home", "dining"];
   const escapeHtml = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
@@ -23,18 +23,13 @@
   };
   const getEventsFor = function (date) {
     const events = [];
-    const agenda = D.meetingAgenda[date] || [];
-    agenda.forEach(function (s) {
-      if (!s.start || !s.title) return;
-      events.push({time:s.start, title:s.title, kind:"Meeting session", description:[s.presenter ? "Presenter: " + s.presenter : "", s.room ? "Room: " + s.room : "", s.notes || ""].filter(Boolean).join(" · "), address:""});
-    });
     if (D.teamActivity.date === date) {
-      events.push({time:D.teamActivity.time, title:D.teamActivity.title, kind:"Team activity", description:"Meet at " + D.teamActivity.meetingPoint + " · Transportation arranged", address:D.hotel.address});
+      events.push({time:D.teamActivity.time, title:D.teamActivity.title, kind:"Team activity", description:"Meet at " + D.teamActivity.meetingPoint + " · Transportation arranged"});
     }
-    D.dinners.filter(function (r) { return r.date === date; }).forEach(function (r) {
-      events.push({time:r.time, title:"Team dinner", kind:"Dinner", description:r.name, address:r.address, mapLink:r.mapUrl, dinner:true});
+    D.dinners.filter(function(r){return r.date===date;}).forEach(function(r){
+      events.push({time:r.time, title:"Team dinner", kind:"Dinner", description:r.name, dinner:true});
     });
-    return events.sort(function (a,b) { return a.time.localeCompare(b.time); });
+    return events.sort(function(a,b){return a.time.localeCompare(b.time);});
   };
   let selectedDate = (function () {
     const today = getLocalDate();
@@ -52,30 +47,6 @@
       const active=d.date===selectedDate;
       return '<button class="day-tab" type="button" data-select-date="' + d.date + '" aria-pressed="' + active + '" aria-label="' + d.label + ' ' + d.number + ' November"><span class="weekday">' + d.day + '</span><span class="day-number">' + d.number + '</span><span class="day-dot"></span></button>';
     }).join("");
-  }
-  function renderSchedule() {
-    renderTabs("schedule-days");
-    const meta=dayMeta(selectedDate);
-    const events=getEventsFor(selectedDate);
-    const agenda=D.meetingAgenda[selectedDate] || [];
-    let html='<div class="detail-top"><div><div class="day-full">' + meta.label + ', ' + meta.number + ' November</div><p>All times in Valencia · Europe/Madrid</p></div><span class="soft-tag">Day ' + (D.dates.indexOf(meta)+1) + ' / 6</span></div>';
-    if (!agenda.length) {
-      html+='<div class="agenda-notice"><span class="agenda-note-meta">MEETING AGENDA · TO BE ANNOUNCED</span><p>Detailed sessions, speakers, rooms and times will appear here when confirmed. No meeting times have been assumed.</p></div>';
-    }
-    if (!events.length) {
-      html+='<div class="card timeline-card"><h3>No confirmed timed activities yet</h3><p>Check back for updates.</p></div>';
-    } else {
-      html+='<div class="timeline">';
-      events.forEach(function(ev) {
-        html+='<div class="timeline-item"><span class="timeline-time">' + escapeHtml(ev.time) + '</span><span class="timeline-track"><span class="timeline-dot"></span></span><article class="timeline-card"><span class="category">' + escapeHtml(ev.kind.toUpperCase()) + '</span><h3>' + escapeHtml(ev.title) + '</h3><p>' + escapeHtml(ev.description) + '</p>';
-        if(ev.dinner) html+='<a href="#dining" data-route="dining" class="mini-action">See dinner details ↗</a> · '+linkToMap(ev.address,"Open in Google Maps","mini-action",ev.mapLink);
-        else if(ev.kind==="Team activity") html+='<a href="#info" data-route="info" class="mini-action">See activity details ↗</a>';
-        else if(ev.address) html+=linkToMap(ev.address, "Directions");
-        html+='</article></div>';
-      });
-      html+='</div>';
-    }
-    document.getElementById("schedule-detail").innerHTML=html;
   }
   function renderDining() {
     renderTabs("dining-days");
@@ -211,7 +182,7 @@
   }
   function activateRoute() {
     const fromHash=window.location.hash.replace(/^#/,"").toLowerCase();
-    const route=names.includes(fromHash) ? fromHash : "home";
+    const route=fromHash==="schedule" ? "dining" : (names.includes(fromHash) ? fromHash : "home");
     names.forEach(function(name) {
       const el=document.getElementById("page-"+name);
       el.hidden=name!==route;
@@ -222,7 +193,6 @@
       a.classList.toggle("is-active",active);
       if(active)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
     });
-    if(route==="schedule")renderSchedule();
     if(route==="dining")renderDining();
     window.scrollTo({top:0,behavior:"auto"});
   }
@@ -230,7 +200,7 @@
     const btn=ev.target.closest("[data-select-date]");
     if(btn) {
       selectedDate=btn.getAttribute("data-select-date");
-      renderSchedule();renderDining();
+      renderDining();
     }
   });
   document.addEventListener("click",async function(ev) {
@@ -263,6 +233,6 @@
     window.setTimeout(function(){btn.textContent="Copy address";},1800);
   });
   window.addEventListener("hashchange",activateRoute);
-  renderSchedule();renderDining();updateNext();activateRoute();
+  renderDining();updateNext();activateRoute();
   window.setInterval(updateNext,30000);
 })();
