@@ -18,3 +18,33 @@
 .lock-meals{display:inline-flex;border:0;background:none;color:var(--green-dark);font-size:12px;font-weight:750;padding:12px 0 0;text-decoration:underline}
 .meal-lookup [hidden]{display:none!important}
 @media(max-width:650px){.access-input-row{flex-direction:column}.access-input-row input{width:100%;min-width:0}.access-input-row button{width:100%}}
+
+/* Two-section experience: compact welcome, useful cards, and Home / Dining navigation */
+.hero{min-height:245px;padding:34px 45px}
+.hero h1{font-size:clamp(43px,5.8vw,62px);letter-spacing:-2.8px;margin:11px 0}
+.hero p{font-size:15px;margin:0 0 17px}
+.hero-meta{font-size:10px}
+.home-dining-shortcut{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 3px 2px;font-size:13px;color:var(--muted)}
+.home-dining-shortcut .text-action{white-space:nowrap}
+.home-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.home-info-grid .info-card{min-width:0}
+.home-info-grid .info-card h3{font-size:23px;letter-spacing:-.6px;line-height:1.2;margin:12px 0}
+.home-info-grid .info-note{margin-top:20px}
+.home-info-grid .activity-grid{gap:8px;margin-top:17px}
+.home-info-grid .activity-grid>div{padding:13px}
+.home-info-grid .activity-grid strong{font-size:12px}
+.home-info-grid .info-card .address{overflow-wrap:anywhere}
+.home-info-grid .activity-footnote{font-size:12px;margin:15px 0 0}
+.mobile-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){.home-info-grid{grid-template-columns:1fr}}
+@media(max-width:650px){
+ .hero{min-height:210px;padding:24px 24px;border-radius:20px}
+ .hero h1{font-size:clamp(38px,9.8vw,51px);line-height:1.05;letter-spacing:-2px;margin:10px 0}
+ .hero p{font-size:13px;margin-bottom:14px}
+ .hero-meta{font-size:9px}
+ .section-heading{margin-top:27px}
+ .home-dining-shortcut{align-items:flex-start;gap:6px;flex-direction:column;font-size:12px;padding:13px 3px 0}
+ .home-info-grid{gap:12px}
+ .home-info-grid .info-card h3{font-size:21px}
+ .mobile-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
