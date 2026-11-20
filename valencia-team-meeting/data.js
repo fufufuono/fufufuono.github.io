@@ -30,12 +30,6 @@ window.VALENCIA_DATA = {
     destination: "Valencia Old Town",
     details: "Small-group treasure hunt in Valencia's historic city centre. Comfortable shoes and clothing recommended. Transportation arranged."
   },
-  /* Add confirmed agenda sessions as:
-     "2026-11-25": [
-       { start: "09:00", end: "10:00", title: "...", presenter: "...", room: "...", notes: "..." }
-     ]
-     Do not invent session times or presenters. */
-  meetingAgenda: {},
   /* Intentionally empty. Avoid publishing identifiable employee orders on a public GitHub Pages site.
      If public, consented, non-sensitive records are ever used:
      { date: "2026-11-25", name: "Public display name", courses: [{ label:"Main", value:"..." }] }
