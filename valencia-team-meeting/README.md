@@ -32,11 +32,15 @@ In data.js, under meetingAgenda:
 
 Meeting times are Valencia local time (Europe/Madrid). The 2026-11-22 to 2026-11-27 dates fall in CET, UTC+1. The site intentionally avoids inventing unknown agenda items and durations.
 
-### Meal selection privacy
+### Encrypted dinner selections (23–26 November)
 
-The site is publicly accessible on GitHub Pages. Do **not** place an employee-name/order list into data.js unless you have an appropriate basis to publish it publicly. Hiding records in the UI or search results does not protect static source data. A separate access-controlled service, or consented anonymous lookup codes without identity linkage, would be better for private meal selections.
+The source workbook contains 116 participant/date records, representing 44 distinct employees. The supplied workbook did not include dinner selections for 22 or 27 November.
 
-The current mealSelections array is empty. The lookup is visually reserved but does not imply that any personal orders have already been uploaded.
+The public repository contains only **meals.enc.json**, a client-side AES-256-GCM encrypted payload with a random salt and nonce and PBKDF2-SHA256 (220,000 iterations). The access code is **not** stored in the repository. The browser decrypts records only after a team access code has been entered; it keeps the decrypted rows in memory and supports first-name or full-name searches. Duplicate first names require a full name.
+
+**Security limitation:** This is a shared-team passcode, not authentication or per-user access control. Anyone with the passcode can potentially inspect every decrypted employee name, order, and note. Share it only via an appropriate internal channel; never publish the access code on GitHub. For stricter privacy, replace the lookup with a company-authenticated backend. Keep data in source files out of public repos, including plaintext logs.
+
+To replace the dataset, parse the updated source locally and generate a new randomized, authenticated ciphertext. Never check a plaintext staff order list or the access code into the repository.
 
 ## Publishing
 
