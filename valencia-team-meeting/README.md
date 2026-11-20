@@ -13,13 +13,13 @@ The site intentionally contains **no meeting-session agenda**, no schedule tab, 
 
 Information lives in `data.js`: dates, hotel, dinner restaurants, links and Treasure Hunt. There is no build dependency or external framework. Times are for Valencia (Europe/Madrid); 22–27 November 2026 falls in CET (UTC+1). If you edit dinner times, the homepage's next-event indicator updates automatically.
 
-## Encrypted dinner selections (23–26 November)
+## Public dinner selection lookup (23–26 November)
 
-The source workbook contained 116 participant/date entries representing 44 people. No personal selection sheets were provided for 22 or 27 November.
+The user requested that team members no longer enter an access code. The Dining page automatically decrypts the existing `meals.enc.json` file in the browser, then supports first-name or full-name search. The source workbook contains 116 participant/date entries representing 44 people. No personal selection sheets were supplied for 22 or 27 November.
 
-`meals.enc.json` contains browser-side AES-256-GCM ciphertext, with PBKDF2-SHA256 key derivation. The passcode is not stored in the repository. `app.js` decrypts the payload in memory and searches the selected day's names using given name or full name; when multiple colleagues share a given name, it requires the full name.
+**Privacy and security:** The browser decryption key is now included in publicly served `app.js`. The meal dataset is therefore **publicly recoverable**, including names, dish selections and dietary notes. The AES-encrypted file must *not* be mistaken for effective access control. The search interface limits the display, but anyone can inspect the downloaded data. Do not assume individual privacy. For private access without manual passcodes, use a company identity provider and a permission-protected backend.
 
-**Important:** A shared passcode on a public site is not account authentication. Anyone who knows or guesses the passcode can potentially access all of the records, including notes. Avoid sharing the passcode in public, and use a company-authenticated service if access needs to be per person. Do not commit employee names, meal orders, raw Excel source data, or passcodes in plaintext.
+The original Excel workbook is not committed into this repository.
 
 ## Publishing
 
