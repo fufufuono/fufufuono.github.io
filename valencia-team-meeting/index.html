@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#148b42">
   <meta name="description" content="Your guide to Jinko Europe Team Meeting, Valencia, 22–27 November 2026.">
   <title>Valencia 2026 | Team Meeting Hub</title>
-  <link rel="stylesheet" href="./style.css?v=20261120-logo-circle">
-  <script defer src="./data.js"></script>
-  <script defer src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css?v=20261120-two-pages">
+  <script defer src="./data.js?v=20261120-two-pages"></script>
+  <script defer src="./app.js?v=20261120-two-pages"></script>
 </head>
 <body>
   <div class="site-shell">
@@ -19,9 +19,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#home" data-route="home" class="is-active">Home</a>
-        <a href="#schedule" data-route="schedule">Schedule</a>
         <a href="#dining" data-route="dining">Dining</a>
-        <a href="#info" data-route="info">Info</a>
       </nav>
       <span class="header-year">VALENCIA / 2026</span>
     </header>
@@ -33,39 +31,56 @@
           <div class="hero-decoration deco-two" aria-hidden="true"></div>
           <div class="hero-content">
             <span class="eyebrow light"><span class="eyebrow-dot"></span> TEAM MEETING · 2026</span>
-            <h1 id="home-title">Hello,<br><em>Valencia!</em></h1>
-            <p>One team. One week.<br>Everything you need, all in one place.</p>
+            <h1 id="home-title">Hello, <em>Valencia!</em></h1>
+            <p>Your week, made simple.</p>
             <div class="hero-meta"><span>22–27 NOVEMBER 2026</span><span class="hero-separator" aria-hidden="true"></span><span>VALENCIA, SPAIN</span></div>
           </div>
-          <span class="hero-index" aria-hidden="true">01 / 04</span>
         </div>
-
-        <div class="section-heading home-next-heading"><div><span class="eyebrow">STAY ON TRACK</span><h2>Coming up next</h2></div><span class="timezone-pill">Valencia local time</span></div>
+        <div class="section-heading home-next-heading">
+          <div><span class="eyebrow">GOOD TO KNOW</span><h2>Coming up next</h2></div>
+          <span class="timezone-pill">Valencia local time</span>
+        </div>
         <div id="upcoming-card" class="upcoming-card" aria-live="polite">
           <div class="loading-note">Loading the next confirmed activity…</div>
         </div>
-
-        <div class="section-heading"><div><span class="eyebrow">QUICK ACCESS</span><h2>Your essentials</h2></div></div>
-        <div class="quick-grid">
-          <a class="quick-card" href="#schedule" data-route="schedule"><span class="quick-icon">01</span><strong>Full schedule</strong><p>All six days at a glance</p><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="quick-card" href="#dining" data-route="dining"><span class="quick-icon">02</span><strong>Dinner guide</strong><p>Restaurants & meal selections</p><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="quick-card" href="#info" data-route="info"><span class="quick-icon">03</span><strong>Hotel & activity</strong><p>Check-in, treasure hunt & FAQ</p><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <div class="home-dining-shortcut">
+          <span>Looking for tonight's restaurant or your pre-selected meal?</span>
+          <a href="#dining" data-route="dining" class="text-action">Go to Dining <span aria-hidden="true">↗</span></a>
         </div>
-
-        <div class="spotlight">
-          <div class="spotlight-icon" aria-hidden="true">✳</div>
-          <div><span class="eyebrow">WEDNESDAY · 25 NOV</span><h3>Valencia Treasure Hunt</h3><p>Explore the historic centre together. Departure at <strong>15:00 from ILUNION Aqua 4</strong>. Transportation is arranged.</p><a href="#info" data-route="info" class="text-action">Activity details <span aria-hidden="true">↗</span></a></div>
+        <div class="section-heading home-info-heading"><div><span class="eyebrow">ESSENTIALS</span><h2>Stay &amp; explore</h2></div></div>
+        <div class="home-info-grid">
+          <article class="card info-card">
+            <span class="card-kicker">YOUR HOTEL</span>
+            <h3>ILUNION Aqua 4</h3>
+            <p class="address" id="hotel-address">C/ de Luis García-Berlanga Martí, 19–21, 46023 Valencia, Spain</p>
+            <div class="button-row">
+              <a id="hotel-map-link" class="button button-green" href="#" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+              <button id="copy-hotel" class="button button-light" type="button">Copy address</button>
+            </div>
+            <div class="info-note">
+              <strong>Hotel check-in</strong>
+              <p>You may receive an online check-in email 1–2 days before arrival, as your email address has been shared with the hotel. Otherwise, check in at reception with your ID card or passport.</p>
+            </div>
+          </article>
+          <article class="card info-card" id="treasure-hunt">
+            <span class="card-kicker">TEAM ACTIVITY · WED 25 NOV</span>
+            <h3>Valencia Treasure Hunt</h3>
+            <p>Explore Valencia Old Town and solve clues together in small teams.</p>
+            <div class="activity-grid">
+              <div><span>DEPARTURE</span><strong>15:00</strong></div>
+              <div><span>MEETING POINT</span><strong>ILUNION Aqua 4</strong></div>
+              <div><span>TRANSPORT</span><strong>Arranged</strong></div>
+              <div><span>WHAT TO WEAR</span><strong>Comfortable shoes</strong></div>
+            </div>
+            <p class="activity-footnote">Wear comfortable clothes; further details will be shared before the activity.</p>
+          </article>
         </div>
       </section>
 
-      <section id="page-schedule" class="page" aria-labelledby="schedule-title" hidden>
-        <div class="page-heading"><span class="eyebrow">THE WEEK AHEAD</span><h1 id="schedule-title">Your schedule<span class="green-period">.</span></h1><p>Confirmed plans for 22–27 November. Detailed meeting sessions will be added when available.</p></div>
-        <div id="schedule-days" class="day-tabs" role="group" aria-label="Select schedule date"></div>
-        <div id="schedule-detail"></div>
-      </section>
+      
 
       <section id="page-dining" class="page" aria-labelledby="dining-title" hidden>
-        <div class="page-heading"><span class="eyebrow">EVENINGS TOGETHER</span><h1 id="dining-title">Dinner guide<span class="green-period">.</span></h1><p>See tonight’s restaurant and find details about pre-selected meals when they are published.</p></div>
+        <div class="page-heading"><span class="eyebrow">EVENINGS TOGETHER</span><h1 id="dining-title">Dinner guide<span class="green-period">.</span></h1><p>Choose a date for restaurant details, directions and your pre-selected meal.</p></div>
         <div id="dining-days" class="day-tabs" role="group" aria-label="Select dinner date"></div>
         <div id="dining-detail"></div>
         <div class="meal-lookup card">
@@ -90,42 +105,14 @@
         </div>
       </section>
 
-      <section id="page-info" class="page" aria-labelledby="info-title" hidden>
-        <div class="page-heading"><span class="eyebrow">GOOD TO KNOW</span><h1 id="info-title">Useful information<span class="green-period">.</span></h1><p>Everything you need to get settled and enjoy the team activities.</p></div>
-        <div class="info-stack">
-          <article class="card info-card">
-            <span class="card-kicker">01 / YOUR HOTEL</span><div class="info-card-head"><h2>ILUNION Aqua 4</h2><span class="soft-tag">Accommodation</span></div>
-            <p class="address" id="hotel-address">C/ de Luis García-Berlanga Martí, 19–21, 46023 Valencia, Spain</p>
-            <div class="button-row"><a id="hotel-map-link" class="button button-green" href="#" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><button id="copy-hotel" class="button button-light" type="button">Copy address</button></div>
-            <div class="info-note"><strong>Online check-in</strong><p>Your email address has already been shared with the hotel. You may receive an online check-in email 1–2 days before arrival. If not, simply check in at reception with your ID card or passport.</p></div>
-          </article>
-          <article class="card info-card" id="treasure-hunt">
-            <span class="card-kicker">02 / TEAM ACTIVITY</span><div class="info-card-head"><h2>Valencia Treasure Hunt</h2><span class="soft-tag">Wednesday 25 Nov</span></div>
-            <p>Join a small group to explore Valencia’s historic city centre, solve clues and enjoy some friendly competition.</p>
-            <div class="activity-grid"><div><span>DEPARTURE</span><strong>15:00</strong></div><div><span>MEETING POINT</span><strong>ILUNION Aqua 4</strong></div><div><span>DESTINATION</span><strong>Valencia Old Town</strong></div><div><span>TRANSPORT</span><strong>Arranged</strong></div></div>
-            <div class="info-note"><strong>What to wear</strong><p>Comfortable shoes and clothing — there will be walking in the historic city centre. Further details will be shared before the activity.</p></div>
-          </article>
-          <article class="card info-card">
-            <span class="card-kicker">03 / FREQUENTLY ASKED</span><h2>Quick answers</h2>
-            <div class="faq">
-              <details><summary>What if I do not receive a hotel check-in email?</summary><p>You can check in at the hotel reception by presenting your ID card or passport.</p></details>
-              <details><summary>Where does the Treasure Hunt start?</summary><p>Departure is at 15:00 on Wednesday, 25 November, from ILUNION Aqua 4. Transport will be arranged.</p></details>
-              <details><summary>Do I need to arrange transportation to the activity?</summary><p>No. Transportation to the Treasure Hunt will be arranged.</p></details>
-              <details><summary>Where can I find the full meeting agenda?</summary><p>The detailed meeting schedule has not yet been supplied. It will appear under Schedule once confirmed.</p></details>
-              <details><summary>Where are my selected dinner dishes?</summary><p>The personal meal selection list has not yet been supplied. A lookup area is reserved under Dining.</p></details>
-            </div>
-          </article>
-        </div>
-      </section>
+      
     </main>
 
     <footer class="site-footer"><span>Made by Shiyan · Joy · Yingzi</span></footer>
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation">
     <a href="#home" data-route="home" class="is-active"><span class="mobile-icon" aria-hidden="true">⌂</span><span>Home</span></a>
-    <a href="#schedule" data-route="schedule"><span class="mobile-icon" aria-hidden="true">▤</span><span>Schedule</span></a>
     <a href="#dining" data-route="dining"><span class="mobile-icon" aria-hidden="true">◷</span><span>Dining</span></a>
-    <a href="#info" data-route="info"><span class="mobile-icon" aria-hidden="true">ⓘ</span><span>Info</span></a>
   </nav>
 </body>
 </html>
