@@ -82,7 +82,7 @@
     const d=D.dinners.find(function(r){return r.date===selectedDate;});
     let html="";
     if(d) {
-      html='<article class="card dinner-card"><span class="card-kicker">DINNER · ' + escapeHtml(dayMeta(selectedDate).label.toUpperCase()) + ' ' + dayMeta(selectedDate).number + ' NOV</span><h2>' + escapeHtml(d.name) + '</h2><div class="dinner-time">' + escapeHtml(d.time) + ' · Valencia local time</div><p class="dinner-address">' + escapeHtml(d.address) + '</p><div class="button-row">' + linkToMap(d.address,"Open in Google Maps","button button-green",d.mapUrl) + '</div></article>';
+      html='<article class="card dinner-card"><span class="card-kicker">DINNER · ' + escapeHtml(dayMeta(selectedDate).label.toUpperCase()) + ' ' + dayMeta(selectedDate).number + ' NOV</span><h2>' + escapeHtml(d.name) + '</h2><div class="dinner-time">' + escapeHtml(d.time) + ' · Valencia local time</div><p class="dinner-address">' + escapeHtml(d.address) + '</p><div class="button-row">' + linkToMap(d.address,"Open in Google Maps","button button-green",d.mapUrl) + '<button type="button" class="button button-light" data-copy-dinner>Copy address</button></div></article>';
     }
     document.getElementById("dining-detail").innerHTML=html;
     renderMeals();
@@ -231,6 +231,21 @@
     if(btn) {
       selectedDate=btn.getAttribute("data-select-date");
       renderSchedule();renderDining();
+    }
+  });
+  document.addEventListener("click",async function(ev) {
+    const btn=ev.target.closest("[data-copy-dinner]");
+    if(!btn) return;
+    const dinner=D.dinners.find(function(r){return r.date===selectedDate;});
+    if(!dinner) return;
+    try {
+      await navigator.clipboard.writeText(dinner.address);
+      btn.textContent="Copied!";
+      window.setTimeout(function(){
+        if(btn.isConnected) btn.textContent="Copy address";
+      },1800);
+    } catch(error) {
+      window.prompt("Copy the restaurant address:",dinner.address);
     }
   });
   document.getElementById("meal-name").addEventListener("input",renderMeals);
