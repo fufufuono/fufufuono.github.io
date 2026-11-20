@@ -8,7 +8,7 @@
   <title>Valencia 2026 | Team Meeting Hub</title>
   <link rel="stylesheet" href="./style.css?v=20261120-two-pages">
   <script defer src="./data.js?v=20261120-two-pages"></script>
-  <script defer src="./app.js?v=20261120-two-pages"></script>
+  <script defer src="./app.js?v=20261120-no-access-code"></script>
 </head>
 <body>
   <div class="site-shell">
@@ -84,24 +84,15 @@
         <div id="dining-days" class="day-tabs" role="group" aria-label="Select dinner date"></div>
         <div id="dining-detail"></div>
         <div class="meal-lookup card">
-          <div class="card-kicker">PERSONAL MEALS · TEAM ACCESS</div>
+          <div class="card-kicker">PERSONAL MEALS · QUICK LOOKUP</div>
           <h2>What did I order?</h2>
-          <p>Meal selections from 23–26 November are available. Enter the team access code, then search your first name or full name.</p>
-          <div id="meal-access-panel" class="meal-access-panel">
-            <label for="meal-access-code" class="field-label">Team access code</label>
-            <div class="access-input-row">
-              <input id="meal-access-code" type="password" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Enter code from your organiser">
-              <button type="button" id="unlock-meals" class="button button-green">Unlock meals</button>
-            </div>
-            <p id="meal-unlock-status" class="access-status" role="status" aria-live="polite">The meal list is encrypted. The access code is not stored by this website.</p>
-          </div>
-          <div id="meal-search-panel" hidden>
+          <p>Choose your dinner date above, then enter your first name or full name to see your selected dish.</p>
+          <div id="meal-search-panel">
             <label for="meal-name" class="field-label">Search by first name or full name</label>
             <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="meal-name" type="search" autocomplete="off" placeholder="e.g. Alex or Alex Smith" aria-describedby="meal-privacy"></div>
-            <div id="meal-results" class="meal-results" aria-live="polite"><span class="empty-dot"></span> Enter your name to find your selected dish.</div>
-            <button type="button" id="lock-meals" class="lock-meals">Lock meal information</button>
+            <div id="meal-results" class="meal-results" aria-live="polite"><span class="empty-dot"></span> Loading meal information…</div>
           </div>
-          <p id="meal-privacy" class="small-muted">Selections for 22 &amp; 27 November are not included in the supplied Excel. Please share the access code privately; it is shared-team access, not individual account authentication.</p>
+          <p id="meal-privacy" class="small-muted">Selections for 22 &amp; 27 November were not included in the supplied Excel. This is a publicly accessible team page; meal records are not individually access-controlled.</p>
         </div>
       </section>
 
