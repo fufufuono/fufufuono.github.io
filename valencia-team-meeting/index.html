@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#148b42">
   <meta name="description" content="Your guide to Jinko Europe Team Meeting, Valencia, 22–27 November 2026.">
   <title>Valencia 2026 | Team Meeting Hub</title>
-  <link rel="stylesheet" href="./style.css?v=20261123-breakfast">
+  <link rel="stylesheet" href="./style.css?v=20261123-home-layout-v2">
   <script defer src="./data.js?v=20261120-two-pages"></script>
   <script defer src="./app.js?v=20261120-no-access-code"></script>
 </head>
@@ -48,36 +48,59 @@
           <a href="#dining" data-route="dining" class="text-action">Go to Dining <span aria-hidden="true">↗</span></a>
         </div>
         <div class="section-heading home-info-heading"><div><span class="eyebrow">ESSENTIALS</span><h2>Stay &amp; explore</h2></div></div>
-        <div class="home-info-grid">
-          <article class="card info-card">
-            <span class="card-kicker">YOUR HOTEL</span>
-            <h3>ILUNION Aqua 4</h3>
-            <p class="address" id="hotel-address">C/ de Luis García-Berlanga Martí, 19–21, 46023 Valencia, Spain</p>
-            <div class="button-row">
+        
+        <article class="card home-hotel-card" aria-labelledby="hotel-card-title">
+          <div class="home-hotel-main">
+            <div class="home-hotel-location">
+              <span class="card-kicker">YOUR HOTEL</span>
+              <h3 id="hotel-card-title">ILUNION Aqua 4</h3>
+              <p class="address" id="hotel-address">C/ de Luis García-Berlanga Martí, 19–21, 46023 Valencia, Spain</p>
+            </div>
+            <div class="button-row home-hotel-actions">
               <a id="hotel-map-link" class="button button-green" href="#" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
               <button id="copy-hotel" class="button button-light" type="button">Copy address</button>
             </div>
-            <div class="hotel-breakfast" aria-label="Hotel breakfast hours">
-              <span class="hotel-breakfast-label">BREAKFAST · DAILY</span>
-              <strong>07:00–10:30</strong>
-              <span class="hotel-breakfast-location">At the hotel</span>
+          </div>
+          <details class="hotel-checkin">
+            <summary><span class="checkin-title"><span class="checkin-icon" aria-hidden="true">✓</span>Hotel check-in information</span>
+              <svg class="checkin-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p>You may receive an online check-in email 1–2 days before arrival, as your email address has been shared with the hotel. Otherwise, check in at reception with your ID card or passport.</p>
+          </details>
+        </article>
+        <div class="section-heading home-useful-heading"><div><span class="eyebrow">GOOD TO KNOW</span><h2>Useful information</h2></div></div>
+        <div class="home-utility-grid">
+          <article class="card home-utility-card utility-meals" aria-labelledby="utility-meals-title">
+            <div class="utility-card-header">
+              <span class="utility-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 8h12v5a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8ZM16 9h2a3 3 0 0 1 0 6h-2M3 21h17M8 3v2m4-2v2"/></svg></span>
+              <h3 id="utility-meals-title">Breakfast &amp; Lunch</h3>
             </div>
-            <div class="info-note">
-              <strong>Hotel check-in</strong>
-              <p>You may receive an online check-in email 1–2 days before arrival, as your email address has been shared with the hotel. Otherwise, check in at reception with your ID card or passport.</p>
-            </div>
+            <div class="utility-stat">07:00–10:30</div>
+            <div class="utility-meta">BREAKFAST · DAILY</div>
+            <div class="utility-rule"></div>
+            <p>Breakfast and lunch are served at the same restaurant on <strong>Level 0</strong> of the hotel.</p>
           </article>
-          <article class="card info-card" id="treasure-hunt">
-            <span class="card-kicker">TEAM ACTIVITY · WED 25 NOV</span>
-            <h3>Valencia Treasure Hunt</h3>
-            <p>Explore Valencia Old Town and solve clues together in small teams.</p>
-            <div class="activity-grid">
-              <div><span>DEPARTURE</span><strong>15:00</strong></div>
-              <div><span>MEETING POINT</span><strong>ILUNION Aqua 4</strong></div>
-              <div><span>TRANSPORT</span><strong>Arranged</strong></div>
-              <div><span>WHAT TO WEAR</span><strong>Comfortable shoes</strong></div>
+          <article class="card home-utility-card utility-parking" aria-labelledby="utility-parking-title">
+            <div class="utility-card-header">
+              <span class="utility-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 11 2-6h10l2 6M5 11h14a2 2 0 0 1 2 2v5H3v-5a2 2 0 0 1 2-2ZM6 18v2m12-2v2M7 14h.01M17 14h.01"/></svg></span>
+              <h3 id="utility-parking-title">Parking</h3>
             </div>
-            <p class="activity-footnote">Wear comfortable clothes; further details will be shared before the activity.</p>
+            <div class="utility-stat">€14 <span>/ 24 hours</span></div>
+            <div class="utility-meta">AQUA SHOPPING MALL</div>
+            <div class="utility-rule"></div>
+            <p>The parking garage is next to the hotel. Ask reception for the hotel's parking discount.</p>
+            <p class="utility-note"><span aria-hidden="true">ⓘ</span> Parking is not included in the hotel booking and must be paid separately.</p>
+          </article>
+          <article class="card home-utility-card utility-activity" id="treasure-hunt" aria-labelledby="utility-activity-title">
+            <div class="utility-card-header">
+              <span class="utility-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4 4-2Z"/></svg></span>
+              <h3 id="utility-activity-title">Treasure Hunt</h3>
+            </div>
+            <div class="utility-stat">15:00</div>
+            <div class="utility-meta">WED · 25 NOV</div>
+            <div class="utility-rule"></div>
+            <p>Meet at <strong>ILUNION Aqua 4</strong>. Transport to Valencia Old Town is arranged.</p>
+            <p class="utility-note"><span aria-hidden="true">✓</span> Comfortable shoes and clothes recommended.</p>
           </article>
         </div>
       </section>
