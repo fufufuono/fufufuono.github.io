@@ -48,3 +48,9 @@
  .home-info-grid .info-card h3{font-size:21px}
  .mobile-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Breakfast hours in the Home hotel card */
+.hotel-breakfast{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin-top:18px;padding:14px 16px;background:var(--green-pale);border:1px solid #d6eadb;border-radius:14px}
+.hotel-breakfast-label{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--green-dark)}
+.hotel-breakfast strong{font-size:18px;line-height:1.25;white-space:nowrap;color:var(--green-dark)}
+.hotel-breakfast-location{font-size:11px;font-weight:650;color:var(--muted)}
