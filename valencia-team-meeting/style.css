@@ -26,15 +26,6 @@
 .hero-meta{font-size:10px}
 .home-dining-shortcut{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 3px 2px;font-size:13px;color:var(--muted)}
 .home-dining-shortcut .text-action{white-space:nowrap}
-.home-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.home-info-grid .info-card{min-width:0}
-.home-info-grid .info-card h3{font-size:23px;letter-spacing:-.6px;line-height:1.2;margin:12px 0}
-.home-info-grid .info-note{margin-top:20px}
-.home-info-grid .activity-grid{gap:8px;margin-top:17px}
-.home-info-grid .activity-grid>div{padding:13px}
-.home-info-grid .activity-grid strong{font-size:12px}
-.home-info-grid .info-card .address{overflow-wrap:anywhere}
-.home-info-grid .activity-footnote{font-size:12px;margin:15px 0 0}
 .mobile-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:800px){.home-info-grid{grid-template-columns:1fr}}
 @media(max-width:650px){
@@ -49,8 +40,48 @@
  .mobile-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* Breakfast hours in the Home hotel card */
-.hotel-breakfast{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin-top:18px;padding:14px 16px;background:var(--green-pale);border:1px solid #d6eadb;border-radius:14px}
-.hotel-breakfast-label{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--green-dark)}
-.hotel-breakfast strong{font-size:18px;line-height:1.25;white-space:nowrap;color:var(--green-dark)}
-.hotel-breakfast-location{font-size:11px;font-weight:650;color:var(--muted)}
+
+/* Home v2: full-width hotel; naturally sized information cards */
+.home-hotel-card{padding:27px 31px}
+.home-hotel-main{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.home-hotel-location{min-width:0}
+.home-hotel-location h3{font-size:25px;line-height:1.22;letter-spacing:-.75px;margin:11px 0 8px}
+.home-hotel-location .address{font-size:13px;color:var(--muted);margin:0;overflow-wrap:anywhere;line-height:1.6}
+.home-hotel-actions{justify-content:flex-end}
+.hotel-checkin{border-top:1px solid var(--line);margin-top:22px;padding-top:1px}
+.hotel-checkin summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 2px 0;list-style:none;color:var(--ink);font-size:13px;font-weight:750;cursor:pointer}
+.hotel-checkin summary::-webkit-details-marker{display:none}
+.checkin-title{display:flex;align-items:center;gap:9px}
+.checkin-icon{display:inline-grid;place-items:center;width:22px;height:22px;background:var(--green-pale);border-radius:7px;color:var(--green-dark);font-weight:900;font-size:12px}
+.checkin-chevron{width:17px;height:17px;flex-shrink:0;fill:none;stroke:var(--green);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.hotel-checkin[open] .checkin-chevron{transform:rotate(180deg)}
+.hotel-checkin>p{font-size:12px;color:var(--muted);max-width:750px;margin:12px 0 0;line-height:1.7}
+.home-useful-heading{margin-top:30px}
+.home-utility-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:16px}
+.home-utility-card{min-width:0;padding:23px 23px 21px}
+.utility-card-header{display:flex;align-items:center;gap:11px;margin-bottom:19px}
+.utility-card-header h3{font-size:17px;line-height:1.25;letter-spacing:-.35px;margin:0}
+.utility-icon{display:grid;place-items:center;background:var(--green-pale);color:var(--green-dark);width:35px;height:35px;border-radius:11px;flex-shrink:0}
+.utility-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.utility-stat{font-size:30px;line-height:1.18;letter-spacing:-1px;font-weight:830;font-variant-numeric:tabular-nums;white-space:nowrap}
+.utility-stat span{font-size:13px;letter-spacing:0;color:var(--muted);font-weight:650}
+.utility-meta{color:var(--green-dark);font-size:10px;letter-spacing:1.1px;font-weight:850;margin-top:7px}
+.utility-rule{height:1px;background:var(--line);margin:17px 0 14px}
+.home-utility-card p{font-size:12px;color:var(--muted);line-height:1.65;margin:0}
+.home-utility-card p strong{color:var(--ink);font-weight:730}
+.home-utility-card .utility-note{margin-top:12px;padding:10px 11px;border-radius:10px;background:var(--bg);font-size:11px}
+.utility-note span{color:var(--green-dark);font-weight:850;margin-right:3px}
+.utility-meals{order:1}.utility-parking{order:2}.utility-activity{order:3}
+@media(max-width:900px){.home-utility-grid{grid-template-columns:1fr}.home-utility-card{padding:22px 23px}.utility-card-header{margin-bottom:12px}.utility-rule{margin:14px 0 12px}.utility-activity{order:2}.utility-parking{order:3}}
+@media(max-width:650px){
+ .home-hotel-card{padding:22px 19px}
+ .home-hotel-main{grid-template-columns:1fr;gap:17px}
+ .home-hotel-location h3{font-size:23px}
+ .home-hotel-actions{justify-content:flex-start}
+ .hotel-checkin{margin-top:17px}
+ .home-utility-grid{gap:12px}
+ .home-utility-card{padding:21px 19px}
+ .home-useful-heading{margin-top:24px}
+ .utility-stat{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){.checkin-chevron{transition:none}}
